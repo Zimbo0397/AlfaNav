@@ -1,0 +1,28 @@
+- var mainpage = true
+
+//- //mixins//
+mixin aboutitem(header, text)
+	.inline-el
+		h3.ellipsis-text= header
+		p!= text
+
+doctype html
+html(lang='en')
+	head
+		title GLOBAL Images
+
+		include ./partials/head.jade
+
+	body
+
+		include ./partials/top-line.jade
+
+				
+
+		include ./partials/footer.jade
+
+
+
+
+
+		include ./partials/scripts.jade

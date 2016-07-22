@@ -1,0 +1,32 @@
+{
+  "name": "AlfaNavigation",
+  "version": "0.0.1",
+  "description": "Seashiptrade",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "Alfa",
+    "Navigation"
+  ],
+  "author": "Vitaliy_Zbryzskiy",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}

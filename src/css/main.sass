@@ -1,0 +1,139 @@
+$medium: 1150px
+$tablet: 1000px
+$mobile-large: 760px
+$mobile-medium: 630px
+$mobile-medium-small: 580px
+$mobile-small: 480px
+$mobile-x-small: 320px
+$main-color: #ffd500
+
+
+// /Global/
+*
+	box-sizing: border-box
+.chromeperfectpixel-initial-block iframe,
+#chromeperfectpixel-supported-by
+	display: none !important
+#__bs_notify__ 
+	display: none !important
+	opacity: 0 !important
+a
+	color: inherit
+	&:hover
+		color: inherit
+// body
+// 	background: #E4E1E1
+body::-webkit-scrollbar
+	height: 0
+	width: 0
+	font-family: CenturyGothic
+body 
+	margin: 0
+
+.ellipsis-text
+	overflow: hidden
+	white-space: nowrap
+	text-overflow: ellipsis
+a 
+	text-decoration: none
+	font-family: inherit
+.inline-holder
+	font-size: 0
+	letter-spacing: 0
+	.inline-el
+		display: inline-block
+		vertical-align: top
+		font-size: 16px
+
+// image-holder
+.image-holder
+	overflow: hidden
+	position: relative
+	text-align: center
+	vertical-align: middle
+	img
+		vertical-align: middle
+		width: 100%
+	.fake-img
+		opacity: 0.001
+		position: relative
+		height: 100%
+		width: 100%
+		z-index: 1
+		pointer-events: none
+	.img
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		background-size: cover
+		height: 100%
+		left: 0
+		position: absolute
+		right: 0
+		top: 0
+
+.main-container
+	max-width: 1120px
+	width: 100%
+	margin: 0 auto
+	@media (max-width: $medium)
+		padding-left: 15px	
+		padding-right: 15px
+
+
+
+.top-line
+	background-size: cover
+	background-repeat: no-repeat
+	padding-bottom: 90px
+
+.brand-holder
+	position: absolute
+	top: 30px
+	left: 83px
+
+.main-nav-holder 
+	text-align: right
+	color: white
+	padding-top: 33px
+	padding-right: 19px
+	font-family: GothamPro
+	font-size: 18px
+	font-weight: 700
+	line-height: 20px
+	.callback-holder
+		padding-right: 57px
+		position: relative
+		margin-right: 42px
+		font-size: inherit
+		text-transform: uppercase
+		img
+			position: absolute
+			top: -5px
+			right: 8px
+
+	.menu-holder
+		padding-right: 65px
+		position: relative
+		font-size: inherit
+		text-transform: uppercase
+		img
+			position: absolute
+			top: -4px
+			right: 8px
+
+.description-in-top
+	text-align: center
+	margin-top: 229px
+	h1
+		color: white
+		font-family: GenplanFree
+		font-size: 50px
+		line-height: 37px
+		font-weight: normal
+		margin-bottom: 21px
+	h2
+		color: white
+		font-family: GothamPro
+		font-size: 30px
+		margin-top: 16px
+
