@@ -1,0 +1,161 @@
+- var mainpage = true
+
+//- //mixins//
+mixin aboutitem(header, text)
+	.inline-el
+		h3.ellipsis-text= header
+		p!= text
+
+doctype html
+html(lang='en')
+	head
+		title GLOBAL Images
+
+		include ./partials/head.jade
+
+	body
+
+		include ./partials/top-line.jade
+
+		section.minidescription
+			.main-container
+				.inline-holder
+					.desc-head.inline-el
+						h3
+							span.green ONLY
+							|  Solid Relationships Result in
+							span.green SUCCESS.
+					.description.inline-el
+						p
+							|There are hundreds of crewing companies and manning agencies that successfully operate as vendors of human resources for marine crew seekers...
+						p
+							|- However, is "Human Resources" enough to fulfill your maritime business strategies?
+						p
+							|- As one of the greatest basketball players - Michael Jordan - says: "Talent wins games, but teamwork wins championships”, AlphaNavigation is uniquely placed to become the extension of your team, entirely covering the recruitment deployment and management chain of the best and brightest seafarers.
+
+		section.reviews
+			.main-container
+				h3 OUR CLIENTS' TESTIMONIALS 
+					span.green SPEAK FOR US
+				.tabs-holder.inline-holder
+					a(href="#").tab-sv.active.inline-el
+						span seafarers
+					a(href="#").tab-sv.inline-el
+						span ship owners
+		section.shipowners
+			.gray-bg.border-bt
+				.main-container
+					h4 Our Principals 
+							span.green & Shipowners
+					.table-holder
+						table.hr
+							mixin newtr(compan, countr, contacts)
+								tr
+									td= compan
+									td= countr
+									td= contacts
+
+							+newtr('Company', 'Country', 'Contract Start Date')
+			.main-container
+				.table-holder.gradient
+					table
+						+newtr('Company', 'Country', 'Contract Start Date')
+						+newtr('ABC MARITIME AG', 'Copenhagen, Denmark', 'June 12, 2006')
+						+newtr('ACHEON AKTI NAVIGATION CO. LTD', 'Nyon, Switzerland', 'January 1, 1998')
+						+newtr('AFLOAT LEASING LTD', 'Limassol, Cyprus', 'November 27, 2007')
+						+newtr('BERNHARD CRAMER', 'Swatar, Malta', 'August 30, 2010')
+						+newtr('BERNUTH LINES USA', 'Haren/Ems, Germany', 'November 18, 2007')
+						+newtr('CENTURIAN MARITIME CO LTD', 'Miami, USA', 'October 15, 2010')
+						+newtr('CHINA NAVIGATION CO LTD.', 'Kifisia, Greece', 'January 31, 2004')
+						+newtr('CHIOS MARITIME', 'Hong Kong', 'August 21, 2003')
+						+newtr('Company', 'Country', 'Contract Start Date')
+						+newtr('ABC MARITIME AG', 'Copenhagen, Denmark', 'June 12, 2006')
+						+newtr('ACHEON AKTI NAVIGATION CO. LTD', 'Nyon, Switzerland', 'January 1, 1998')
+						+newtr('AFLOAT LEASING LTD', 'Limassol, Cyprus', 'November 27, 2007')
+						+newtr('BERNHARD CRAMER', 'Swatar, Malta', 'August 30, 2010')
+						+newtr('BERNUTH LINES USA', 'Haren/Ems, Germany', 'November 18, 2007')
+						+newtr('CENTURIAN MARITIME CO LTD', 'Miami, USA', 'October 15, 2010')
+						+newtr('CHINA NAVIGATION CO LTD.', 'Kifisia, Greece', 'January 31, 2004')
+						+newtr('CHIOS MARITIME', 'Hong Kong', 'August 21, 2003')
+						+newtr('Company', 'Country', 'Contract Start Date')
+						+newtr('ABC MARITIME AG', 'Copenhagen, Denmark', 'June 12, 2006')
+						+newtr('ACHEON AKTI NAVIGATION CO. LTD', 'Nyon, Switzerland', 'January 1, 1998')
+						+newtr('AFLOAT LEASING LTD', 'Limassol, Cyprus', 'November 27, 2007')
+						+newtr('BERNHARD CRAMER', 'Swatar, Malta', 'August 30, 2010')
+						+newtr('BERNUTH LINES USA', 'Haren/Ems, Germany', 'November 18, 2007')
+						+newtr('CENTURIAN MARITIME CO LTD', 'Miami, USA', 'October 15, 2010')
+						+newtr('CHINA NAVIGATION CO LTD.', 'Kifisia, Greece', 'January 31, 2004')
+						+newtr('CHIOS MARITIME', 'Hong Kong', 'August 21, 2003')
+						+newtr('Company', 'Country', 'Contract Start Date')
+						+newtr('ABC MARITIME AG', 'Copenhagen, Denmark', 'June 12, 2006')
+						+newtr('ACHEON AKTI NAVIGATION CO. LTD', 'Nyon, Switzerland', 'January 1, 1998')
+						+newtr('AFLOAT LEASING LTD', 'Limassol, Cyprus', 'November 27, 2007')
+						+newtr('BERNHARD CRAMER', 'Swatar, Malta', 'August 30, 2010')
+						+newtr('BERNUTH LINES USA', 'Haren/Ems, Germany', 'November 18, 2007')
+						+newtr('CENTURIAN MARITIME CO LTD', 'Miami, USA', 'October 15, 2010')
+						+newtr('CHINA NAVIGATION CO LTD.', 'Kifisia, Greece', 'January 31, 2004')
+						+newtr('CHIOS MARITIME', 'Hong Kong', 'August 21, 2003')
+						+newtr('Company', 'Country', 'Contract Start Date')
+						+newtr('ABC MARITIME AG', 'Copenhagen, Denmark', 'June 12, 2006')
+						+newtr('ACHEON AKTI NAVIGATION CO. LTD', 'Nyon, Switzerland', 'January 1, 1998')
+						+newtr('AFLOAT LEASING LTD', 'Limassol, Cyprus', 'November 27, 2007')
+						+newtr('BERNHARD CRAMER', 'Swatar, Malta', 'August 30, 2010')
+						+newtr('BERNUTH LINES USA', 'Haren/Ems, Germany', 'November 18, 2007')
+						+newtr('CENTURIAN MARITIME CO LTD', 'Miami, USA', 'October 15, 2010')
+						+newtr('CHINA NAVIGATION CO LTD.', 'Kifisia, Greece', 'January 31, 2004')
+						+newtr('CHIOS MARITIME', 'Hong Kong', 'August 21, 2003')
+				.btn-holder
+					a(href="#").button Show all
+
+
+		section.minidescription.type2
+			.main-container
+				.inline-holder
+					.desc-head.inline-el
+						h3 Why 
+							br
+							span.green AlphaNavigation?
+					.description.inline-el
+						p
+							|As one of the leading crewing companies in Ukraine, Alpha Navigation is proud to offer 60 000+ well-educated and highly qualified seafarers in our database.
+
+						p
+							|Our seafarers are compliant with IMO, STCW95, and USCG regulations and requirements and are well versed in the ISM code. We go above and beyond to ensure that all seafarers have passed all medical examinations, English language comprehension tests, and our very own internal professional tests; we also require positive references from past employers.
+		section.our-services
+			.main-container
+				h3 Our 
+					span.green Services
+				.services
+					ul.inline-holder
+						mixin newservitem(name, img)
+							li.newservitem.inline-el
+								a(href="#")
+									div
+										img(src= img, alt= img)
+									div
+										.undersc
+									span!= name
+
+						+newservitem('Crew Management', 'img/icons/anchor-img.png' )
+						+newservitem('Repair Team </br> Management', 'img/icons/anchor-img.png' )
+						+newservitem('Shore personnel </br> placement', 'img/icons/anchor-img.png' )
+						+newservitem('Business and Maritime </br> Consultancy', 'img/icons/anchor-img.png' )
+						+newservitem('Husbanding / Port Agency </br> Services', 'img/icons/anchor-img.png' )
+						+newservitem('Maritime Training', 'img/icons/anchor-img.png' )
+						+newservitem('In-House Travel </br>  Agency', 'img/icons/anchor-img.png' )
+						+newservitem('Maritime </br> Publications', 'img/icons/anchor-img.png' )
+						+newservitem('IT Services', 'img/icons/anchor-img.png' )
+
+
+
+						
+
+
+
+		include ./partials/footer.jade
+
+
+
+
+
+		include ./partials/scripts.jade

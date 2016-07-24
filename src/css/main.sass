@@ -29,6 +29,7 @@ body::-webkit-scrollbar
 	font-family: CenturyGothic
 body 
 	margin: 0
+	font-family: GothamPro
 
 .ellipsis-text
 	overflow: hidden
@@ -37,6 +38,24 @@ body
 a 
 	text-decoration: none
 	font-family: inherit
+h3,
+h4
+	font-family: GothamPro
+	font-size: 50px
+	line-height: 50px
+	text-transform: uppercase
+	color: #2d4170
+	margin-top: 0px
+	letter-spacing: -2.2px
+	.green
+		color: #81bb41
+h4
+	font-size: 30px
+
+.gray-bg
+	background: #fafafa
+.border-bt
+	border-bottom: 1px solid #e2e2e2
 .inline-holder
 	font-size: 0
 	letter-spacing: 0
@@ -72,12 +91,28 @@ a
 		top: 0
 
 .main-container
-	max-width: 1120px
+	max-width: 1555px
 	width: 100%
 	margin: 0 auto
 	@media (max-width: $medium)
 		padding-left: 15px	
 		padding-right: 15px
+.btn-holder
+	text-align: center
+.button
+	color: #81bb41
+	font-size: 14px
+	font-weight: 700
+	text-transform: uppercase
+	padding: 10px
+	border: 2px solid #81bb41
+	transition: background, color .2s
+	display: inline-block
+	&:hover
+		color: #fff
+		background: #81bb41
+		transition: background, color .2s
+
 
 
 
@@ -135,5 +170,229 @@ a
 		color: white
 		font-family: GothamPro
 		font-size: 30px
-		margin-top: 16px
+		margin-top: 11px
 
+.minidescription
+	padding-top: 64px
+	padding-bottom: 57px
+	.inline-el
+		width: 50%
+	.desc-head
+		text-align: left
+		padding-right: 75px
+	.description
+		text-align: justify
+		padding-left: 10px
+		p
+			color: #48576a
+			font-family: GothamPro
+			font-size: 16px
+			font-weight: 400
+			line-height: 24px
+			margin-top: 0
+			margin-bottom: 24px
+	&.type2
+		padding-bottom: 15px
+
+.reviews
+	background: url('../img/images/rev-bg.jpg')	
+	height: 900px
+	padding-top: 63px
+	.tabs-holder
+		text-align: center
+		margin-top: 71px
+		.tab-sv
+			width: 200px
+			height: 40px
+			border: 2px solid #81bb41
+			font-size: 14px
+			font-weight: 700
+			text-transform: uppercase
+			padding-top: 10px
+			transition: .2s
+			color: #81bb41
+			&.active
+				background-color: #81bb41
+				position: relative
+				color: white
+				&:after
+					height: 20px
+					width: 20px
+					content: ''
+					bottom: -15px
+					left: 50%
+					background: #81bb41
+					position: absolute
+					transform: rotate(45deg) translateX(-50%)
+			span
+				position: relative
+				z-index: 5
+			&:hover
+				background-color: #81bb41
+				transition: .2s
+				color: white
+.shipowners
+	padding-bottom: 110px
+	h4
+		text-align: center
+		margin-bottom: 7px
+	.table-holder
+		padding-left: 154px
+		padding-right: 154px
+		table
+			width: 100%
+			&.hr
+				tr
+					td
+						font-size: 13px
+						font-weight: 500
+						text-transform: uppercase
+						border-bottom: none !important
+			tr
+				td
+					width: 33.33%
+					text-align: left
+					padding-left: 157px
+					color: #48576a
+					font-size: 12px
+					padding-bottom: 15px
+					padding-top: 9px
+
+
+					&:first-child
+						color: #48576a
+						font-size: 12px
+						text-transform: uppercase
+						font-weight: 500
+					&:last-child
+						text-align: right
+						padding-right: 157px
+						padding-left: 0
+			tr
+
+				&:nth-child(odd)
+					td
+						border-bottom: 2px solid #ebebeb
+				&:nth-child(even)
+					td
+						border-bottom: 1px solid #ebebeb
+	&.gradient
+		// background-color: hsla(0,0%,93%,0)
+		// background: @include filter-gradient(#ededed, #ffffff, vertical)
+		// background: @include background-image(linear-gradient(top, hsla(0,0%,93%,0) 0%, hsla(0,0%,93%,0) 0%, hsla(0,0%,96%,0.54) 54%, hsla(0,0%,100%,1) 100%))
+	.btn-holder
+		margin-top: 40px
+		.button
+			padding-top: 15px
+			width: 200px
+			height: 50px
+
+
+.our-services
+	background: url('../img/images/serv-bg.svg')
+	padding-top: 112px
+	h3
+		margin-bottom: 58px
+	.services
+		ul
+			padding-left: 0
+			.newservitem
+				width: 20%
+				text-align: center
+				margin-bottom: 51px
+				padding: 0 10px
+				color: #48576a
+				font-weight: 700
+				text-transform: uppercase
+				.undersc
+					width: 120px
+					height: 1px
+					background-color: #dadde1
+					display: inline-block
+				span
+					display: inline-block
+					margin-top: 9px
+
+.footer
+	background: url('../img/images/foot-bg.jpg')
+	background-size: cover
+	position: relative
+	padding-top: 91px
+	padding-bottom: 73px
+	h5
+		color: white
+		font-size: 18px
+		text-transform: uppercase
+		margin-top: 0
+		margin-bottom: 21px
+	.brand-holder
+		top: 115px
+		left: 176px
+		img
+			width: 103px
+	.gotquestion
+		padding-left: 155px
+		.button
+			width: 160px
+			height: 50px
+			padding-top: 15px
+			text-align: center
+			text-transform: uppercase
+	.foot-services,
+	.foot-company
+		padding-left: 255px
+		ul
+			padding-left: 0
+			li
+				color: #81bb41
+				font-size: 14px
+				text-transform: uppercase
+				list-style: none
+				margin-bottom: 5px
+	.foot-company
+		padding-left: 166px
+
+	.contactus
+		padding-left: 220px
+		max-width: 512px
+		p,
+		a
+			color: white
+			font-size: 14px
+			text-transform: uppercase
+		a
+			display: block
+		.show
+			color: #81bb41
+			font-weight: 700
+			text-transform: uppercase
+			margin-bottom: 10px
+
+	.foot-socials
+		text-align: center
+		margin-top: 75px
+		margin-bottom: 37px
+		ul
+			padding-left: 0
+			li
+				list-style: none
+				display: inline-block
+				font-size: 22px
+				width: 50px
+				height: 50px
+				border-radius: 50%
+				border: 1px solid #fff
+				padding-top: 11px
+				color: #fff
+				margin-left: 10px
+				margin-right: 10px
+	.pre-links,
+	.Copyright
+		text-align: center
+		a
+			color: white
+			font-size: 14px
+			margin-left: 10px
+			margin-right: 10px
+	.pre-links
+		margin-bottom: 12px

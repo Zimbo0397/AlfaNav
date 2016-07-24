@@ -1,21 +1,65 @@
 section.footer
 	.main-container
-		.inline-holder.first-lv
-			.inline-el.nav-list
+		.brand-holder
+			img(src="img/images/logo.png", alt="img/images/logo.png")
+		.inline-holder
+			.gotquestion.inline-el
+				h5 
+					|GOT A QUESTION? </br> WE ARE HERE TO HELP
+				.button-holder
+					a(href="#").button CONTACT US
+			.foot-services.inline-el
+				h5 Services
 				ul
-					mixin footmenuitem(href, text)
-						li.inline-el
-							a(href= href)= text
-					+footmenuitem('#', 'Правовая информация')
-					+footmenuitem('#', 'Истории и тренды')
-					+footmenuitem('#', 'Контакты')
-			.inline-el.social-list
-				ul
-					mixin footsocitem(href, src, cls)
-						li.inline-el(class= cls)
-							a(href= href)
-								img(src= src, alt= src)
+					mixin newfootlist(name)
+						li 
+							a(href="#")= name
 
-					+footsocitem('#', 'img/icons/facebook-foot-icon.png', 'facebook')
-					+footsocitem('#', 'img/icons/twitter-foot-icon.png', 'twitter')
-					+footsocitem('#', 'img/icons/instagram-foot-icon.png', 'instagram')
+					+newfootlist('For Job Seekers')
+					+newfootlist('Vacancies')
+					+newfootlist('For Crew Seekers')
+					+newfootlist('Clients')
+					+newfootlist('Fleet')
+			.foot-company.inline-el
+				h5 Company
+				ul
+					+newfootlist('About')
+					+newfootlist('Mission')
+					+newfootlist('Vision')
+					+newfootlist('Team')
+					+newfootlist('News')
+			.contactus.inline-el
+				h5 Contact Us
+				p 17 Machtovaya str., Odessa, 65010, Ukraine
+				a(href="#").show Show Map
+				a(href="#") +380 482 32 92 04
+				a(href="#") crew@alncc.com
+
+		.foot-socials
+			ul.inline-holder
+				mixin newsocitem(class1)
+					li
+						a(href="#")
+							i.fa(class= class1)
+				+newsocitem('fa-facebook')
+				+newsocitem('fa-twitter')
+				+newsocitem('fa-google-plus')
+				+newsocitem('fa-linkedin')
+		.pre-links
+			a(href="#") Privacy Policy
+			a(href="#") SiteMap     
+		.Copyright
+			a(href="#") Copyright @2016 Alpha Navigation
+
+
+
+ 
+
+
+
+
+				
+
+
+
+
