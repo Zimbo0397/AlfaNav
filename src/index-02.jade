@@ -1,0 +1,128 @@
+- var mainpage = true
+
+//- //mixins//
+mixin aboutitem(header, text)
+	.inline-el
+		h3.ellipsis-text= header
+		p!= text
+
+doctype html
+html(lang='en')
+	head
+		title Index
+
+		include ./partials/head.jade
+
+	body
+
+		section.top-line.index(style='background-image: url("img/images/main-bg-2.jpg")')
+			.brand-holder
+				img(src="img/images/logo.png", alt="")
+			.main-nav-holder.inline-holder
+				a(href="#" class='callback-holder inline-el')
+					span Call back
+					img(src="img/icons/callback-img.png", alt="")
+				a(href="#" class='menu-holder inline-el')
+					span menu
+					img(src="img/icons/gumb.png", alt="")
+
+			.description-in-top
+				h1.index HUMAN FACTOR. REDEFINED.
+				.rope-icons
+					div
+						img(src="img/icons/scewText1.png", alt="")
+					div
+						img(src="img/icons/rope-icon.png", alt="")
+					div
+						img(src="img/icons/scewText2.png", alt="")
+			.btn-holder
+				a(href="#").button For Job seekers
+				a(href="#").button For crew seekers
+
+		section.reviews(style='background-image: url(img/images/ship-away.jpg)')
+			.main-container
+				.secion-icon
+					img(src="img/icons/gray-rope-icon.png", alt="")
+				h3.big WE  GET
+					span.green   SEAFARERS
+					|  TALKING
+				.btn-holder
+					a(href="#").button Show more comments
+
+		section.info-block
+			.main-container
+				.secion-icon
+					img(src="img/icons/gray-rope-icon2.png", alt="")
+				h3.big WE LIVE AND BREATHE WHAT WE DO AND 
+					span.green WE’RE PROUD OF our results
+
+				.inline-holder
+					.text-holder.inline-el
+						p 
+							|Crewing Company Alpha Navigation, created in 1997, has been supplying vessels with competent and professional crew consistently throughout the years. We recognize the importance of providing qualified personnel on both sides at sea and onshore. We accomplish this by personally screening each and every perspective applicant through rigorous competence, fitness and English language comprehension tests to bring our clients the very best people. In accordance to the Shipowner’s demands, the designated Crew Superintendent selects and employs the command and crew for the vessel. We make sure to comply with all internal Quality Standards, IMO, STCW, ISO requirements, and the vessel’s manning stipulations. We maintain our high standard of excellency through performance appraisals and continuous upgrade training for our crews; our clients’ satisfaction and success is of utmost importance to us.
+						.btn-holder
+							a(href="#").button Learn More
+							a(href="#").button See Vacancies
+					.counters-holder.inline-el
+						.counter-item.inline-el
+							.counter 16648
+							.count-desc Contracts Signed
+
+						.counter-item.inline-el 
+							.counter 1243
+							.count-desc Vessels Manned
+																				
+
+
+						
+		section.minidescription.type2
+			.main-container
+				.inline-holder
+					.desc-head.inline-el
+						h3.big Why 
+							br
+							span.green AlphaNavigation?
+					.description.inline-el
+						p
+							|As one of the leading crewing companies in Ukraine, Alpha Navigation is proud to offer 60 000+ well-educated and highly qualified seafarers in our database.
+
+						p
+							|Our seafarers are compliant with IMO, STCW95, and USCG regulations and requirements and are well versed in the ISM code. We go above and beyond to ensure that all seafarers have passed all medical examinations, English language comprehension tests, and our very own internal professional tests; we also require positive references from past employers.
+		section.our-services
+			.main-container
+				h3 Our 
+					span.green Services
+				.services
+					ul.inline-holder
+						mixin newservitem(name, img)
+							li.newservitem.inline-el
+								a(href="#")
+									div
+										img(src= img, alt= img)
+									div
+										.undersc
+									span!= name
+
+						+newservitem('Crew Management', 'img/icons/anchor-img.png' )
+						+newservitem('Repair Team </br> Management', 'img/icons/anchor-img.png' )
+						+newservitem('Shore personnel </br> placement', 'img/icons/anchor-img.png' )
+						+newservitem('Business and Maritime </br> Consultancy', 'img/icons/anchor-img.png' )
+						+newservitem('Husbanding / Port Agency </br> Services', 'img/icons/anchor-img.png' )
+						+newservitem('Maritime Training', 'img/icons/anchor-img.png' )
+						+newservitem('In-House Travel </br>  Agency', 'img/icons/anchor-img.png' )
+						+newservitem('Maritime </br> Publications', 'img/icons/anchor-img.png' )
+						+newservitem('IT Services', 'img/icons/anchor-img.png' )
+
+
+
+						
+
+
+
+		include ./partials/footer.jade
+
+
+
+
+
+		include ./partials/scripts.jade
