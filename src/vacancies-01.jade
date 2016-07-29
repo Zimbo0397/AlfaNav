@@ -1,0 +1,481 @@
+- var mainpage = true
+
+//- //mixins//
+mixin aboutitem(header, text)
+	.inline-el
+		h3.ellipsis-text= header
+		p!= text
+
+doctype html
+html(lang='en')
+	head
+		title vacancies-01
+
+		include ./partials/head.jade
+
+	body
+
+		section.top-line(style='background-image: url("img/images/vacancies.jpg")')
+			.brand-holder
+				img(src="img/images/logo.png", alt="")
+			.main-nav-holder.inline-holder
+				a(href="#" class='callback-holder inline-el')
+					span Call back
+					img(src="img/icons/callback-img.png", alt="")
+				a(href="#" class='menu-holder inline-el')
+					span menu
+					img(src="img/icons/gumb.png", alt="")
+
+			.description-in-top
+				h1 Vacancies
+					
+				img(src="img/icons/waves-icon.png", alt="")
+
+				h2 
+					|600+ vessels of various types and sizes, partially or fully 
+					br
+					|manned by Crewing Company Alpha Navigation.
+		
+
+		section.database
+			.gray-bg
+				.main-container
+					.inline-holder
+						.filters-holder.inline-el
+							.search-holder
+								input(placeholder="Search")
+								a.searchbtn(href="#")
+									i.fa.fa-search
+						.table-holder.inline-el
+							table.head
+								tbody
+									tr
+										td.rank
+											span Rank
+										td.deadline
+											span Deadline
+										td.vname
+											span Vessel Name
+										td.vtype
+											span Vessel Type
+										td.wages
+											span Wages
+										td.duration
+											span Contract Duration
+			.main-container
+				.inline-holder
+					.filters-holder.main.inline-el
+						ul
+							li.filters-item.open
+								p Rank: 
+								ul.chekboxes-list
+									li
+										.checkbox
+											input#checkbox1(type="checkbox")
+											label(for="checkbox1") MST
+									li
+										.checkbox
+											input#checkbox2(type="checkbox")
+											label(for="checkbox2") C/O
+									li
+										.checkbox
+											input#checkbox3(type="checkbox")
+											label(for="checkbox3") 3/O
+									li
+										.checkbox
+											input#checkbox4(type="checkbox")
+											label(for="checkbox4") EX BS
+								a.crossbtn(href="#")
+
+							li.filters-item
+								p Deadline
+								ul.chekboxes-list
+									li
+										.checkbox
+											input#checkbox1(type="checkbox")
+											label(for="checkbox1") ASAP
+									li
+										.checkbox
+											input#checkbox2(type="checkbox")
+											label(for="checkbox2") END JUNE
+									li
+										.checkbox
+											input#checkbox3(type="checkbox")
+											label(for="checkbox3") MID JUNE
+									li
+										.checkbox
+											input#checkbox4(type="checkbox")
+											label(for="checkbox4") JULY
+
+
+								a.crossbtn(href="#")
+
+							li.filters-item
+								p Vessel Name
+								ul.chekboxes-list
+									li
+										.checkbox
+											input#checkbox1(type="checkbox")
+											label(for="checkbox1") Arion
+									li
+										.checkbox
+											input#checkbox2(type="checkbox")
+											label(for="checkbox2") Atlantic Patroller
+									li
+										.checkbox
+											input#checkbox3(type="checkbox")
+											label(for="checkbox3") Blue Wave
+									li
+										.checkbox
+											input#checkbox4(type="checkbox")
+											label(for="checkbox4") Caribe Star
+
+								a.crossbtn(href="#")
+
+							li.filters-item
+								p Vessel Type
+								ul.chekboxes-list
+									li
+										.checkbox
+											input#checkbox1(type="checkbox")
+											label(for="checkbox1") CHEMICAL OIL PRODUCTS
+									li
+										.checkbox
+											input#checkbox2(type="checkbox")
+											label(for="checkbox2") BULK
+									li
+										.checkbox
+											input#checkbox3(type="checkbox")
+											label(for="checkbox3") CRUDE OIL TANKER
+									li
+										.checkbox
+											input#checkbox4(type="checkbox")
+											label(for="checkbox4") LPG
+
+								a.crossbtn(href="#")
+
+							li.filters-item
+								a.crossbtn(href="#")
+								p Wages
+								.slider-holder
+									input#amount4(type='text' readonly)
+									input#amount5(type='text' readonly)
+									.range-holder
+										#slider-range2.slider-range
+
+
+							li.filters-item
+								p Vessel Type
+								ul.chekboxes-list
+									li
+										.checkbox
+											input#checkbox1(type="checkbox")
+											label(for="checkbox1") 4 MONTHSPRODUCTS
+									li
+										.checkbox
+											input#checkbox2(type="checkbox")
+											label(for="checkbox2") 4+/-1 MONTHS
+									li
+										.checkbox
+											input#checkbox3(type="checkbox")
+											label(for="checkbox3") 3 MONTHS/ 3 MONTHS
+									li
+										.checkbox
+											input#checkbox4(type="checkbox")
+											label(for="checkbox4") 6 MONTHS
+
+								a.crossbtn(href="#")
+
+
+					.table-holder.main.inline-el
+						table.main
+							tbody
+								mixin newtr(rank, deadline, vname, vtype, wages, duration)
+									tr
+										td.rank
+											span= rank
+										td.deadline
+											span= deadline
+										td.vname
+											span= vname
+										td.vtype
+											span= vtype
+										td.wages
+											span= wages
+										td.duration
+											span= duration
+											a.button.apply-btn(href="#") Apply
+								+newtr(
+									'MST',
+									'06/06/2016',
+									'A.P. Moeller',
+									'CHEMICAL OIL PRODUCTS',
+									'USD 12500-13650',
+									'4+/-1 MONTHS'
+								)
+								+newtr(
+									'C/O',
+									'ASAP',
+									'Accord Express',
+									'BULK',
+									'DISCUSSIBLE',
+									'4 MONTHS'
+								)
+								+newtr(
+									'3/O',
+									'END JUNE',
+									'African Azalea',
+									'LPG',
+									'USD 8500-8700',
+									'6 MONTHS'
+								)
+								+newtr(
+									'EX BS',
+									'02/07/2016',
+									'African Begonia',
+									'CONT',
+									'USD 14000',
+									'3 MONTHS/ 3 MONTHS'
+								)
+								+newtr(
+									'MST',
+									'MID JUNE',
+									'Atlantic Patroller',
+									'PCC',
+									'USD 12500-13500',
+									'5+/-1 MONTHS'
+								)
+								+newtr(
+									'MST',
+									'06/06/2016',
+									'A.P. Moeller',
+									'CHEMICAL OIL PRODUCTS',
+									'USD 12500-13650',
+									'4+/-1 MONTHS'
+								)
+								+newtr(
+									'C/O',
+									'ASAP',
+									'Accord Express',
+									'BULK',
+									'DISCUSSIBLE',
+									'4 MONTHS'
+								)
+								+newtr(
+									'3/O',
+									'END JUNE',
+									'African Azalea',
+									'LPG',
+									'USD 8500-8700',
+									'6 MONTHS'
+								)
+								+newtr(
+									'EX BS',
+									'02/07/2016',
+									'African Begonia',
+									'CONT',
+									'USD 14000',
+									'3 MONTHS/ 3 MONTHS'
+								)
+								+newtr(
+									'MST',
+									'MID JUNE',
+									'Atlantic Patroller',
+									'PCC',
+									'USD 12500-13500',
+									'5+/-1 MONTHS'
+								)
+								+newtr(
+									'MST',
+									'06/06/2016',
+									'A.P. Moeller',
+									'CHEMICAL OIL PRODUCTS',
+									'USD 12500-13650',
+									'4+/-1 MONTHS'
+								)
+								+newtr(
+									'C/O',
+									'ASAP',
+									'Accord Express',
+									'BULK',
+									'DISCUSSIBLE',
+									'4 MONTHS'
+								)
+								+newtr(
+									'3/O',
+									'END JUNE',
+									'African Azalea',
+									'LPG',
+									'USD 8500-8700',
+									'6 MONTHS'
+								)
+								+newtr(
+									'EX BS',
+									'02/07/2016',
+									'African Begonia',
+									'CONT',
+									'USD 14000',
+									'3 MONTHS/ 3 MONTHS'
+								)
+								+newtr(
+									'MST',
+									'MID JUNE',
+									'Atlantic Patroller',
+									'PCC',
+									'USD 12500-13500',
+									'5+/-1 MONTHS'
+								)
+								+newtr(
+									'MST',
+									'06/06/2016',
+									'A.P. Moeller',
+									'CHEMICAL OIL PRODUCTS',
+									'USD 12500-13650',
+									'4+/-1 MONTHS'
+								)
+								+newtr(
+									'C/O',
+									'ASAP',
+									'Accord Express',
+									'BULK',
+									'DISCUSSIBLE',
+									'4 MONTHS'
+								)
+								+newtr(
+									'3/O',
+									'END JUNE',
+									'African Azalea',
+									'LPG',
+									'USD 8500-8700',
+									'6 MONTHS'
+								)
+								+newtr(
+									'EX BS',
+									'02/07/2016',
+									'African Begonia',
+									'CONT',
+									'USD 14000',
+									'3 MONTHS/ 3 MONTHS'
+								)
+								+newtr(
+									'MST',
+									'MID JUNE',
+									'Atlantic Patroller',
+									'PCC',
+									'USD 12500-13500',
+									'5+/-1 MONTHS'
+								)
+								+newtr(
+									'MST',
+									'06/06/2016',
+									'A.P. Moeller',
+									'CHEMICAL OIL PRODUCTS',
+									'USD 12500-13650',
+									'4+/-1 MONTHS'
+								)
+								+newtr(
+									'C/O',
+									'ASAP',
+									'Accord Express',
+									'BULK',
+									'DISCUSSIBLE',
+									'4 MONTHS'
+								)
+								+newtr(
+									'3/O',
+									'END JUNE',
+									'African Azalea',
+									'LPG',
+									'USD 8500-8700',
+									'6 MONTHS'
+								)
+								+newtr(
+									'EX BS',
+									'02/07/2016',
+									'African Begonia',
+									'CONT',
+									'USD 14000',
+									'3 MONTHS/ 3 MONTHS'
+								)
+								+newtr(
+									'MST',
+									'MID JUNE',
+									'Atlantic Patroller',
+									'PCC',
+									'USD 12500-13500',
+									'5+/-1 MONTHS'
+								)
+								+newtr(
+									'MST',
+									'06/06/2016',
+									'A.P. Moeller',
+									'CHEMICAL OIL PRODUCTS',
+									'USD 12500-13650',
+									'4+/-1 MONTHS'
+								)
+								+newtr(
+									'C/O',
+									'ASAP',
+									'Accord Express',
+									'BULK',
+									'DISCUSSIBLE',
+									'4 MONTHS'
+								)
+								+newtr(
+									'3/O',
+									'END JUNE',
+									'African Azalea',
+									'LPG',
+									'USD 8500-8700',
+									'6 MONTHS'
+								)
+								+newtr(
+									'EX BS',
+									'02/07/2016',
+									'African Begonia',
+									'CONT',
+									'USD 14000',
+									'3 MONTHS/ 3 MONTHS'
+								)
+								+newtr(
+									'MST',
+									'MID JUNE',
+									'Atlantic Patroller',
+									'PCC',
+									'USD 12500-13500',
+									'5+/-1 MONTHS'
+								)
+						ul.pagination
+							li
+								a(href="#") 0
+							li
+								a(href="#") 75
+							li
+								a.active(href="#") 150
+							li
+								a(href="#") 225
+							li
+								a(href="#") 300
+							li
+								a(href="#") 375
+							li
+								a(href="#") 450
+							li
+								a(href="#") 525
+							li
+								a(href="#") 600
+
+
+
+
+
+
+
+
+		include ./partials/footer.jade
+
+
+
+
+
+		include ./partials/scripts.jade

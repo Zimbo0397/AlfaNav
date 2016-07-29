@@ -1,0 +1,576 @@
+- var mainpage = true
+
+//- //mixins//
+mixin aboutitem(header, text)
+	.inline-el
+		h3.ellipsis-text= header
+		p!= text
+
+doctype html
+html(lang='en')
+	head
+		title find-talent-01
+
+		include ./partials/head.jade
+
+	body
+
+		section.top-line(style='background-image: url("img/images/database-bg.png")')
+			.brand-holder
+				img(src="img/images/logo.png", alt="")
+			.main-nav-holder.inline-holder
+				a(href="#" class='callback-holder inline-el')
+					span Call back
+					img(src="img/icons/callback-img.png", alt="")
+				a(href="#" class='menu-holder inline-el')
+					span menu
+					img(src="img/icons/gumb.png", alt="")
+
+			.description-in-top
+				h1 
+					|Alpha Vessel's Data Base
+					
+				img(src="img/icons/waves-icon.png", alt="")
+
+				h2 
+					|1000+ vessels of various types and sizes, partially or fully manned 
+					br
+					by our company.
+		
+
+		section.database
+			.gray-bg
+				.main-container
+					.inline-holder
+						.filters-holder.inline-el
+							.search-holder
+								input(placeholder="Search")
+								a.searchbtn(href="#")
+									i.fa.fa-search
+						.table-holder.inline-el
+							table.head
+								tbody
+									tr
+										td.name-holder
+											span Vessel's Name
+										td.type-holder
+											span Type
+										td.dwt
+											span DWT
+										td.delivered 
+											span Delivered
+										td.manager
+											span Ship Manager	
+										td.country
+											span Country
+			.main-container
+				.inline-holder
+					.filters-holder.main.inline-el
+						ul
+							li.filters-item.open
+								p Vessel Type: 
+								ul.chekboxes-list
+									li
+										.checkbox
+											input#checkbox1(type="checkbox")
+											label(for="checkbox1") Bulk Carriers
+									li
+										.checkbox
+											input#checkbox2(type="checkbox")
+											label(for="checkbox2") Oil Tankers
+									li
+										.checkbox
+											input#checkbox3(type="checkbox")
+											label(for="checkbox3") Refrigerated
+									li
+										.checkbox
+											input#checkbox4(type="checkbox")
+											label(for="checkbox4") Cargo Ships
+									li
+										.checkbox
+											input#checkbox5(type="checkbox")
+											label(for="checkbox5") Livestock Carriers
+									li
+										.checkbox
+											input#checkbox6(type="checkbox")
+											label(for="checkbox6") Lng Carriers
+									li
+										.checkbox
+											input#checkbox7(type="checkbox")
+											label(for="checkbox7") Car Carriers
+									li
+										.checkbox
+											input#checkbox8(type="checkbox")
+											label(for="checkbox8") Container Ships
+									li
+										.checkbox
+											input#checkbox9(type="checkbox")
+											label(for="checkbox9") Dry Cargo Vessels
+									li
+										.checkbox
+											input#checkbox10(type="checkbox")
+											label(for="checkbox10") Heavy Lift Vessels
+									li
+										.checkbox
+											input#checkbox10(type="checkbox")
+											label(for="checkbox10") Tugs
+									li
+										.checkbox
+											input#checkbox11(type="checkbox")
+											label(for="checkbox11") Ro- Ro Vessels
+
+								a.crossbtn(href="#")
+							li.filters-item.open
+								a.crossbtn(href="#")
+								p DWT:
+								.slider-holder
+									input#amount1(type='text' readonly)
+									input#amount2(type='text' readonly)
+									.range-holder
+										#slider-range.slider-range
+							li.filters-item.open 
+								a.crossbtn(href="#")
+								p Delivered: 
+								.slider-holder
+									input#amount3(type='text' readonly)
+									.range-holder
+										#slider-range1.slider-range
+							li.filters-item 
+								p Ship Manager: 
+								ul.chekboxes-list
+									li
+										.checkbox
+											input#checkbox1(type="checkbox")
+											label(for="checkbox1") Bulk Carriers
+									li
+										.checkbox
+											input#checkbox2(type="checkbox")
+											label(for="checkbox2") Oil Tankers
+									li
+										.checkbox
+											input#checkbox3(type="checkbox")
+											label(for="checkbox3") Refrigerated
+									li
+										.checkbox
+											input#checkbox4(type="checkbox")
+											label(for="checkbox4") Cargo Ships
+									li
+										.checkbox
+											input#checkbox5(type="checkbox")
+											label(for="checkbox5") Livestock Carriers
+									li
+										.checkbox
+											input#checkbox6(type="checkbox")
+											label(for="checkbox6") Lng Carriers
+									li
+										.checkbox
+											input#checkbox7(type="checkbox")
+											label(for="checkbox7") Car Carriers
+									li
+										.checkbox
+											input#checkbox8(type="checkbox")
+											label(for="checkbox8") Container Ships
+									li
+										.checkbox
+											input#checkbox9(type="checkbox")
+											label(for="checkbox9") Dry Cargo Vessels
+									li
+										.checkbox
+											input#checkbox10(type="checkbox")
+											label(for="checkbox10") Heavy Lift Vessels
+									li
+										.checkbox
+											input#checkbox10(type="checkbox")
+											label(for="checkbox10") Tugs
+									li
+										.checkbox
+											input#checkbox11(type="checkbox")
+											label(for="checkbox11") Ro- Ro Vessels
+
+								a.crossbtn(href="#")
+							li.filters-item 
+								p Country: 
+								ul.chekboxes-list
+									li
+										.checkbox
+											input#checkbox1(type="checkbox")
+											label(for="checkbox1") Bulk Carriers
+									li
+										.checkbox
+											input#checkbox2(type="checkbox")
+											label(for="checkbox2") Oil Tankers
+									li
+										.checkbox
+											input#checkbox3(type="checkbox")
+											label(for="checkbox3") Refrigerated
+									li
+										.checkbox
+											input#checkbox4(type="checkbox")
+											label(for="checkbox4") Cargo Ships
+									li
+										.checkbox
+											input#checkbox5(type="checkbox")
+											label(for="checkbox5") Livestock Carriers
+									li
+										.checkbox
+											input#checkbox6(type="checkbox")
+											label(for="checkbox6") Lng Carriers
+									li
+										.checkbox
+											input#checkbox7(type="checkbox")
+											label(for="checkbox7") Car Carriers
+									li
+										.checkbox
+											input#checkbox8(type="checkbox")
+											label(for="checkbox8") Container Ships
+									li
+										.checkbox
+											input#checkbox9(type="checkbox")
+											label(for="checkbox9") Dry Cargo Vessels
+									li
+										.checkbox
+											input#checkbox10(type="checkbox")
+											label(for="checkbox10") Heavy Lift Vessels
+									li
+										.checkbox
+											input#checkbox10(type="checkbox")
+											label(for="checkbox10") Tugs
+									li
+										.checkbox
+											input#checkbox11(type="checkbox")
+											label(for="checkbox11") Ro- Ro Vessels
+
+								a.crossbtn(href="#")
+
+
+					.table-holder.main.inline-el
+						table.main
+							tbody
+								mixin newtr(name, type, dwt, deliver, ship, country)
+									tr
+										td.name-holder
+											span= name
+										td.type-holder
+											span= type
+										td.dwt
+											span= dwt
+										td.delivered 
+											span= deliver
+										td.manager
+											span= ship
+										td.country
+											span= country
+								+newtr(
+									'A.P. Moeller',
+									'Cont',
+									'104750',
+									'2000',
+									'A. P. Moller Maersk, Denmark',
+									'A. P. Moller Maersk, Denmark'
+								)
+								+newtr(
+									'Accord Express',
+									'Tank',
+									'19991',
+									'1985',
+									'Mms Shipmanagement Inc., Usa',
+									'Mms Shipmanagement Inc., Usa'
+								)
+								+newtr(
+									'African Begonia',
+									'Bulk',
+									'8986',
+									'1978',
+									'Dockendale Shipping Co Lt, Bahamas',
+									'Dockendale Shipping Co Lt, Bahamas'
+								)
+								+newtr(
+									'African Camellia',
+									'Bulk',
+									'8992',
+									'1979',
+									'Tsakos Shipping & Trading, Greece',
+									'Tsakos Shipping & Trading, Greece'
+								)
+								+newtr(
+									'African Dahlia',
+									'D/C',
+									'8996',
+									'1980',
+									'Maersk Ship Management B., Netherlands',
+									'Maersk Ship Management B., Netherlands'
+								)
+								+newtr(
+									'African Eagle',
+									'Ch/Tank',
+									'27000',
+									'1980',
+									'Wallem Shipmanagement Pvt, India',
+									'Wallem Shipmanagement Pvt, India'
+								)
+								+newtr(
+									'A.P. Moeller',
+									'Cont',
+									'104750',
+									'2000',
+									'A. P. Moller Maersk, Denmark',
+									'A. P. Moller Maersk, Denmark'
+								)
+								+newtr(
+									'Accord Express',
+									'Tank',
+									'19991',
+									'1985',
+									'Mms Shipmanagement Inc., Usa',
+									'Mms Shipmanagement Inc., Usa'
+								)
+								+newtr(
+									'African Begonia',
+									'Bulk',
+									'8986',
+									'1978',
+									'Dockendale Shipping Co Lt, Bahamas',
+									'Dockendale Shipping Co Lt, Bahamas'
+								)
+								+newtr(
+									'African Camellia',
+									'Bulk',
+									'8992',
+									'1979',
+									'Tsakos Shipping & Trading, Greece',
+									'Tsakos Shipping & Trading, Greece'
+								)
+								+newtr(
+									'African Dahlia',
+									'D/C',
+									'8996',
+									'1980',
+									'Maersk Ship Management B., Netherlands',
+									'Maersk Ship Management B., Netherlands'
+								)
+								+newtr(
+									'African Eagle',
+									'Ch/Tank',
+									'27000',
+									'1980',
+									'Wallem Shipmanagement Pvt, India',
+									'Wallem Shipmanagement Pvt, India'
+								)
+								+newtr(
+									'A.P. Moeller',
+									'Cont',
+									'104750',
+									'2000',
+									'A. P. Moller Maersk, Denmark',
+									'A. P. Moller Maersk, Denmark'
+								)
+								+newtr(
+									'Accord Express',
+									'Tank',
+									'19991',
+									'1985',
+									'Mms Shipmanagement Inc., Usa',
+									'Mms Shipmanagement Inc., Usa'
+								)
+								+newtr(
+									'African Begonia',
+									'Bulk',
+									'8986',
+									'1978',
+									'Dockendale Shipping Co Lt, Bahamas',
+									'Dockendale Shipping Co Lt, Bahamas'
+								)
+								+newtr(
+									'African Camellia',
+									'Bulk',
+									'8992',
+									'1979',
+									'Tsakos Shipping & Trading, Greece',
+									'Tsakos Shipping & Trading, Greece'
+								)
+								+newtr(
+									'African Dahlia',
+									'D/C',
+									'8996',
+									'1980',
+									'Maersk Ship Management B., Netherlands',
+									'Maersk Ship Management B., Netherlands'
+								)
+								+newtr(
+									'African Eagle',
+									'Ch/Tank',
+									'27000',
+									'1980',
+									'Wallem Shipmanagement Pvt, India',
+									'Wallem Shipmanagement Pvt, India'
+								)
+								+newtr(
+									'A.P. Moeller',
+									'Cont',
+									'104750',
+									'2000',
+									'A. P. Moller Maersk, Denmark',
+									'A. P. Moller Maersk, Denmark'
+								)
+								+newtr(
+									'Accord Express',
+									'Tank',
+									'19991',
+									'1985',
+									'Mms Shipmanagement Inc., Usa',
+									'Mms Shipmanagement Inc., Usa'
+								)
+								+newtr(
+									'African Begonia',
+									'Bulk',
+									'8986',
+									'1978',
+									'Dockendale Shipping Co Lt, Bahamas',
+									'Dockendale Shipping Co Lt, Bahamas'
+								)
+								+newtr(
+									'African Camellia',
+									'Bulk',
+									'8992',
+									'1979',
+									'Tsakos Shipping & Trading, Greece',
+									'Tsakos Shipping & Trading, Greece'
+								)
+								+newtr(
+									'African Dahlia',
+									'D/C',
+									'8996',
+									'1980',
+									'Maersk Ship Management B., Netherlands',
+									'Maersk Ship Management B., Netherlands'
+								)
+								+newtr(
+									'African Eagle',
+									'Ch/Tank',
+									'27000',
+									'1980',
+									'Wallem Shipmanagement Pvt, India',
+									'Wallem Shipmanagement Pvt, India'
+								)
+								+newtr(
+									'A.P. Moeller',
+									'Cont',
+									'104750',
+									'2000',
+									'A. P. Moller Maersk, Denmark',
+									'A. P. Moller Maersk, Denmark'
+								)
+								+newtr(
+									'Accord Express',
+									'Tank',
+									'19991',
+									'1985',
+									'Mms Shipmanagement Inc., Usa',
+									'Mms Shipmanagement Inc., Usa'
+								)
+								+newtr(
+									'African Begonia',
+									'Bulk',
+									'8986',
+									'1978',
+									'Dockendale Shipping Co Lt, Bahamas',
+									'Dockendale Shipping Co Lt, Bahamas'
+								)
+								+newtr(
+									'African Camellia',
+									'Bulk',
+									'8992',
+									'1979',
+									'Tsakos Shipping & Trading, Greece',
+									'Tsakos Shipping & Trading, Greece'
+								)
+								+newtr(
+									'African Dahlia',
+									'D/C',
+									'8996',
+									'1980',
+									'Maersk Ship Management B., Netherlands',
+									'Maersk Ship Management B., Netherlands'
+								)
+								+newtr(
+									'African Eagle',
+									'Ch/Tank',
+									'27000',
+									'1980',
+									'Wallem Shipmanagement Pvt, India',
+									'Wallem Shipmanagement Pvt, India'
+								)
+								+newtr(
+									'A.P. Moeller',
+									'Cont',
+									'104750',
+									'2000',
+									'A. P. Moller Maersk, Denmark',
+									'A. P. Moller Maersk, Denmark'
+								)
+								+newtr(
+									'Accord Express',
+									'Tank',
+									'19991',
+									'1985',
+									'Mms Shipmanagement Inc., Usa',
+									'Mms Shipmanagement Inc., Usa'
+								)
+								+newtr(
+									'African Begonia',
+									'Bulk',
+									'8986',
+									'1978',
+									'Dockendale Shipping Co Lt, Bahamas',
+									'Dockendale Shipping Co Lt, Bahamas'
+								)
+								+newtr(
+									'African Camellia',
+									'Bulk',
+									'8992',
+									'1979',
+									'Tsakos Shipping & Trading, Greece',
+									'Tsakos Shipping & Trading, Greece'
+								)
+								+newtr(
+									'African Dahlia',
+									'D/C',
+									'8996',
+									'1980',
+									'Maersk Ship Management B., Netherlands',
+									'Maersk Ship Management B., Netherlands'
+								)
+						ul.pagination
+							li
+								a(href="#") 0
+							li
+								a(href="#") 75
+							li
+								a.active(href="#") 150
+							li
+								a(href="#") 225
+							li
+								a(href="#") 300
+							li
+								a(href="#") 375
+							li
+								a(href="#") 450
+							li
+								a(href="#") 525
+							li
+								a(href="#") 600
+
+
+
+
+
+
+
+
+		include ./partials/footer.jade
+
+
+
+
+
+		include ./partials/scripts.jade

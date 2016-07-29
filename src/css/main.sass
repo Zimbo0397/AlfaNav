@@ -54,6 +54,39 @@ h4
 		line-height: 60px
 h4
 	font-size: 30px
+ul 
+	padding-left: 0
+	li
+		list-style: none
+.clearfix 
+    zoom: 1
+
+.clearfix:before,
+.clearfix:after 
+    content: ""
+    display: table
+
+.clearfix:after 
+    clear: both
+
+ul.pagination
+	text-align: center
+	margin-top: 30px !important
+	margin-bottom: 30px	!important
+	li
+		display: inline-block
+		a
+			display: inline-block
+			font-size: 13px
+			color: #81bb41
+			height: 25px
+			padding-left: 9px
+			padding-right: 9px
+			padding-top: 6px
+			&.active
+				background: #81bb41
+				color: #fff
+
 
 .gray-bg
 	background: #fafafa
@@ -97,11 +130,19 @@ h4
 	max-width: 1555px
 	width: 100%
 	margin: 0 auto
+	position: relative
 	@media (max-width: $medium)
 		padding-left: 15px	
 		padding-right: 15px
 .btn-holder
 	text-align: center
+	&.white
+		.button
+			border-color: #fff
+			color: #fff
+			&:hover
+				border-color: #81bb41
+
 .button
 	color: #81bb41
 	font-size: 14px
@@ -115,11 +156,15 @@ h4
 		color: #fff
 		background: #81bb41
 		transition: background, color .2s
-.secion-icon
+.section-icon
 	text-align: center
-	margin-bottom: 85px
+	margin-bottom: 120px
 	img
 		display: inline-block
+
+
+
+
 
 
 
@@ -184,7 +229,7 @@ h4
 		color: white
 		font-family: GenplanFree
 		font-size: 50px
-		line-height: 37px
+		line-height: 50px
 		font-weight: normal
 		margin-bottom: 21px
 		&.index																																	
@@ -221,8 +266,13 @@ h4
 			line-height: 24px
 			margin-top: 0
 			margin-bottom: 24px
+			span.green	
+				color: #81bb41
+				font-weight: 700
 	&.type2
 		padding-bottom: 15px
+	&.story
+		background: #f6f6f6
 
 .reviews	
 	height: 900px
@@ -268,8 +318,12 @@ h4
 	.table-holder
 		padding-left: 154px
 		padding-right: 154px
+		max-height: 815px
+		overflow: hidden
+		position: relative
 		table
 			width: 100%
+			border-collapse: collapse
 			&.hr
 				tr
 					td
@@ -300,15 +354,27 @@ h4
 			tr
 
 				&:nth-child(odd)
-					td
+					td,th
 						border-bottom: 2px solid #ebebeb
 				&:nth-child(even)
-					td
+					td,th
 						border-bottom: 1px solid #ebebeb
-	&.gradient
-		// background-color: hsla(0,0%,93%,0)
-		// background: @include filter-gradient(#ededed, #ffffff, vertical)
-		// background: @include background-image(linear-gradient(top, hsla(0,0%,93%,0) 0%, hsla(0,0%,93%,0) 0%, hsla(0,0%,96%,0.54) 54%, hsla(0,0%,100%,1) 100%))
+		&.gradient
+			&:after
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 0
+				height: 100px
+				width: 100%
+				background: rgba(255,255,255,0)
+				background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 94%)
+				background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(0%, rgba(255,255,255,0)), color-stop(81%, rgba(255,255,255,1)), color-stop(94%, rgba(255,255,255,1)))
+				background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 94%)
+				background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 94%)
+				background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 94%)
+				background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 94%)
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 )
 	.btn-holder
 		margin-top: 40px
 		.button
@@ -355,8 +421,8 @@ h4
 		margin-top: 0
 		margin-bottom: 21px
 	.brand-holder
-		top: 115px
-		left: 176px
+		top: 3px
+		left: -6px
 		img
 			width: 103px
 	.gotquestion
@@ -399,7 +465,7 @@ h4
 
 	.foot-socials
 		text-align: center
-		margin-top: 75px
+		margin-top: 62px
 		margin-bottom: 37px
 		ul
 			padding-left: 0
@@ -429,10 +495,19 @@ h4
 .info-block
 	padding-top: 63px
 	position: relative
-	
+	.bg-1-holder
+		background: url('../img/images/info-bg-1.png')
+		.bg-2-holder
+			background: url('../img/images/info-bg-2.png') no-repeat 100% 100%
+			.bg-3-holder
+				background: url('../img/images/info-bg-3.png') no-repeat 100% 100%
+				.bg-4-holder
+					background: url('../img/images/info-bg-4.png') no-repeat 100% 100%
+	.content-holder
+		padding-bottom: 248px
 	h3
 		max-width: 1140px
-		padding-bottom: 34px
+		padding-bottom: 42px
 		position: relative
 		margin-bottom: 10px
 		&:after
@@ -450,6 +525,7 @@ h4
 		line-height: 20px
 		.btn-holder
 			text-align: left
+			margin-top: 45px
 			.button
 				height: 50px
 				padding-left: 29px
@@ -473,3 +549,1320 @@ h4
 				line-height: 20px
 				text-transform: uppercase
 				text-align: center
+
+.crew
+	.crew-bg
+		padding-top: 55px
+		padding-bottom: 235px
+		background: url(../img/images/crew-bg.jpg) no-repeat 50%
+		background-size: cover
+
+	.crew-title,
+	.crew-description
+		width: 50%
+	.crew-title
+		padding-right: 170px
+		h3
+			margin-top: 54px
+		.btn-holder
+			text-align: right
+			max-width: 180px
+			.button
+				width: 185px
+				height: 50px
+				padding-top: 16px
+				text-align: center
+	.crew-description
+		padding-left: 314px
+		h5
+			color: #48576a
+			font-size: 16px
+			text-transform: uppercase
+			.light
+				font-weight: 400
+		.soc-holder
+			ul
+				padding-left: 0
+				li
+					a
+						display: inline-block
+						height: 50px
+						width: 50px
+						border-radius: 50%
+						border: 1px solid #48576a
+						text-align: center
+						padding-top: 15px
+						font-size: 19px
+						color: #48576a
+						margin-right: 9px
+		.text-holder
+			margin-top: 10px
+			color: #48576a
+			font-size: 14px
+			line-height: 20px
+
+	.crewitemlist
+		$gap: 4.0%
+		margin-left: -$gap / -2
+		margin-right: -$gap / -2
+		margin-top: -$gap / -2
+		position: relative
+		top: -24px
+		.crewitem
+			display: inline-block
+			text-align: center
+			width: 235px
+			margin: $gap / 2
+			.image-holder
+				border-radius: 50%
+				background: #ccc
+				height: 200px
+				width: 200px
+				display: inline-block
+				img
+					-webkit-filter: grayscale(1)
+				.social-plate
+					position: absolute
+					height: 100%
+					width: 100%
+					top: 0
+					right: -110%
+					background: #8dc254
+					opacity: 0.9
+					border-radius: 50%
+					transition: right .2s
+					.soc-holder
+						display: inline-block
+						position: absolute
+						transform: translateX(-50%) translateY(-50%)
+						left: 50%
+						top: 50%
+						padding-left: 0
+						width: 125px
+						li
+							display: inline-block
+							height: 50px
+							width: 50px
+							border-radius: 50%
+							border: 1px solid #fff
+							position: relative
+							font-size: 26px
+							text-align: center
+							color: #fff
+							margin: 6px
+							.socitem
+								display: inline-block
+								position: absolute
+								top: 50%
+								left: 50%
+								transform: translateX(-50%) translateY(-50%)
+			.name-holder
+				h6,
+				p
+					color: #48576a
+					font-size: 14px
+					text-transform: uppercase
+				h6
+					margin-top: 15px
+					margin-bottom: 3px
+				p
+					font-weight: 400
+					margin-top: 0
+			&:hover
+				.social-plate
+					right: 0px
+					transition: right .2s
+
+.partners
+	padding-top: 37px
+	padding-bottom: 70px
+    background: url(../img/images/serv-bg.svg) no-repeat 100% 100%
+	h4
+		color: #48576a
+		font-size: 24px
+		font-weight: 400
+		text-transform: uppercase
+	.cards-holder
+		$gap: 8.1%
+		margin-left: $gap / -2
+		margin-right: $gap / -2
+		.card-item
+			padding: $gap / 2
+			padding-top: 40px
+			width: 283px
+			width: 25%
+			display: inline-block
+			position: relative
+			.image-holder
+				height: 100px
+				width: 100px
+				border-radius: 50%
+				background: #eaebec
+			.name-holder
+				padding-left: 20px
+				h6
+					color: #48576a
+					font-size: 14px
+					font-weight: 700
+					margin-bottom: 0
+					text-transform: uppercase
+				p
+					margin-top: 3px
+					color: #48576a
+					font-size: 14px
+			.text-holder
+				color: #48576a
+				font-size: 13px
+				font-weight: 400
+				line-height: 20px
+				margin-top: 17px
+				max-height: 320px
+				padding-bottom: 20px
+				overflow: hidden
+				position: relative
+				z-index: 2
+				&:after
+					content: ''
+					position: absolute
+					width: 44px
+					height: 4px
+					background: url('../img/icons/green-dots.png')
+					left: 50%
+					bottom: 10px
+					transform: translateX(-50%)
+				&:before
+					content: ''
+					position: absolute
+					width: 100%
+					height: 100px
+					bottom: 0
+					left: 0
+					#f6f6f6
+					background: rgba(246,246,246,0)
+					background: -moz-linear-gradient(top, rgba(246,246,246,0) 0%, rgba(246,246,246,0) 0%, rgba(246,246,246,1) 81%, rgba(246,246,246,1) 94%)
+					background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(246,246,246,0)), color-stop(0%, rgba(246,246,246,0)), color-stop(81%, rgba(246,246,246,1)), color-stop(94%, rgba(246,246,246,1)))
+					background: -webkit-linear-gradient(top, rgba(246,246,246,0) 0%, rgba(246,246,246,0) 0%, rgba(246,246,246,1) 81%, rgba(246,246,246,1) 94%)
+					background: -o-linear-gradient(top, rgba(246,246,246,0) 0%, rgba(246,246,246,0) 0%, rgba(246,246,246,1) 81%, rgba(246,246,246,1) 94%)
+					background: -ms-linear-gradient(top, rgba(246,246,246,0) 0%, rgba(246,246,246,0) 0%, rgba(246,246,246,1) 81%, rgba(246,246,246,1) 94%)
+					background: linear-gradient(to bottom, rgba(246,246,246,0) 0%, rgba(246,246,246,0) 0%, rgba(246,246,246,1) 81%, rgba(246,246,246,1) 94%)
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 )
+			.backplate
+				padding: $gap
+				padding-top: 40px
+				position: absolute
+				top: -20px
+				left: 0
+				width: 100%
+				background: #fff
+				-moz-box-shadow: 0px 0px 22px 1px rgba(0,0,0,0.75)
+				box-shadow: 0 2px 20px rgba(0, 0, 0, 0.07)
+				z-index: 0
+				opacity: 0
+				.image-holder
+					border-radius: 0
+			&:hover
+				.backplate
+					z-index: 5
+					opacity: 1
+					transition: z-index, opacity .2s
+					top: 0px
+					.text-holder
+						overflow: inherit
+						height: auto
+						max-height: 100%
+						&:before
+							display: none
+						&:after
+							display: none
+	.btn-holder
+		.button
+			width: 200px
+			height: 50px
+			padding-top: 15px
+
+
+.followus
+	padding-top: 64px
+	padding-bottom: 70px
+	.btn-holder
+		.button
+			width: 260px
+			height: 50px
+			text-align: center
+			padding-top: 15px
+	.float-el
+		float: left
+		width: 100%
+	.facebook-holder
+		max-width: 951px
+		.column
+			width: 50%
+			padding-right: 20px
+			.post-item
+				padding-bottom: 28px
+				margin-bottom: 18px
+				position: relative
+				&:after
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 0
+					height: 2px
+					background: #e2e2e2
+					width: 100%
+				.f-massage
+					padding-left: 62px
+					padding-top: 18px
+					position: relative
+					.icon-holder
+						position: absolute
+						left: 1px
+						top: 20px
+					h6
+						margin-top: 0
+						margin-bottom: 0
+						color: #48576a
+						font-size: 13px
+						text-transform: uppercase
+					p
+						color: #48576a
+						font-size: 13px
+						line-height: 20px
+						margin-top: 13px
+						max-height: 157px
+						overflow: hidden
+					.nav-panel
+						a
+							position: relative
+							display: inline-block
+							padding-left: 20px
+							img
+								position: absolute
+								top: 1px
+								left: -1px
+						.like
+							padding-left: 20px
+							margin-right: 19px
+						.comment
+							margin-right: 9px
+						.forward
+							img
+								top: 4px
+		.btn-holder
+			text-align: left
+
+	.twitt-holder
+		max-width: 512px
+		.btn-holder
+			text-align: left
+		.twittitem
+			position: relative
+			padding-left: 60px
+			padding-top: 1px
+			padding-bottom: 21px
+			margin-bottom: 32px
+			&:after
+				content: ''
+				position: absolute
+				left: 0
+				bottom: 0
+				height: 2px
+				width: 100%
+				background: #e2e2e2
+			h6
+				margin-top: 0
+				margin-bottom: 0
+				color: #48576a
+				font-size: 13px
+				text-transform: uppercase
+			p
+				color: #48576a
+				font-size: 13px
+				font-weight: 400
+				line-height: 20px
+				margin-top: 14px
+				max-height: 36px
+				overflow: hidden
+			.icon-holder
+				position: absolute
+				left: 0
+				top: 4px
+			.nav-panel
+				a
+					display: inline-block
+					position: relative
+					top: -3px
+					right: -4px
+					margin-right: 28px
+				.refresh
+					top: -3px
+				.like
+					top: -2px
+					left: 1px
+
+
+.ourbusiness
+	background: url('../img/images/business-bg.jpg') no-repeat
+	background-size: cover
+	padding-top: 64px
+	padding-bottom: 95px
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		height: 100px
+		width: 100px
+		background: url('../img/icons/helm-icon.png')
+		bottom: 0
+		left: 0
+
+	.text-holder
+		max-width: 905px
+		margin: 0 auto
+		text-align: center
+		margin-top: 79px
+		p
+			color: #48576a
+			line-height: 24px
+			margin-bottom: 28px
+		b
+			color: #48576a
+			font-size: 18px
+	.counters
+		padding-top: 26px
+		.counter-holder
+			width: 50%
+			padding-left: 39px
+			.number
+				text-align: center
+				width: 200px
+				span
+					color: #81bb41
+					font-size: 80px
+					line-height: 70px
+					font-weight: 700
+				p
+					color: #48576a
+					font-size: 16px
+					text-transform: uppercase
+					margin-top: 10px
+			.description
+				color: #48576a
+				font-size: 18px
+				line-height: 24px
+				max-width: 290px
+				max-width: 362px
+				padding-left: 73px
+	.btn-holder
+		margin-top: 46px
+		.button
+			width: 300px
+			height: 50px
+			margin-left: 9px
+			margin-right: 9px
+			font-size: 18px
+			text-transform: uppercase
+			padding-top: 14px
+
+.whyalfanav
+	.gray-strip
+		height: 80px
+		background-color: #f6f6f6
+		text-align: right
+		padding-top: 31px
+		.hotvac
+			margin-right: 227px
+			span
+				color: #48576a
+				font-size: 18px
+				font-weight: 700
+				text-transform: uppercase
+		.allurl
+			margin-right: 34px
+			a
+				color: #81bb41
+				font-size: 14px
+				text-transform: uppercase
+	.description-part
+		width: 100%
+		max-width: 945px
+		padding-right: 40px
+		h3
+			margin-top: 58px
+			margin-bottom: 34px
+		p
+			color: #48576a
+			font-size: 24px
+			line-height: 30px
+			max-width: 801px
+			padding-right: 50px
+		ul
+			margin-top: 29px
+			li
+				color: #48576a
+				font-size: 14px
+				margin-bottom: 24px
+				padding-left: 31px
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					top: -4px
+					left: -5px
+					height: 22px
+					width: 22px
+					background: url('../img/icons/list-sucs-icon.png')
+	.slider-holder
+		width: 100%
+		max-width: 600px
+		.vacitem
+			padding-left: 59px
+			position: relative
+			padding-bottom: 20px
+			margin-bottom: 15px
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 18px
+				height: 42px
+				width: 42px
+				background: url('../img/icons/mini-helm-icon.png') 50% 50%
+			&:after
+				content: ''
+				position: absolute
+				left: 0
+				bottom: 0
+				height: 5px
+				background: #f5f6f7
+				width: 100%
+
+			table
+				width: 281px
+				td
+					color: #48576a
+					font-size: 13px
+					font-weight: 400
+					&:first-child
+						font-weight: 500
+						width: 147px
+			.button
+				position: absolute
+				right: 25px
+				top: 50%
+				text-align: center
+				transform: translateY(-75%)
+				width: 100px
+				height: 40px
+			&:hover
+				&:before
+					background: url('../img/icons/mini-helm-icon-active.png') 50% 50%
+					transition: all .2s
+				.button
+					color: #fff
+					background: #81bb41
+					transition: background, color .2s
+.slider-holder
+	.bx-wrapper
+		max-width: 100%
+		box-shadow: none
+		border: none
+		padding-bottom: 25px
+		margin-bottom: 31px
+		.bx-pager
+			height: 80px
+			padding-top: 26px
+			background: #fafafa
+			&.bx-default-pager 
+				a
+					height: 9px
+					width: 9px
+					border: 1px solid #619b42
+					background: transparent
+					&.active
+						background: #619b42
+					&:hover
+						background: #619b42
+			
+		.bx-prev,
+		.bx-next
+			display: none
+
+
+
+.careers-form
+	padding-top: 47px
+	padding-bottom: 235px
+	p
+		color: #48576a
+		font-size: 16px
+		font-weight: 400
+		line-height: 24px
+		margin-bottom: 25px
+	.text-holder
+		margin-bottom: 162px
+	.textarea-holder
+		padding: 9px
+		label
+			color: #48576a
+			font-size: 14px
+			font-weight: 700
+			text-transform: uppercase
+		textarea
+			width: 100%
+			resize: none
+			border: 1px solid #eceef0
+			height: 130px
+			margin-top: 8px
+	.form-holder
+		max-width: 1243px
+		margin: 0 auto
+		.form-part
+			width: 50%
+			padding-left: 10px
+			padding-right: 10px
+			ul 
+				li 
+					border-bottom: 1px solid #dadde1
+					margin-bottom: 36px
+					padding-bottom: 5px
+					label,
+					input,
+					select
+						vertical-align: bottom
+						background: transparent
+						border: none
+						outline: none
+						color: #333
+						font-family: GothamPro
+						font-size: 14px
+						font-weight: 400
+					.input-item
+						padding-left: 190px
+						position: relative
+						label
+							position: absolute
+							left: 0
+							color: #48576a
+							font-size: 14px
+							text-transform: uppercase
+						select
+							width: 100%
+							position: relative
+							appearance: none
+						input
+							border: none
+							color: #333
+							font-family: GothamPro
+							font-size: 14px
+							font-weight: 400
+							width: 100%
+							&::-webkit-input-placeholder
+								color: #333
+								font-family: GothamPro
+								font-size: 14px
+								font-weight: 400
+							&::-moz-placeholder
+								color: #333
+								font-family: GothamPro
+								font-size: 14px
+								font-weight: 400
+							&:-moz-placeholder
+								color: #333
+								font-family: GothamPro
+								font-size: 14px
+								font-weight: 400
+							&:-ms-input-placeholder
+								color: #333
+								font-family: GothamPro
+								font-size: 14px
+								font-weight: 400
+					.captcha
+						height: 30px
+						position: relative
+						label
+							top: 13px
+						.image-holder
+							width: 220px
+							height: 42px
+							top: -7px
+							left: -84px
+						.ref-button
+							position: absolute
+							right: 0
+							top: 6px
+						input
+							top: 12px
+							position: relative
+					.selectable
+						background: url("../img/icons/select-apper.png") no-repeat 97% 33%
+					.browse
+						height: 18px
+						position: relative
+						top: -10px
+						span
+							color: #48576a
+							font-size: 14px
+							text-transform: uppercase
+							vertical-align: bottom
+							position: relative
+							top: -7px
+						button
+							width: 110px
+							height: 33px
+							background-color: #48576a
+							border: none
+							color: white
+							font-family: GothamPro
+							font-size: 12px
+							font-weight: 500
+							text-transform: uppercase
+							margin-right: 13px
+							cursor: pointer
+							vertical-align: bottom
+		.btn-holder
+			text-align: left
+			margin-top: 33px
+			padding-left: 10px
+			.button
+				cursor: pointer
+				background: transparent
+				width: 200px
+				height: 50px
+				font-family: GothamPro
+				&:hover
+					background: #81bb41
+
+.offices-map
+	background: #f6f6f6
+	padding-top: 71px
+	.map-holder
+		padding: 9px
+		max-width: 1243px
+		margin: 0 auto
+		.description-part
+			width: 50%
+			ul
+				margin-top: 0
+				li
+					padding-right: 126px
+					position: relative
+					margin-bottom: 39px
+					.office-type
+						padding-top: 11px
+						position: relative
+						h6
+							color: #48576a
+							font-size: 14px
+							text-transform: uppercase
+							margin-top: 0
+							margin-bottom: 8px
+						p
+							color: #48576a
+							font-size: 14px
+							line-height: 20px
+							margin-top: 0
+						&:before
+							content: ''
+							height: 3px
+							width: 100%
+							position: absolute
+							left: 0
+							top: 0
+							background: #e3e3e3
+					.city
+						color: #2d4170
+						font-weight: 700
+						text-transform: uppercase
+						position: absolute
+						right: -4px
+						top: -2px
+						width: 120px
+						&:hover
+							color: #81bb41
+						&.active
+							color: #81bb41
+
+		.map-part
+			width: 50%
+
+.database
+	.gray-bg
+		    border: 1px solid #e2e2e2
+	.filters-holder
+		max-width: 297px
+		width: 100%
+		border-left: 1px solid #f4f4f4
+		border-right: 1px solid #f4f4f4
+		&.main
+			height: 1570px
+		.search-holder
+			height: 49px
+			background: #fff
+			padding-left: 29px
+			padding-top: 13px
+			padding-right: 50px
+			position: relative
+			input
+				border: none
+				background: transparent
+				outline: none
+				color: #48576a
+				font-family: GothamPro
+				font-size: 14px
+				text-transform: uppercase
+			.searchbtn
+				display: inline-block
+				height: 50px
+				width: 50px
+				background: #81bd41
+				position: absolute
+				top: -1px
+				right: -1px
+				color: #fff
+				font-size: 18px
+				padding-top: 14px
+				padding-left: 17px
+		.filters-item
+			padding: 10px 12px 20px 35px
+			position: relative
+			border-bottom: 1px solid #e2e2e2
+			max-height: 39px
+			overflow: hidden
+			transition: max-height .2s
+			&.open
+				max-height: 1000px
+				transition: max-height .2s
+				.crossbtn
+					transform: rotate(45deg)
+					transition: transform .2s
+
+		p
+			color: #48576a
+			font-size: 13px
+			font-weight: 500
+			text-transform: uppercase
+			margin: 0
+			margin-bottom: 24px
+		.chekboxes-list
+			li
+				margin-bottom: 7px
+				label
+					color: #48576a
+					font-size: 13px
+					vertical-align: middle
+				input
+					vertical-align: middle
+		.crossbtn
+			position: absolute
+			right: 11px
+			top: 9px
+			height: 17px
+			width: 17px
+			background: url("../img/icons/filters-cross.png") 50% 50%
+			transform: rotate(0deg)
+			transition: transform .2s
+		.slider-holder
+			width: 270px
+			position: relative
+			left: -19px
+			top: -3px
+			margin-bottom: 10px
+			input
+				width: 122px
+				height: 30px
+				border: 1px solid #e2e2e2
+				border-radius: 15px
+				text-align: center
+				padding-left: 10px
+				padding-right: 10px
+				color: #48576a
+				font-family: GothamPro
+				font-size: 12px
+				outline: none
+				margin-left: 5px
+			.ui-slider-horizontal
+				height: 3px
+				background: #e2e2e2
+				border: none
+			.ui-widget-header
+				background: #81bd41
+				height: 3px
+			.ui-state-default
+				width: 12px
+				height: 20px
+				background: #619b42
+				border-radius: 6px
+				outline: none
+				top: -9px
+				cursor: pointer
+			.slider-range
+				margin-top: 19px
+			.range-holder
+				padding-left: 6px
+				padding-right: 14px
+
+	ul
+		margin: 0
+
+	.table-holder
+		max-width: 1258px
+		width: 100%
+		padding-left: 20px
+		table
+			width: 100%
+			.name-holder
+				width: 21.7%
+				padding-left: 22px
+			.type-holder
+				width: 5.96%
+			.dwt
+			 	width: 6.3%
+			 	text-align: right
+			.delivered 
+				width: 17.8%
+				text-align: center
+				padding-right: 39px
+			.manager
+				width: 25.4%
+			.country
+				width: 24.44%
+
+			.rank
+				width: 8.86%
+				padding-left: 20px
+				text-transform: uppercase
+			.deadline
+				width: 8.85%
+				text-align: right
+				text-transform: uppercase
+			.vname
+				width: 22.3%
+				padding-left: 77px
+				font-weight: 500
+				text-transform: uppercase
+			.vtype
+				width: 16.76%
+				text-transform: uppercase
+			.wages
+				width: 12.1%
+				text-align: right
+				text-transform: uppercase
+			.duration
+				width: 31.5%
+				text-align: left
+				padding-left: 72px
+				position: relative
+				text-transform: uppercase
+				.apply-btn
+					position: absolute
+					width: 66px
+					height: 21px
+					font-size: 12px
+					font-weight: 500
+					text-transform: uppercase
+					transform: translateY(-50%)
+					top: 50%
+					right: 18px
+					padding-top: 2px
+		.head
+			td
+				color: #48576a
+				font-size: 13px
+				font-weight: 500
+				text-transform: uppercase
+				padding-bottom: 15px
+				padding-top: 15px
+		.main
+			border-collapse: collapse
+			border-bottom: 1px solid #e2e2e2
+			th
+				border-bottom: 1px solid #e2e2e2
+			td
+				border-bottom: 1px solid #e2e2e2
+				height: 39px
+				color: #48576a
+				font-size: 12px
+			tr
+				&:hover
+					background: #f6f6f6
+
+.news
+	.border-el
+		border: 1px solid #fff
+		width: 100%
+		height: 120px
+		position: absolute
+		left: 0
+		top: -90px
+		padding: 22px
+		.white-bg
+			background: #fff
+			width: 100%
+			height: 100px
+	.news-list
+		margin-top: 0
+		.news-item
+			padding-left: 209px
+			position: relative
+			height: 239px
+			.date-holder
+				color: #48576a
+				font-size: 12px
+				line-height: 20px
+				text-transform: uppercase
+				text-align: right
+				display: inline-block
+				position: absolute
+				top: 33px
+				left: 131px
+				.number
+					font-size: 36px
+					font-weight: 700
+					margin-bottom: 8px
+
+		.image-holder
+			width: 33.85%
+			height: 100%
+			filter: grayscale(1)
+			transition: filter .2s
+		.text-holder
+			width: 55.1%
+			padding-left: 70px
+			h4
+				color: #48576a
+				font-family: GothamPro
+				font-size: 18px
+				line-height: 24px
+				text-transform: uppercase
+				letter-spacing: normal
+				text-align: right
+				margin-top: 26px
+				margin-bottom: 15px
+				transition: color .2s
+			p
+				color: #48576a
+				font-size: 13px
+				line-height: 24px
+				text-align: right
+				height: 100px
+				overflow: hidden
+	.news-list
+		a
+			transition: background .2s
+			display: block
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				left: 99px
+				top: 0
+				width: 110px
+				height: 1px
+				background: #c4c8ce
+			&:last-child:after
+				content: ''
+				position: absolute
+				left: 99px
+				bottom: 0
+				width: 110px
+				height: 1px
+				background: #c4c8ce
+			&:hover
+				background: #fafafa
+				transition: background .2s
+				h4
+					color: #81bb41
+					transition: color .2s
+				.image-holder
+					filter: grayscale(0)
+					transition: filter .2s
+	.btn-holder
+		margin-top: 35px
+		margin-bottom: 70px
+		.button
+			width: 200px
+			height: 50px
+			padding-top: 15px
+
+
+.our-team
+	$gap: 4%
+	padding-bottom: 116px
+	.leaders-holder
+		margin: $gap / -2
+		.team-item
+			width: 16%
+			margin: $gap / 2
+			margin-top: 0
+	.team-title
+		text-align: center
+		position: relative
+		margin-bottom: 20px
+		&:before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 1px
+			background: #d3d7db
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+		h4
+			margin-top: 40px
+			text-align: center
+			position: relative
+			background: #fff
+			display: inline-block
+			padding-left: 20px
+			padding-right: 20px
+	.team-item
+		filter: grayscale(1)
+		transition: filter .2s
+		&:hover
+			filter: grayscale(0)
+			transition: filter .2s
+		&.last
+			filter: grayscale(0)
+			.item-name
+				text-align: center
+			.image-holder
+				.img
+					background-size: 150px
+					filter: grayscale(0)
+				&:after
+					display: none
+
+		h6
+			color: #81bb41
+			font-size: 16px
+			text-transform: uppercase
+			margin-top: 17px
+			margin-bottom: 0px
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+		p
+			color: #48576a
+			font-size: 14px
+			line-height: 20px
+			margin-top: 4px
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+		.image-holder
+			height: 350px
+			.img
+				filter: grayscale(1)
+				transition: filter .2s
+			&:after
+				content: ''
+				position: absolute
+				bottom: -100px
+				right: 10px
+				width: 26px
+				height: 26px 
+				background: url('../img/icons/filters-cross.png') 50% 50%
+				transition: bottom .2s
+			&:hover:after
+				content: ''
+				position: absolute
+				bottom: 10px
+				right: 10px
+				width: 26px
+				height: 26px 
+				background: url('../img/icons/filters-cross.png') 50% 50%
+				transition: bottom .2s
+
+
+.add-rev
+	.btn-holder
+		margin-top: 11px
+		.button	
+			padding-top: 13px
+
+
+.seafarers
+	padding: 40px 0
+	.comments-holder
+		max-width: 1248px
+		margin: 0 auto
+		li
+			padding-left: 221px
+			padding-right: 228px
+			border: 1px solid transparent
+			position: relative
+			padding-bottom: 24px
+			padding-top: 3px
+			&:hover
+				border: 1px solid #81bb41
+				&:before
+					background: url('../img/icons/mini-helm-icon-active.png') 50% 50%
+			&:before
+				content: ''
+				position: absolute
+				height: 47px
+				width: 47px
+				left: 157px
+				top: 60px
+				background: url('../img/icons/mini-helm-icon.png') 50% 50%
+				transition: background .2s
+			h5
+				color: #48576a
+				font-size: 16px
+				font-weight: 700
+				text-transform: uppercase
+				margin-bottom: 0px
+			h6
+				color: #48576a
+				font-size: 14px
+				margin-top: 7px
+				margin-bottom: 0
+			p
+				color: #48576a
+				font-size: 14px
+				font-weight: 400
+				line-height: 20px
+				margin-top: 11px
+	.btn-holder
+		margin-top: 75px
+		margin-bottom: 20px
+		.button
+			width: 200px
+			height: 50px
+			padding-top: 15px
+
+
+.ourstr-buttons
+	margin-top: 359px
+	margin-bottom: 154px
+	.btn-holder
+		.button
+			width: 247px
+			height: 50px
+			font-size: 16px
+			padding-top: 13px
+			margin: 0 8px
+
+
+.milestones
+	background: url('../img/icons/miles-bg.png')
+	padding-bottom: 60px
+	padding-top: 60px
+	.timeline-holder
+		margin-top: 265px
+		margin-bottom: 60px
+		position: relative
+		li
+			width: 12.8%
+			position: relative
+			.time
+				color: #2d4170
+				font-weight: 700
+				position: absolute
+				bottom: 0
+				right: -20px
+				text-align: center
+				display: inline-block
+				height: 60px
+				width: 39px
+				text-align: center
+			&:after
+				content: ''
+				position: absolute
+				right: 0
+				bottom: 0
+				height: 20px 
+				width: 1px 
+				background: #81bb41
+			&.active
+				&:before
+					content: ''
+					position: absolute
+					width: 60px
+					height: 5px
+					background-color: #81bb41
+					bottom: 0
+					right: -30px
+				.time
+					&:after
+						content: ''
+						position: absolute
+						left: 13px
+						bottom: -20px
+						width: 11px
+						height: 9px
+						background: url('../img/icons/time-pin.png')
+		&:before
+			content: ''
+			position: absolute
+			width: 300%
+			height: 1px 
+			background: #81bb41
+			left: -150%
+			bottom: 0
+	.milestonesSlider
+		margin-top: 14px
+		li
+			padding-left: 150px
+			.image-holder
+				max-width: 455px
+			.text-holder
+				max-width: 630px
+				padding-left: 180px
+				h4
+					color: #48576a
+					font-size: 50px
+					text-transform: none
+					margin-bottom: 13px
+				p
+					color: #48576a
+					font-size: 18px
+					line-height: 30px
+	.bx-wrapper
+		border: none
+		box-shadow: none
+		background: transparent
+		.bx-prev
+			background: url('../img/icons/sliderPrev.svg')
+			height: 37px
+			width: 20px
+		.bx-next
+			background: url('../img/icons/sliderNext.svg')
+		.bx-controls-direction
+			a
+				height: 37px
+				width: 20px
+		.bx-pager
+			display: none
+
+			
+.our-mission
+	padding-top: 63px
+	padding-bottom: 87px
+	h3
+		margin-bottom: 26px
+	.mis-head
+		h5
+			color: #48576a
+			font-size: 30px
+			font-weight: 700
+			text-transform: uppercase
+			text-align: center
+			margin-top: 0
+			margin-bottom: 15px
+	.inline-el
+		width: 50%
+		text-align: center
+		.text-holder
+			display: inline-block
+			max-width: 440px
+			p
+				color: #48576a
+				line-height: 24px
+			.btn-holder
+				margin-top: 23px
+				.button
+					width: 155px
+					height: 50px
+					padding-top: 15px

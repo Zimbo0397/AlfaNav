@@ -1,0 +1,57 @@
+
+.checkbox input[type="checkbox"]
+  &:not(:checked), &:checked
+    left: -9999px
+    position: absolute
+  &:not(:checked) + label, &:checked + label
+    cursor: pointer
+    position: relative
+    padding-left: 25px
+  &:not(:checked) + label:before
+    background: #fff
+    border: 1px solid #48576a
+    border-radius: 2px
+  &:not(:checked) + label:before, &:checked + label:before
+    content: ''
+    left: -4px
+    top: -2px
+    position: absolute
+    width: 13px
+    height: 13px
+  &:not(:checked) + label:after, &:checked + label:after
+    content: '✔'
+    position: absolute
+    top: -7px
+    left: -2px
+    font-size: 18px
+    color: #fff
+    transition: all .2s
+  &:not(:checked) + label:after
+    opacity: 0
+    transform: rotate(-90deg) scale(0)
+  &:checked + label:after
+    opacity: 1
+    transform: rotate(0deg) scale(1)
+  &:disabled
+    &:not(:checked) + label:before
+      box-shadow: none
+      border-color: #48576a
+      background-color: #ddd
+      background: #81bd41
+    &:checked + label
+      &:before
+        box-shadow: none
+        border-color: #bbb
+        background-color: #ddd
+      &:after
+        color: #999
+    + label
+      color: #aaa
+  &:checked:focus + label:before, &:not(:checked):focus + label:before
+    border: 1px solid #81bd41
+    border-radius: 2px
+  &:checked:focus + label:after, &:not(:checked):focus + label:after
+  &:checked + label:before
+  	background: #81bd41
+  	border: 1px solid #81bd41
+  	border-radius: 2px

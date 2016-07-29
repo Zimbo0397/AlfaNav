@@ -41,7 +41,7 @@ html(lang='en')
 
 		section.reviews(style='background-image: url(img/images/ship-away.jpg)')
 			.main-container
-				.secion-icon
+				.section-icon
 					img(src="img/icons/gray-rope-icon.png", alt="")
 				h3.big WE  GET
 					span.green   SEAFARERS
@@ -50,72 +50,303 @@ html(lang='en')
 					a(href="#").button Show more comments
 
 		section.info-block
-			.main-container
-				.secion-icon
-					img(src="img/icons/gray-rope-icon2.png", alt="")
-				h3.big WE LIVE AND BREATHE WHAT WE DO AND 
-					span.green WE’RE PROUD OF our results
+			.bg-1-holder
+				.bg-2-holder
+					.bg-3-holder
+						.bg-4-holder
+							.main-container
+								.content-holder
+									.section-icon
+										img(src="img/icons/gray-rope-icon2.png", alt="")
+									h3.big WE LIVE AND BREATHE WHAT WE DO AND 
+										span.green WE’RE PROUD OF our results
 
-				.inline-holder
-					.text-holder.inline-el
-						p 
-							|Crewing Company Alpha Navigation, created in 1997, has been supplying vessels with competent and professional crew consistently throughout the years. We recognize the importance of providing qualified personnel on both sides at sea and onshore. We accomplish this by personally screening each and every perspective applicant through rigorous competence, fitness and English language comprehension tests to bring our clients the very best people. In accordance to the Shipowner’s demands, the designated Crew Superintendent selects and employs the command and crew for the vessel. We make sure to comply with all internal Quality Standards, IMO, STCW, ISO requirements, and the vessel’s manning stipulations. We maintain our high standard of excellency through performance appraisals and continuous upgrade training for our crews; our clients’ satisfaction and success is of utmost importance to us.
-						.btn-holder
-							a(href="#").button Learn More
-							a(href="#").button See Vacancies
-					.counters-holder.inline-el
-						.counter-item.inline-el
-							.counter 16648
-							.count-desc Contracts Signed
+									.inline-holder
+										.text-holder.inline-el
+											p 
+												|Crewing Company Alpha Navigation, created in 1997, has been supplying vessels with competent and professional crew consistently throughout the years. We recognize the importance of providing qualified personnel on both sides at sea and onshore. We accomplish this by personally screening each and every perspective applicant through rigorous competence, fitness and English language comprehension tests to bring our clients the very best people. In accordance to the Shipowner’s demands, the designated Crew Superintendent selects and employs the command and crew for the vessel. We make sure to comply with all internal Quality Standards, IMO, STCW, ISO requirements, and the vessel’s manning stipulations. We maintain our high standard of excellency through performance appraisals and continuous upgrade training for our crews; our clients’ satisfaction and success is of utmost importance to us.
+											.btn-holder
+												a(href="#").button Learn More
+												a(href="#").button See Vacancies
+										.counters-holder.inline-el
+											.counter-item.inline-el
+												.counter 16648
+												.count-desc Contracts Signed
 
-						.counter-item.inline-el 
-							.counter 1243
-							.count-desc Vessels Manned
+											.counter-item.inline-el 
+												.counter 1243
+												.count-desc Vessels Manned
 																				
-
-
-						
-		section.minidescription.type2
+		section.crew
+			.crew-bg
+				.main-container
+					.inline-holder
+						.crew-title.inline-el
+							h3.big The Crew that will navigate you to your 
+								span.green success
+							.btn-holder
+								a(href="#").button MEET OUR TEAM
+						.crew-description.inline-el
+							h5 Bogdan Alec  Zelenski 
+								span.light / Founder & President
+							.soc-holder
+								ul.inline-holder
+									li.inline-el
+										a(href="#")
+											i.fa.fa-facebook
+									li.inline-el
+										a(href="#")
+											i.fa.fa-envelope
+							.text-holder
+								p
+									|Crewing Company Alpha Navigation, created in 1996, has been providing vessels with competent and professional Ukrainian crews consistently throughout the years. We recognize the importance of providing quality persons to organizations both at sea and onshore. We accomplish this by personally screening each and every perspective applicant through rigorous competence, fitness, and English language comprehension tests to bring our clients the very best people. In accordance to the Shipowner’s demands, the designated Crew Superintendent selects and employs the command and crew for the vessel. We make sure to comply with all internal Quality Standards, IMO, STCW, ISO requirements, and the vessel’s manning stipulations. We maintain our high standard of excellency through performance appraisals and continuous upgrade training for our crews; our clients’ satisfaction and success is of utmost importance to us. 
 			.main-container
+				ul.crewitemlist.inline-holder
+					mixin newcrewitem(name, surname, src)
+						li.crewitem.inline-el
+							.image-holder
+								img.fake-img(src= src, alt= src)
+								.img(style='background-image: url( '+src+')')
+								.social-plate
+									ul.soc-holder.inline-holder
+										li.inline-el
+											a.socitem(href="#")
+												i.fa.fa-facebook
+										li.inline-el
+											a.socitem(href="#")
+												i.fa.fa-envelope
+							a(href="#")
+								.name-holder
+									h6= name
+									p= surname
+					+newcrewitem('Julia Makarova', 'General Manager', 'img/images/crew-1.png')
+					+newcrewitem('Ellen Makarova', 'Senior Operations Manager ', 'img/images/crew-2.png')
+					+newcrewitem('Anna Mykhaylichenko', 'Financial Manager', 'img/images/crew-2.png')
+					+newcrewitem('Victoria Chumachenko', 'Administrative Director', 'img/images/crew-3.png')
+					+newcrewitem('Simon Varias', 'Manila Branch Director', 'img/images/crew-2.png')
+
+		
+		section.partners(style='background: url(img/images/serv-bg.svg) no-repeat 100% 130%')
+			.main-container
+				.section-icon
+					img(src="img/images/rope-icon-35.png", alt="")
+				h3 FEEL THE POWER TO CHANGE YOUR DIRECTION IN BUSINESS TO 
+					span.green BETTER WITH ALPHA NAVIGATION
+				h4 Our  Partners  About  Us
+
+				ul.cards-holder.inline-holder
+					mixin newpartner(name, manage, text1, src, src2, namecompany, company, text2 )
+						li.card-item.inline-el
+							.card-header.inline-holder
+								.image-holder.inline-el
+									img.fake-img(src= src, alt= src)
+									.img(style='background-image: url( '+src+')')
+								.name-holder.inline-el
+									h6= name
+									p= manage
+							.text-holder
+								p= text1
+							.backplate
+								.card-header.inline-holder
+									.image-holder.inline-el
+										img.fake-img(src= src2, alt= src2)
+										.img(style='background-image: url( '+src2+')')
+									.name-holder.inline-el
+										h6= namecompany
+										p= company
+								.text-holder
+									p= text2
+
+					+newpartner(
+						'E OLEKSANDR',
+						'Manager',
+						'I took part in a conference of 29.07.15 organized by Alfa Navigation and Enzian Shipmanagement. I hasten to note that in such an event took part for the first time in my life. In due time we were met by representatives of the Alpha Navigation company from whom we received all information on the forthcoming conference interesting us. During the day we also supported dense communication and discussed the questions interesting us. The companys staff is very friendly and helpful, always pays a sufficient amount of time and attention. Despite the fact that the ... conference had been scheduled throughout the day, time passed pretty quickly. We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry.',
+						'img/images/partner-img-1.png',
+						'img/images/company-img-1.png',
+						'Fleet Pro Ship',
+						'Company',
+						'The companys staff is very friendly and helpful, always pays a sufficient amount of time and attention. Despite the fact that the conference had been scheduled throughout the day, time passed pretty quickly. We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry.'
+					)
+					+newpartner(
+						'E OLEKSANDR',
+						'Manager',
+						'I took part in a conference of 29.07.15 organized by Alfa Navigation and Enzian Shipmanagement. I hasten to note that in such an event took part for the first time in my life. In due time we were met by representatives of the Alpha Navigation company from whom we received all information on the forthcoming conference interesting us. During the day we also supported dense communication and discussed the questions interesting us. The companys staff is very friendly and helpful, always pays a sufficient amount of time and attention. Despite the fact that the ... conference had been scheduled throughout the day, time passed pretty quickly. We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry.',
+						'img/images/partner-img-1.png',
+						'img/images/company-img-1.png',
+						'Fleet Pro Ship',
+						'Company',
+						'The companys staff is very friendly and helpful, always pays a sufficient amount of time and attention. Despite the fact that the conference had been scheduled throughout the day, time passed pretty quickly. We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry.'
+					)
+					+newpartner(
+						'E OLEKSANDR',
+						'Manager',
+						'During the day we also supported dense communication and discussed the questions interesting us. The companys staff is very friendly and helpful, always pays a sufficient amount of time and attention. Despite the fact that the conference had been scheduled throughout the day, time passed pretty quickly. We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such... conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry.',
+						'img/images/partner-img-2.png',
+						'img/images/company-img-1.png',
+						'Fleet Pro Ship',
+						'Company',
+						'The companys staff is very friendly and helpful, always pays a sufficient amount of time and attention. Despite the fact that the conference had been scheduled throughout the day, time passed pretty quickly. We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry.'
+					)
+					+newpartner(
+						'E OLEKSANDR',
+						'Manager',
+						'I hasten to note that in such an event took part for the first time in my life. In due time we were met by representatives of the Alpha Navigation company from whom we received all information on the forthcoming conference interesting us. During the day we also supported dense communication and discussed the questions interesting us. The companys staff is very friendly and helpful, always pays a sufficient amount of time and attention. Despite the fact that the conference had been scheduled throughout the day, time passed pretty quickly. We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry.',
+						'img/images/partner-img-3.png',
+						'img/images/company-img-1.png',
+						'Fleet Pro Ship',
+						'Company',
+						'The companys staff is very friendly and helpful, always pays a sufficient amount of time and attention. Despite the fact that the conference had been scheduled throughout the day, time passed pretty quickly. We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry. The companys staff is very friendly and helpful, always pays a sufficient amount of time and attention. Despite the fact that the conference had been scheduled throughout the day, time passed pretty quickly. We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry.'
+					)
+				.btn-holder
+					a.button(href="#") Show more
+
+		section.followus
+			.main-container
+				h3 Follow US
 				.inline-holder
-					.desc-head.inline-el
-						h3.big Why 
-							br
-							span.green AlphaNavigation?
-					.description.inline-el
-						p
-							|As one of the leading crewing companies in Ukraine, Alpha Navigation is proud to offer 60 000+ well-educated and highly qualified seafarers in our database.
+					.facebook-holder.inline-el
+						.inline-holder
+							.column.inline-el
+								.post-item
+									.image-holder
+										img.fake-img(src="img/images/f-post-1.jpg", alt="")
+										.img(style='background-image: url(img/images/f-post-1.jpg)')
+									.f-massage
+										.icon-holder
+											img(src="img/icons/f-icon.png", alt="")
+										.title
+											h6 22 ferbuary 2016
+											p 
+												| The company's staff is very friendly and helpful, always pays a sufficient amount of time and attention. Despite the fact that the conference had been scheduled throughout the day, time passed pretty quickly. We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry.
+										ul.nav-panel.inline-holder
+											li.inline-el
+												a.like(href="#") Like
+													img(src="img/icons/f-like.png", alt="f-icon.png")
+											li.inline-el
+												a.comment(href="#") Comment
+													img(src="img/icons/f-comment.png", alt="f-comment")
+											li.inline-el
+												a.forward(href="#") Forward
+													img(src="img/icons/f-forward.png", alt="f-comment")
+								.post-item
+									.f-massage
+										.icon-holder
+											img(src="img/icons/f-icon.png", alt="")
+										.title
+											h6 22 ferbuary 2016
+											p 
+												| The company's staff is very friendly and helpful, always pays a sufficient amount of time and attention. Despite the fact that the conference had been scheduled throughout the day, time passed pretty quickly. We 
+										ul.nav-panel.inline-holder
+											li.inline-el
+												a.like(href="#") Like
+													img(src="img/icons/f-like.png", alt="f-icon.png")
+											li.inline-el
+												a.like(href="#") Comment
+													img(src="img/icons/f-comment.png", alt="f-comment")
+											li.inline-el
+												a.like(href="#") Forward
+													img(src="img/icons/f-forward.png", alt="f-comment")
+							.column.inline-el
+								.post-item
+									.f-massage
+										.icon-holder
+											img(src="img/icons/f-icon.png", alt="")
+										.title
+											h6 22 ferbuary 2016
+											p 
+												| The company's staff is very friendly and helpful, always pays a sufficient amount of time and attention. Despite the fact that the conference had been scheduled throughout the day, time passed pretty quickly. We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry.
+										ul.nav-panel.inline-holder
+											li.inline-el
+												a.like(href="#") Like
+													img(src="img/icons/f-like.png", alt="f-icon.png")
+											li.inline-el
+												a.like(href="#") Comment
+													img(src="img/icons/f-comment.png", alt="f-comment")
+											li.inline-el
+												a.like(href="#") Forward
+													img(src="img/icons/f-forward.png", alt="f-comment")
+								.post-item
+									.image-holder
+										img.fake-img(src="img/images/f-post-2.jpg", alt="")
+										.img(style='background-image: url(img/images/f-post-2.jpg)')
+									.f-massage
+										.icon-holder
+											img(src="img/icons/f-icon.png", alt="")
+										.title
+											h6 22 ferbuary 2016
+											p 
+												| The company's staff is very friendly and helpful, always pays a sufficient amount of time and attention. Despite the fact that the conference had been scheduled throughout the day, time passed pretty quickly. We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry.
+										ul.nav-panel.inline-holder
+											li.inline-el
+												a.like(href="#") Like
+													img(src="img/icons/f-like.png", alt="f-icon.png")
+											li.inline-el
+												a.like(href="#") Comment
+													img(src="img/icons/f-comment.png", alt="f-comment")
+											li.inline-el
+												a.like(href="#") Forward
+													img(src="img/icons/f-forward.png", alt="f-comment")
+			
+					.twitt-holder.inline-el
+						ul
+							mixin newtwittitem(post, text)
+								li.twittitem
+									h6= post
+									p= text
+									.icon-holder
+										img(src="img/icons/twitt-icon.png", alt="")
+									.nav-panel
+										ul.inline-holder
+											li.inline-el
+												a.forward(href="#")
+													img(src="img/icons/t-for.png", alt="")
+												a.refresh(href="#")
+													img(src="img/icons/t-ref.png", alt="")
+												a.like(href="#")
+													img(src="img/icons/t-like.png", alt="")
+							+newtwittitem(
+							'22 ferbuary 2016',
+							'We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry.'
+							)
+							+newtwittitem(
+							'22 ferbuary 2016',
+							'We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry.'
+							)
+							+newtwittitem(
+							'22 ferbuary 2016',
+							'We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry.'
+							)
+							+newtwittitem(
+							'22 ferbuary 2016',
+							'We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry.'
+							)
+							+newtwittitem(
+							'22 ferbuary 2016',
+							'We considered a variety of issues, from the first minutes passed sided conversation between conference participants. Representatives of the companies in an accessible form and with beautiful presentations on the screen wide open topics relating to security, prevention of marine pollution, proper organization of work on board, and actively responded to questions asked by seafarers. I think such conferences are useful for both Employers and seafarers. They allow to prevent errors and improve the quality of work and service in the marine industry.'
+							)
 
-						p
-							|Our seafarers are compliant with IMO, STCW95, and USCG regulations and requirements and are well versed in the ISM code. We go above and beyond to ensure that all seafarers have passed all medical examinations, English language comprehension tests, and our very own internal professional tests; we also require positive references from past employers.
-		section.our-services
-			.main-container
-				h3 Our 
-					span.green Services
-				.services
-					ul.inline-holder
-						mixin newservitem(name, img)
-							li.newservitem.inline-el
-								a(href="#")
-									div
-										img(src= img, alt= img)
-									div
-										.undersc
-									span!= name
-
-						+newservitem('Crew Management', 'img/icons/anchor-img.png' )
-						+newservitem('Repair Team </br> Management', 'img/icons/anchor-img.png' )
-						+newservitem('Shore personnel </br> placement', 'img/icons/anchor-img.png' )
-						+newservitem('Business and Maritime </br> Consultancy', 'img/icons/anchor-img.png' )
-						+newservitem('Husbanding / Port Agency </br> Services', 'img/icons/anchor-img.png' )
-						+newservitem('Maritime Training', 'img/icons/anchor-img.png' )
-						+newservitem('In-House Travel </br>  Agency', 'img/icons/anchor-img.png' )
-						+newservitem('Maritime </br> Publications', 'img/icons/anchor-img.png' )
-						+newservitem('IT Services', 'img/icons/anchor-img.png' )
+					.clearfix
+						.facebook-holder.float-el
+							.btn-holder
+								a.button(href="#") Show more on facebook
+						.twitt-holder.float-el
+							.btn-holder
+								a.button(href="#") Show more on twitter
 
 
 
-						
+														
+														
+
+
+
+
+
+
+
+
+
+
 
 
 

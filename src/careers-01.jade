@@ -1,0 +1,113 @@
+- var mainpage = true
+
+//- //mixins//
+mixin aboutitem(header, text)
+	.inline-el
+		h3.ellipsis-text= header
+		p!= text
+
+doctype html
+html(lang='en')
+	head
+		title find-talent-01
+
+		include ./partials/head.jade
+
+	body
+
+		section.top-line(style='background-image: url("img/images/top-line-bg-4.jpg")')
+			.brand-holder
+				img(src="img/images/logo.png", alt="")
+			.main-nav-holder.inline-holder
+				a(href="#" class='callback-holder inline-el')
+					span Call back
+					img(src="img/icons/callback-img.png", alt="")
+				a(href="#" class='menu-holder inline-el')
+					span menu
+					img(src="img/icons/gumb.png", alt="")
+
+			.description-in-top
+				h1 
+					|WE ARE HIRING! WELCOME TO 
+					br
+					|YOUR OPPORTUNITY OF A LIFETME!
+				img(src="img/icons/waves-icon.png", alt="")
+				h2 
+					|Regardless of differences, we strive shoulder to shoulder... 
+					br
+					|Teamwork can be summed up in five short words: "We believe in each other"
+
+		section.careers-form
+			.main-container
+				.text-holder
+					p
+						|We are a tightly-welded team of 60 enamoured of their mission to deliver success professionals and we are always on the look out for like-minded  persons who are willing to join our on-shore team and take bold steps in the direction of a dream career! 
+					p
+						|If this sounds like you, say hello to us with an email or complete and submit the form below.  
+				.form-holder.inline-holder
+					form(action="")
+						.form-part.inline-el
+							ul
+								li
+									.input-item
+										label First Name
+										input(placeholder="Ivan")
+								li
+									.input-item
+										label Email
+										input(placeholder="mail@mail.com")
+								li
+									.input-item
+										label Age
+										input(placeholder="45")
+								li
+									.browse
+										button(href="#") Browse
+										span  Curriculum Vitae
+
+
+
+
+
+						.form-part.inline-el
+							ul
+								li
+									.input-item
+										label Last Name
+										input(placeholder="Sidorov")
+								li
+									.input-item
+										label Phone
+										input(placeholder="+38 (098) 765 43 21")
+								li
+									.input-item.selectable
+										label Country
+										select
+											option(value="1") Ukraine
+											option(value="2") Russia
+											option(value="3") Andorra
+											option(value="4") Denmark
+											option(value="5") Estonia
+											option(value="6") Germany
+											option(value="7") Iceland
+								li
+									.browse
+										button(href="#") Browse
+										span  Cover Letter
+						.btn-holder
+							button.button Submit
+
+
+
+		
+
+
+
+
+		include ./partials/footer.jade
+
+
+
+
+
+		include ./partials/scripts.jade

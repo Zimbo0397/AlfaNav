@@ -1,0 +1,152 @@
+- var mainpage = true
+
+//- //mixins//
+mixin aboutitem(header, text)
+	.inline-el
+		h3.ellipsis-text= header
+		p!= text
+
+doctype html
+html(lang='en')
+	head
+		title find-talent-01
+
+		include ./partials/head.jade
+
+	body
+
+		section.top-line(style='background-image: url("img/images/contacts-bg.jpg")')
+			.brand-holder
+				img(src="img/images/logo.png", alt="")
+			.main-nav-holder.inline-holder
+				a(href="#" class='callback-holder inline-el')
+					span Call back
+					img(src="img/icons/callback-img.png", alt="")
+				a(href="#" class='menu-holder inline-el')
+					span menu
+					img(src="img/icons/gumb.png", alt="")
+
+			.description-in-top
+				h1 
+					|Contact Us
+					
+				img(src="img/icons/waves-icon.png", alt="")
+
+		section.careers-form
+			.main-container
+				.form-holder.inline-holder
+					form(action="")
+						.form-part.inline-el
+							ul
+								li
+									.input-item
+										label First Name
+										input
+								li
+									.input-item
+										label Email
+										input
+								li
+									.input-item
+										label Phone
+										input
+								li
+									.input-item
+										label City
+										input
+
+
+
+
+
+
+
+						.form-part.inline-el
+							ul
+								li
+									.input-item
+										label Last Name
+										input
+								li
+									.input-item
+										label Company
+										input
+								li
+									.input-item
+										label Address
+										input
+								li
+									.input-item
+										label Country
+										input
+
+						.textarea-holder
+							label MESSAGE
+							textarea
+
+						.form-part.inline-el
+							ul
+								li
+									.input-item.captcha
+										label Captcha
+										.image-holder
+											img(src="img/images/Captcha.png", alt="")
+										a.ref-button(href="#")
+											img(src="img/icons/ref-capt-btn.png", alt="")
+						.form-part.inline-el
+							ul
+								li
+									.input-item.captcha
+										label Enter Catcha words
+										input
+
+						.btn-holder
+							button.button Submit
+
+		
+
+		section.offices-map
+			.main-container
+				.map-holder.inline-holder
+					.description-part.inline-el
+						ul
+							mixin newoffice(place, adress, city)
+								li
+									.office-type
+										h6= place
+										p!= adress
+									a.city(href="#")= city
+
+							+newoffice(
+							'Main Office',
+							'Main Office </br>Alpha Navigation </br>10/2 Marshala Govorova str </br>Odessa 65063 Ukraine </br> Tel: +380 48 783 80 80',
+							'ODESSA'
+							)
+							+newoffice(
+							'Manila Branch',
+							'BZ Alpha Navigation Inc </br> Unit 501 Doña Felisa Building </br> 5th floor Taft Avenue Corner Remedios street., </br> Malate Manila Philippines </br> Tel: +632 354 88 31',
+							'MANILA'
+							)
+							+newoffice(
+							'Mariupol Branch',
+							'Alpha Navigation Mariupol </br> 7, Aerodromnaya  str, </br> Business Center Avers, office 52, </br> Mariupol Ukraine </br> Tel: +38 0629 405 260',
+							'MARIUPOL'
+							)
+							+newoffice(
+							'Kiev Branch',
+							'Alpha Navigation Kiev </br> 2A Petrozavodskaya str, office 604 </br> Keiv 03035 Ukraine </br> Tel: + 380 66 569 08 91',
+							'KIEV'
+							)
+
+					.map-part.inline-el
+						#map
+
+
+
+		include ./partials/footer.jade
+
+
+
+
+
+		include ./partials/scripts.jade

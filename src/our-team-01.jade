@@ -1,0 +1,200 @@
+- var mainpage = true
+
+//- //mixins//
+mixin aboutitem(header, text)
+	.inline-el
+		h3.ellipsis-text= header
+		p!= text
+
+doctype html
+html(lang='en')
+	head
+		title find-talent-01
+
+		include ./partials/head.jade
+
+	body
+
+		section.top-line(style='background-image: url("img/images/database-bg.png")')
+			.brand-holder
+				img(src="img/images/logo.png", alt="")
+			.main-nav-holder.inline-holder
+				a(href="#" class='callback-holder inline-el')
+					span Call back
+					img(src="img/icons/callback-img.png", alt="")
+				a(href="#" class='menu-holder inline-el')
+					span menu
+					img(src="img/icons/gumb.png", alt="")
+
+			.description-in-top
+				h1  OUR CREW
+				img(src="img/icons/waves-icon.png", alt="")
+				h2 
+					|The team whose life path is creating opportunities 
+					br
+					for thousands of seafarers and hundreds of shipowners.
+
+		section.our-team
+			.main-container
+				.team-title
+					h4 Our Leaders
+				ul.leaders-holder.inline-holder
+					mixin newteamitem(src, name, manage)
+						li.team-item.inline-el
+							a(href="#")
+								.image-holder
+									img.fake-img(src= src, alt= src)
+									.img(style='background-image: url( '+src+')')
+								.item-name
+									h6= name
+									p= manage
+					+newteamitem(
+						'img/images/team1.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team2.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team3.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team4.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team5.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+
+				.team-title
+					h4 Our Team
+
+				ul.leaders-holder.inline-holder
+					+newteamitem(
+						'img/images/team1.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team2.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team3.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team4.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team5.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team1.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team2.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team3.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team4.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team5.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team1.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team2.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team3.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team4.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team5.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team1.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team2.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team3.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					+newteamitem(
+						'img/images/team4.jpg',
+						'Patti Clifford',
+						'Chief Talent Officer, Havas Group'
+					)
+					li.team-item.last.inline-el
+						a(href="#")
+							.image-holder
+								img.fake-img(src='img/images/you-icon.png', alt= src)
+								.img(style='background-image: url(img/images/you-icon.png)')
+							.item-name
+								h6 You?
+								p Email to tell us why
+					
+
+
+
+
+
+
+
+
+
+		include ./partials/footer.jade
+
+
+
+
+
+		include ./partials/scripts.jade

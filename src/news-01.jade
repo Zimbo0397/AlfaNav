@@ -1,0 +1,125 @@
+- var mainpage = true
+
+//- //mixins//
+mixin aboutitem(header, text)
+	.inline-el
+		h3.ellipsis-text= header
+		p!= text
+
+doctype html
+html(lang='en')
+	head
+		title find-talent-01
+
+		include ./partials/head.jade
+
+	body
+
+		section.top-line(style='background-image: url("img/images/database-bg.png")')
+			.brand-holder
+				img(src="img/images/logo.png", alt="")
+			.main-nav-holder.inline-holder
+				a(href="#" class='callback-holder inline-el')
+					span Call back
+					img(src="img/icons/callback-img.png", alt="")
+				a(href="#" class='menu-holder inline-el')
+					span menu
+					img(src="img/icons/gumb.png", alt="")
+
+			.description-in-top
+				h1 
+					|Alpha Navigation Crewing Agency News 
+					br
+					and Maritime Tricks
+					
+				img(src="img/icons/waves-icon.png", alt="")
+
+
+		section.news
+			.main-container
+				.border-el
+					.white-bg
+			.main-container
+				ul.news-list
+					mixin newnewslist(number, month, year, src, head, text)
+						a(href="#")
+							li.news-item.inline-holder
+								.date-holder
+									.number= number
+									.month= month
+									.year= year
+								.image-holder.inline-el
+									img.fake-img(src= src, alt= src)
+									.img(style='background-image: url( '+src+')')
+								.text-holder.inline-el
+									h4!= head
+									p= text
+					+newnewslist(
+						'22',
+						'January',
+						'2015',
+						'img/images/news1.jpg',
+						'V. Ships Turkey Enters Offshore Crewing </br> Contract with Polarcus',
+						'V.Ships Turkey announced that it has recently agreed an offshore crewing contract with Polarcus, a pure play marine geophysical company with principal office in Dubai, United Arab Emirates. Polarcus has a long-term collaboration arrangement with the Turkish Petroleum Corporation (TPAO) and recently sold and delivered the Polarcus SAMUR, an 8-streamer 3D world class seismic exploration vessel, to TPAO. The vessel will be renamed ‘Barbaros Hayreddin Pasa’ after the legendary Ottoman Admiral, and Polarcus will provide technical and crew management services to TPAO.'
+					)
+					+newnewslist(
+						'22',
+						'January',
+						'2015',
+						'img/images/news2.png',
+						'Norway: Shipowners Should Hold Crewing Agents More Accountable',
+						'Shipowners are being urged to hold crewing agents more accountable as crew standards face increased scrutiny. With shipboard crewing levels at a bare minimum in some cases as owners look to reduce operational costs and onboard technological challenges increase, Norwegian insurer and P&I club Skuld is urging its members to hold those responsible for crew selection more accountable.'
+					)
+					+newnewslist(
+						'22',
+						'January',
+						'2015',
+						'img/images/news3.png',
+						'Latvia: BachmannHR Chooses CrewInspector Crewing Software',
+						'CrewInspector an online ship crew management system provider has been chosen by BachmannHR Group Ltd to integrate crewing process across the group of companies. Crewing software allows employees to maintain crew data, prepare crew employment contracts and share data easily with rest of the teams residing in different geographic locations at single access point without having any additional software to install. An overview of crew certificate expiry enables to keep the information up to date and to initiate any training activities for respective crew members as soon as required.'
+					)
+					+newnewslist(
+						'22',
+						'January',
+						'2015',
+						'img/images/news4.jpg',
+						'Norway: Shipowners Should Hold Crewing Agents More Accountable',
+						'Shipowners are being urged to hold crewing agents more accountable as crew standards face increased scrutiny. With shipboard crewing levels at a bare minimum in some cases as owners look to reduce operational costs and onboard technological challenges increase, Norwegian insurer and P&I club Skuld is urging its members to hold those responsible for crew selection more accountable.'
+					)
+					+newnewslist(
+						'22',
+						'January',
+						'2015',
+						'img/images/news1.jpg',
+						'V. Ships Turkey Enters Offshore Crewing Contract with Polarcus',
+						'V.Ships Turkey announced that it has recently agreed an offshore crewing contract with Polarcus, a pure play marine geophysical company with principal office in Dubai, United Arab Emirates. Polarcus has a long-term collaboration arrangement with the Turkish Petroleum Corporation (TPAO) and recently sold and delivered the Polarcus SAMUR, an 8-streamer 3D world class seismic exploration vessel, to TPAO. The vessel will be renamed ‘Barbaros Hayreddin Pasa’ after the legendary Ottoman Admiral, and Polarcus will provide technical and crew management services to TPAO.'
+					)
+					+newnewslist(
+						'22',
+						'January',
+						'2015',
+						'img/images/news2.png',
+						'Norway: Shipowners Should Hold Crewing Agents More Accountable',
+						'Shipowners are being urged to hold crewing agents more accountable as crew standards face increased scrutiny. With shipboard crewing levels at a bare minimum in some cases as owners look to reduce operational costs and onboard technological challenges increase, Norwegian insurer and P&I club Skuld is urging its members to hold those responsible for crew selection more accountable.'
+					)
+
+
+				.btn-holder
+					a(href="#").button show more
+
+
+		
+
+
+
+
+
+
+
+		include ./partials/footer.jade
+
+
+
+
+
+		include ./partials/scripts.jade

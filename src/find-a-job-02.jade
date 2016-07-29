@@ -1,0 +1,290 @@
+- var mainpage = true
+
+//- //mixins//
+mixin aboutitem(header, text)
+	.inline-el
+		h3.ellipsis-text= header
+		p!= text
+
+doctype html
+html(lang='en')
+	head
+		title find-talent-01
+
+		include ./partials/head.jade
+
+	body
+
+		section.top-line(style='background-image: url("img/images/top-line-bg-3.jpg")')
+			.brand-holder
+				img(src="img/images/logo.png", alt="")
+			.main-nav-holder.inline-holder
+				a(href="#" class='callback-holder inline-el')
+					span Call back
+					img(src="img/icons/callback-img.png", alt="")
+				a(href="#" class='menu-holder inline-el')
+					span menu
+					img(src="img/icons/gumb.png", alt="")
+
+			.description-in-top
+				h1 Ask us about our retention rate! 
+				img(src="img/icons/waves-icon.png", alt="")
+				h2 The number will tell the story best!
+		
+		section.ourbusiness
+			.main-container
+				h3 Personalities are the cornerstone of our maritime business and 
+					span.green we appreciate them at most.
+				.counters.inline-holder
+					.counter-holder.inline-el
+						.counter.inline-holder
+							.number.inline-el
+								span 20
+								p Years of experience
+							.description.inline-el
+								| We have almost 20 years of experience in placing seafarers in contracts with the top tier employers from the longest ship owners list.
+					.counter-holder.inline-el
+						.counter.inline-holder
+							.number.inline-el
+								span 17K
+								p Seafarers
+							.description.inline-el
+								| A special point of proud for us is the AlphaNavigation database of contracts signed since 1997, that reaches the number of 17 000. 
+				.btn-holder
+					a.button(href="#") Read our testimonials
+					a.button(href="#") Our Principals List
+				.text-holder
+					p 
+						|Our work is geared to providing our clients with professional services of the highest quality. To ensure we achieve our objectives successfully we have masterminded a one of a kind process of maritime employment.
+					p
+						|After successfully getting on board with us you obtain a personal attorney represented by AlphaNavigation on top of the best maritime job opportunities.
+					b
+						|To get a job at sea, please complete our application form:
+
+				.btn-holder
+					a.button(href="#") Fill out the form
+
+
+
+
+		section.shipowners
+			.gray-bg.border-bt
+				.main-container
+					h4 Our Principals 
+							span.green & Shipowners
+					.table-holder
+						table.hr
+							mixin newtr(compan, countr, contacts)
+								tr
+									td= compan
+									td= countr
+									td= contacts
+
+							+newtr('Company', 'Country', 'Contract Start Date')
+			.main-container
+				.table-holder.gradient
+					table
+						+newtr('Company', 'Country', 'Contract Start Date')
+						+newtr('ABC MARITIME AG', 'Copenhagen, Denmark', 'June 12, 2006')
+						+newtr('ACHEON AKTI NAVIGATION CO. LTD', 'Nyon, Switzerland', 'January 1, 1998')
+						+newtr('AFLOAT LEASING LTD', 'Limassol, Cyprus', 'November 27, 2007')
+						+newtr('BERNHARD CRAMER', 'Swatar, Malta', 'August 30, 2010')
+						+newtr('BERNUTH LINES USA', 'Haren/Ems, Germany', 'November 18, 2007')
+						+newtr('CENTURIAN MARITIME CO LTD', 'Miami, USA', 'October 15, 2010')
+						+newtr('CHINA NAVIGATION CO LTD.', 'Kifisia, Greece', 'January 31, 2004')
+						+newtr('CHIOS MARITIME', 'Hong Kong', 'August 21, 2003')
+						+newtr('Company', 'Country', 'Contract Start Date')
+						+newtr('ABC MARITIME AG', 'Copenhagen, Denmark', 'June 12, 2006')
+						+newtr('ACHEON AKTI NAVIGATION CO. LTD', 'Nyon, Switzerland', 'January 1, 1998')
+						+newtr('AFLOAT LEASING LTD', 'Limassol, Cyprus', 'November 27, 2007')
+						+newtr('BERNHARD CRAMER', 'Swatar, Malta', 'August 30, 2010')
+						+newtr('BERNUTH LINES USA', 'Haren/Ems, Germany', 'November 18, 2007')
+						+newtr('CENTURIAN MARITIME CO LTD', 'Miami, USA', 'October 15, 2010')
+						+newtr('CHINA NAVIGATION CO LTD.', 'Kifisia, Greece', 'January 31, 2004')
+						+newtr('CHIOS MARITIME', 'Hong Kong', 'August 21, 2003')
+						+newtr('Company', 'Country', 'Contract Start Date')
+						+newtr('ABC MARITIME AG', 'Copenhagen, Denmark', 'June 12, 2006')
+						+newtr('ACHEON AKTI NAVIGATION CO. LTD', 'Nyon, Switzerland', 'January 1, 1998')
+						+newtr('AFLOAT LEASING LTD', 'Limassol, Cyprus', 'November 27, 2007')
+						+newtr('BERNHARD CRAMER', 'Swatar, Malta', 'August 30, 2010')
+						+newtr('BERNUTH LINES USA', 'Haren/Ems, Germany', 'November 18, 2007')
+						+newtr('CENTURIAN MARITIME CO LTD', 'Miami, USA', 'October 15, 2010')
+						+newtr('CHINA NAVIGATION CO LTD.', 'Kifisia, Greece', 'January 31, 2004')
+						+newtr('CHIOS MARITIME', 'Hong Kong', 'August 21, 2003')
+						+newtr('Company', 'Country', 'Contract Start Date')
+						+newtr('ABC MARITIME AG', 'Copenhagen, Denmark', 'June 12, 2006')
+						+newtr('ACHEON AKTI NAVIGATION CO. LTD', 'Nyon, Switzerland', 'January 1, 1998')
+						+newtr('AFLOAT LEASING LTD', 'Limassol, Cyprus', 'November 27, 2007')
+						+newtr('BERNHARD CRAMER', 'Swatar, Malta', 'August 30, 2010')
+						+newtr('BERNUTH LINES USA', 'Haren/Ems, Germany', 'November 18, 2007')
+						+newtr('CENTURIAN MARITIME CO LTD', 'Miami, USA', 'October 15, 2010')
+						+newtr('CHINA NAVIGATION CO LTD.', 'Kifisia, Greece', 'January 31, 2004')
+						+newtr('CHIOS MARITIME', 'Hong Kong', 'August 21, 2003')
+						+newtr('Company', 'Country', 'Contract Start Date')
+						+newtr('ABC MARITIME AG', 'Copenhagen, Denmark', 'June 12, 2006')
+						+newtr('ACHEON AKTI NAVIGATION CO. LTD', 'Nyon, Switzerland', 'January 1, 1998')
+						+newtr('AFLOAT LEASING LTD', 'Limassol, Cyprus', 'November 27, 2007')
+						+newtr('BERNHARD CRAMER', 'Swatar, Malta', 'August 30, 2010')
+						+newtr('BERNUTH LINES USA', 'Haren/Ems, Germany', 'November 18, 2007')
+						+newtr('CENTURIAN MARITIME CO LTD', 'Miami, USA', 'October 15, 2010')
+						+newtr('CHINA NAVIGATION CO LTD.', 'Kifisia, Greece', 'January 31, 2004')
+						+newtr('CHIOS MARITIME', 'Hong Kong', 'August 21, 2003')
+				.btn-holder
+					a(href="#").button Show all
+
+
+		section.whyalfanav
+			.gray-strip.inline-holder
+				.main-container
+					.hotvac.inline-el
+						span Hot vacances
+					.allurl.inline-el
+						a(href="#")
+							span Show all vacancies
+			.main-container
+				.inline-holder
+					.description-part.inline-el
+						h3 Why
+							span.green AlphaNavigation?
+						p 
+							|Aligning the best people with appropriate positions we put our seafarers fulfillment within the entire contract duration as our top priority goal.
+						ul
+							li Free of charge employment services
+							li Stable job for reputable employers
+							li Time efficient application process
+							li 24/7 support for you and your family
+					.slider-holder.inline-el
+						ul.vacitemslider
+							li
+								ul
+									mixin newvac()
+										li.vacitem
+											a(href="#")
+												table
+													tbody
+														tr
+															td Vessel Type: 
+															td Dry Cargo Vessels
+														tr
+															td DWT 
+															td 100,000
+														tr
+															td Salary Level: 
+															td $50 000
+														tr
+															td Contract Duration:
+															td 5 Months contract
+
+												span.button(href="#") Apply
+									+newvac
+									+newvac
+									+newvac
+									+newvac
+									+newvac
+							li
+								ul
+									mixin newvac()
+										li.vacitem
+											a(href="#")
+												table
+													tbody
+														tr
+															td Vssel Type: 
+															td Dry Cargo Vessels
+														tr
+															td DWT 
+															td 10,00
+														tr
+															td Salary Level: 
+															td $60 000
+														tr
+															td Contract Duration:
+															td 6 yers contract
+
+												span.button(href="#") Apply
+									+newvac
+									+newvac
+									+newvac
+									+newvac
+									+newvac
+							li
+								ul
+									mixin newvac()
+										li.vacitem
+											a(href="#")
+												table
+													tbody
+														tr
+															td Vessel Type: 
+															td Dry Cargo Vessels
+														tr
+															td DWT 
+															td 100,000
+														tr
+															td Salary Level: 
+															td $50 000
+														tr
+															td Contract Duration:
+															td 5 Months contract
+
+												span.button(href="#") Apply
+									+newvac
+									+newvac
+									+newvac
+									+newvac
+									+newvac
+							li
+								ul
+									mixin newvac()
+										li.vacitem
+											a(href="#")
+												table
+													tbody
+														tr
+															td Vssel Type: 
+															td Dry Cargo Vessels
+														tr
+															td DWT 
+															td 10,00
+														tr
+															td Salary Level: 
+															td $60 000
+														tr
+															td Contract Duration:
+															td 6 yers contract
+
+												span.button(href="#") Apply
+									+newvac
+									+newvac
+									+newvac
+									+newvac
+									+newvac
+
+
+
+											
+											
+											
+
+
+
+
+
+
+
+
+
+
+
+
+						
+
+
+
+		include ./partials/footer.jade
+
+
+
+
+
+		include ./partials/scripts.jade
