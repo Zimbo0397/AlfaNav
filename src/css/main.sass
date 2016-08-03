@@ -173,6 +173,9 @@ ul.pagination
 	background-size: cover
 	background-repeat: no-repeat
 	padding-bottom: 90px
+	max-width: 100vw
+	position: relative
+	overflow: hidden
 	.btn-holder
 		margin-top: 58px
 		.button
@@ -182,9 +185,10 @@ ul.pagination
 			margin-right: 15px
 			font-size: 18px
 			text-transform: uppercase
-			padding-top: 17px
+			padding-top: 13px
 	&.index
 		padding-bottom: 260px
+		height: 100vh
 
 .brand-holder
 	position: absolute
@@ -274,8 +278,14 @@ ul.pagination
 		background: #f6f6f6
 
 .reviews	
-	height: 900px
 	padding-top: 63px
+	padding-bottom: 159px
+	.btn-holder
+		margin-top: 70px
+		.button
+			width: 250px
+			height: 50px
+			padding-top: 13px
 	.tabs-holder
 		text-align: center
 		margin-top: 71px
@@ -492,10 +502,12 @@ ul.pagination
 		margin-bottom: 12px
 
 .info-block
-	padding-top: 63px
 	position: relative
+	overflow: hidden
 	.bg-1-holder
+		padding-top: 105px
 		background: url('../img/images/info-bg-1.png')
+		background-size: cover
 		.bg-2-holder
 			background: url('../img/images/info-bg-2.png') no-repeat 100% 100%
 			.bg-3-holder
@@ -625,11 +637,12 @@ ul.pagination
 					height: 100%
 					width: 100%
 					top: 0
-					right: -110%
+					right: 0
 					background: #8dc254
-					opacity: 0.9
+					opacity: 0
+					pointer-events: none
 					border-radius: 50%
-					transition: right .2s
+					transition: opacity .2s
 					.soc-holder
 						display: inline-block
 						position: absolute
@@ -669,8 +682,9 @@ ul.pagination
 					margin-top: 0
 			&:hover
 				.social-plate
-					right: 0px
-					transition: right .2s
+					opacity: 0.9
+					pointer-events: inherit
+					transition: opacity .2s
 
 .partners
 	padding-top: 37px
@@ -783,6 +797,8 @@ ul.pagination
 .followus
 	padding-top: 64px
 	padding-bottom: 70px
+	background: url(../img/images/follow-bg.jpg) no-repeat
+	background-size: cover
 	.btn-holder
 		.button
 			width: 260px
@@ -2216,6 +2232,7 @@ ul.pagination
 	padding-right: 60px
 	transition: right .2s
 	background: url(../img/images/aside-bg.jpg)
+	z-index: 20
 	&.open
 		right: 0
 		transition: right .2s
@@ -2649,3 +2666,16 @@ ul.pagination
 						color: #fff
 						background: #a8b0b8
 						transition: color, background .2s
+
+.carousel
+	h5
+		color: #48576a
+		font-family: GothamPro
+		font-size: 14px
+		margin-bottom: 0
+	p
+		color: #48576a
+		font-family: GothamPro
+		font-size: 14px
+		font-weight: 400
+		line-height: 20px

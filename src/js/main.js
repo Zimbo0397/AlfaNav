@@ -1,3 +1,4 @@
+// init bx-sliders
 $('.vacitemslider').bxSlider({
   mode: 'fade'
 });
@@ -8,9 +9,6 @@ $('.news-slider').bxSlider({
 $('.person-info-slider').bxSlider({
   mode: 'fade'
 });
-
-
-
 $(window).on('load', function() {
 		var setCurrentTime = function() {
 			$('.timeline-holder li').each(function() {
@@ -49,9 +47,17 @@ $(window).on('load', function() {
 	})
 		
 });
+// END init bx-sliders
+
+
+//wow animation init
+new WOW().init();
+//END wow animation init
 
 
 
+
+// Ui-slider init
 $( function() {
     $( "#slider-range" ).slider({
       range: true,
@@ -95,6 +101,11 @@ $( function() {
     $( "#amount5" ).val( $( "#slider-range2" ).slider( "values", 1 ) );
   } );
 
+// END Ui-slider init
+
+
+
+// click functions on pages
 $('.crossbtn').each(function () {
 	$(this).on('click', function(e) {
 		e.preventDefault();
@@ -104,11 +115,39 @@ $('.crossbtn').each(function () {
 $('#side-open').on('click', function() {
   $(this).toggleClass('open')
   $('.side-panel').addClass('open')
+  $('body').css('overflow','hidden')
 })
 $('#side-close').on('click', function() {
   $('.side-panel').removeClass('open')
   $('#side-open').removeClass('open')
+  $('body').css('overflow','initial')
 })
+// END click functions on pages
+
+
+
+// animate numbers init
+
+
+$('#animateNumber1')
+  .prop('number', 16500)
+  .animateNumber(
+    {
+      number: 16648
+    },
+    2000
+  );
+
+  $('#animateNumber2')
+  .prop('number', 1100)
+  .animateNumber(
+    {
+      number: 1243
+    },
+    2000
+  );
+  
+// END animate numbers init
 
 // // init gogle maps
 // function initMap() {
