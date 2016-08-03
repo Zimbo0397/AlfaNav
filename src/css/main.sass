@@ -26,7 +26,6 @@ a
 body::-webkit-scrollbar
 	height: 0
 	width: 0
-	font-family: CenturyGothic
 body 
 	margin: 0
 	font-family: GothamPro
@@ -1744,6 +1743,131 @@ ul.pagination
 			padding-top: 13px
 			margin: 0 8px
 
+.policy-holder
+	border: 1px solid #fff
+	padding: 20px
+	margin-top: 180px
+	.white-bg
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			background: rgba(255, 255, 255, 0.93)
+			height: 100%
+			width: 100%
+		.content-holder
+			position: relative
+			z-index: 1
+			max-width: 805px
+			margin: 0 auto
+			padding-top: 33px
+			padding-bottom: 80px
+			max-height: 800px
+			overflow-y: auto
+			&::-webkit-scrollbar
+				height: 0
+				width: 0
+			h5
+				margin-top: 0
+				color: #48576a
+				font-family: GenplanFree
+				font-size: 30px
+				font-weight: 400
+				text-align: center
+				margin-bottom: 7px
+			.image-holder
+				width: 148px
+				margin: 0 auto
+				margin-bottom: 23px
+			p
+				color: #48576a
+				font-family: GothamPro
+				font-size: 14px
+				font-weight: 400
+				line-height: 20px
+				margin-bottom: 20px
+			h6
+				color: #48576a
+				font-size: 16px
+				font-weight: 700
+				margin-top: 30px
+				margin-bottom: 20px
+
+.person-info-holder
+	position: relative
+	max-width: 771px
+	margin: 0 auto
+	padding-top: 30px
+	.person-info-slider
+		margin: 0
+	.image-holder
+		width: 250px
+		margin: 0 auto
+		-webkit-filter: grayscale(1)
+		margin-bottom: 35px
+	.tittle
+		text-align: center
+		h4
+			color: #48576a
+			text-transform: uppercase
+			margin-bottom: 0
+		h6
+			color: #48576a
+			font-size: 14px
+			font-weight: 400
+			margin-top: 1px
+			margin-bottom: 30px
+	p
+		color: #48576a
+		font-size: 13px
+		line-height: 24px
+		margin-bottom: 0
+		margin-top: 9px
+	.social-holder
+		text-align: center
+		margin-top: 42px
+		margin-bottom: 37px
+		padding-left: 0
+		li
+			list-style: none
+			display: inline-block
+			font-size: 22px
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			border: 1px solid #48576a
+			padding-top: 11px
+			color: #48576a
+			margin-left: 10px
+			margin-right: 10px
+	.bx-controls-direction
+		position: absolute
+		top: 60px
+		left: 0
+		width: 100%
+	.bx-wrapper
+		border: none
+		box-shadow: none
+		background: transparent
+		margin-bottom: 0
+		.bx-viewport
+			padding-bottom: 10px	
+		.bx-prev
+			height: 37px
+			width: 20px
+			background: url(../img/icons/arrow-left.svg)
+			left: -50px
+		.bx-next
+			height: 37px
+			width: 20px
+			right: -50px
+			background: url(../img/icons/arrow-right.svg)
+		.bx-pager
+			display: none
+
+
 
 .milestones
 	background: url('../img/icons/miles-bg.png')
@@ -1866,3 +1990,662 @@ ul.pagination
 					width: 155px
 					height: 50px
 					padding-top: 15px
+
+.main-modal
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	display: none
+	
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background: #fff
+		opacity: 0.97
+	&.open
+		display: block
+	.scroll-holder
+		overflow-y: auto
+		max-height: 95vh
+		&::-webkit-scrollbar
+			height: 0
+			width: 0
+	.rewiew-holder
+		max-width: 614px
+		width: 100%
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translateX(-50%) translateY(-50%) translateZ(0)
+		h6
+			color: #48576a
+			font-family: GothamPro
+			font-size: 20px
+			font-weight: 700
+			line-height: 24px
+			text-transform: uppercase
+			text-align: center
+		input
+			outline: none
+			color: #48576a
+			font-family: GothamPro
+			font-size: 14px
+			font-weight: 400
+			text-transform: uppercase
+			border: none
+			border-bottom: 1px solid #abb2ba
+			width: 100%
+			padding-top: 10px
+			padding-bottom: 10px
+			line-height: 15px
+			margin-bottom: 20px
+			background: transparent
+		label
+			color: #A9A9A9
+			font-family: GothamPro
+			font-size: 14px
+			font-weight: 400
+			text-transform: uppercase
+			padding-top: 10px
+			padding-bottom: 10px
+			line-height: 15px
+			margin-bottom: 20px
+		textarea
+			width: 100%
+			height: 100px
+			padding: 10px
+			resize: none
+			margin-top: 30px
+			margin-bottom: 40px
+			background: transparent
+		.captcha
+			position: relative
+			label
+				width: 50%
+				border-bottom: 1px solid #abb2ba
+				border-right: 10px solid transparent
+				vertical-align: bottom
+				margin-bottom: 0
+				position: relative
+				.image-holder
+					display: inline-block
+					height: 42px
+					width: 220px
+					position: absolute
+					top: -11px
+					right: -11px
+			input
+				width: 50%
+				margin-bottom: 0
+				vertical-align: bottom
+				border-left: 10px solid transparent
+		.btn-holder
+			margin-top: 30px
+			.button	
+				height: 50px
+				width: 200px
+				padding-top: 18px
+		.ref-capt-btn
+			position: absolute
+			right: 0
+			top: 0
+	.close-btn
+		position: absolute
+		top: 20px
+		right: 20px
+		height: 40px
+		width: 40px
+		z-index: 5
+	.call-back-holder
+		max-width: 614px
+		width: 100%
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translateX(-50%) translateY(-50%) translateZ(0)
+		h6
+			color: #48576a
+			font-family: GothamPro
+			font-size: 20px
+			font-weight: 700
+			line-height: 24px
+			text-transform: uppercase
+			text-align: center
+			margin-bottom: 25px
+		input
+			outline: none
+			color: #48576a
+			font-family: GothamPro
+			font-size: 14px
+			font-weight: 400
+			text-transform: uppercase
+			border: none
+			border-bottom: 1px solid #abb2ba
+			width: 100%
+			padding-top: 15px
+			padding-bottom: 10px
+			line-height: 15px
+			margin-bottom: 10px
+			background: transparent
+		label
+			color: #A9A9A9
+			font-family: GothamPro
+			font-size: 14px
+			font-weight: 400
+			text-transform: uppercase
+			padding-top: 10px
+			padding-bottom: 10px
+			line-height: 15px
+			margin-bottom: 20px
+		.btn-holder
+			margin-top: 30px
+			.button	
+				height: 50px
+				width: 200px
+				padding-top: 15px
+				position: relative
+				.material-icons
+					left: 12px
+					top: 5px
+					position: absolute
+					font-size: 35px
+
+.nav-toggle-button
+	width: 40px
+	height: 20px
+	position: absolute
+	top: -4px
+	right: 8px
+	transform: rotate(0deg)
+	transition: .5s ease-in-out
+	cursor: pointer
+
+	span
+		background-color: #81bd41
+		display: block
+		position: absolute
+		height: 3px
+		width: 40px
+		//border-radius: 1px;
+		left: 0
+		transform: rotate(0deg)
+		transition: .25s ease-in-out
+
+	.span1
+		top: 0px
+		transform-origin: left center
+
+	.span2
+		top: 9px
+		transform-origin: left center
+
+	.span3
+		top: 18px
+		transform-origin: left center
+
+.nav-toggle-button
+	&.open
+		.span1
+			transform: rotate(45deg)
+			top: 0px
+			left: 4px
+		.span2
+			top: 20px
+			position: relative
+			opacity: 0
+		.span3
+			transform: rotate(-45deg)
+			top: 27px
+			left: 4px
+
+.side-panel
+	position: absolute
+	top: 0
+	right: -200%
+	height: 100vh
+	width: 30%
+	max-width: 475px
+	padding-left: 106px
+	padding-top: 170px
+	padding-right: 60px
+	transition: right .2s
+	background: url(../img/images/aside-bg.jpg)
+	&.open
+		right: 0
+		transition: right .2s
+	h4
+		margin-bottom: 18px
+	ul.menu-list
+		li
+			color: #48576a
+			font-family: GothamPro
+			font-size: 18px
+			font-weight: 700
+			text-transform: uppercase
+			a
+				display: block
+				padding: 10px
+				border: 2px solid transparent
+				&:hover
+					border: 2px solid #81bb41
+			&.sec-lv
+				font-weight: 400
+				font-size: 14px
+
+	.socials-holder
+		text-align: center
+		ul
+			padding-left: 0
+			li
+				list-style: none
+				display: inline-block
+				font-size: 22px
+				width: 50px
+				height: 50px
+				border-radius: 50%
+				border: 1px solid #48576a
+				padding-top: 11px
+				color: #48576a
+				margin-left: 10px
+				margin-right: 10px
+	.close-btn
+		a
+			display: inline-block
+			position: absolute
+			right: 8px
+			top: 0px
+			.material-icons
+				font-size: 43px
+				color: #81bb41
+
+.news-hoolder
+	max-width: 930px
+	margin: 0 auto
+	position: relative
+	z-index: 2
+	padding-top: 43px
+	.news-slider
+		margin: 0
+	.breadcrumbs
+		border-bottom: 1px solid #cacdcf
+		padding-bottom: 7px
+		li
+			display: inline-block
+			font-size: 13px
+			height: 25px
+			padding-right: 6px
+			color: #48576a
+			&:first-child
+				color: #81bb41
+				font-weight: 500
+				padding-left: 0
+	.text-holder
+		padding-left: 158px
+		position: relative
+		margin-bottom: 38px
+		.date
+			position: absolute
+			left: 58px
+			top: 10px
+			text-align: right
+			.number
+				color: #48576a
+				font-size: 36px
+				font-weight: 700
+				line-height: 20px
+				margin-bottom: 7px
+				
+			.month
+				span
+					display: block
+					color: #48576a
+					font-size: 12px
+					font-weight: 400
+					line-height: 20px
+					text-transform: uppercase
+		h5
+			color: #48576a
+			font-size: 18px
+			line-height: 24px
+			text-transform: uppercase
+			margin-bottom: 0
+			margin-top: 24px
+		p
+			color: #48576a
+			font-size: 13px
+			font-weight: 400
+			line-height: 24px
+			margin-top: 17px
+	.social-counters
+		text-align: center
+		padding-top: 32px
+		.ya-share2__item_service_twitter,
+		.ya-share2__item_service_gplus,
+		.ya-share2__item_service_facebook,
+		.ya-share2__item_service_vkontakte
+			.ya-share2__badge
+				border-radius: 50%
+				height: 50px
+				width: 50px
+				text-align: center
+				.ya-share2__icon
+					height: 50px
+					width: 50px
+					background-position: 50% 50%
+					background-size: 30px 30px 
+					background-repeat: no-repeat
+		.ya-share2__item_service_gplus
+			.ya-share2__icon
+				background-size: 47px 46px !important
+		.ya-share2__item_service_vkontakte
+			.ya-share2__icon
+				background-size: 50px 40px !important
+		.ya-share2__item
+			&.ya-share2__item_service_facebook
+				margin: 10px
+			&.ya-share2__item_service_twitter
+				margin: 10px
+			&.ya-share2__item_service_gplus
+				margin: 10px
+			&.ya-share2__item_service_vkontakte
+				margin: 10px
+	.related-news
+		position: relative
+		margin-top: 63px
+		padding-top: 36px
+		padding-bottom: 58px
+		&:before
+			content: ""
+			position: absolute
+			right: -100%
+			top: 0
+			width: 500%
+			height: 100%
+			background: url(../img/images/related-bg.png)
+		h3
+			color: #48576a
+			font-family: GenplanFree
+			font-size: 30px
+			text-transform: uppercase
+			text-align: center
+			font-weight: 400
+			letter-spacing: normal
+		.related-holder
+			$gap: 4.4%
+			margin-left: $gap / -2
+			margin-right: $gap / -2
+			.news-item
+				margin-left: $gap / 2
+				margin-right: $gap / 2
+				width: 20.6%
+				.date-holder
+					display: inline-block
+					text-align: right
+					margin-bottom: 8px
+					.number
+						color: #48576a
+						font-size: 36px
+						font-weight: 700
+						line-height: 38px
+					.month
+						span
+							color: #48576a
+							font-size: 12px
+							font-weight: 400
+							line-height: 20px
+							text-transform: uppercase
+							display: block
+				.image-holder
+					height: 200px
+				.tittle
+					color: #48576a
+					font-size: 14px
+					font-weight: 700
+					line-height: 18px
+					text-transform: uppercase
+					margin-top: 14px
+					position: relative
+					transition: color .2s
+					&:hover
+						color: #81bb41
+						transition: color .2s
+			.btn-holder
+				position: relative
+				margin-top: 60px
+				.button
+					width: 200px
+					height: 50px
+					padding-top: 15px
+	.bx-controls-direction
+		position: absolute
+		top: 60px
+		left: 0
+		width: 100%
+	.bx-wrapper
+		border: none
+		box-shadow: none
+		background: transparent
+		margin-bottom: 0
+		.bx-viewport
+			padding-bottom: 10px	
+		.bx-prev
+			height: 37px
+			width: 20px
+			background: url(../img/icons/arrow-left.svg)
+			left: -50px
+		.bx-next
+			height: 37px
+			width: 20px
+			right: -50px
+			background: url(../img/icons/arrow-right.svg)
+		.bx-pager
+			display: none
+
+.forms-gray
+	background-color: rgba(246, 246, 246, 0.56)
+	position: relative
+	padding-bottom: 20px
+	padding-top: 1px
+.online-forms-holder
+	max-width: 613px
+	margin: 0 auto
+	position: relative
+	h5
+		color: #48576a
+		font-size: 20px
+		font-weight: 700
+		line-height: 20px
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 20px
+	ul
+		margin-bottom: 45px
+		li
+			width: 100%
+			border-bottom: 1px solid #b2b8bf
+			padding-bottom: 9px
+			padding-top: 9px
+			text-align: right
+			padding-left: 170px
+			position: relative
+			margin-bottom: 12px
+			padding-right: 10px
+			&.half
+				width: 50%
+				display: inline-block
+			&.half
+				&.first
+					width: 47%
+					margin-right: 2%	
+			label
+				color: #48576a
+				font-size: 14px
+				font-weight: 400
+				position: absolute
+				left: 0
+				top: 14px
+			input
+				color: #333
+				font-family: GothamPro
+				font-size: 14px
+				font-weight: 400
+				background: transparent
+				border: none
+				outline: none
+			.select-holder
+				position: relative
+				display: inline-block
+				margin-left: 40px
+				&:after
+					content: ''
+					position: absolute
+					right: 0
+					top: 7px
+					height: 8px
+					width: 12px
+					background: url(../img/icons/select-apper.png)
+				select
+					min-width: 65px
+					appearance: none
+					background: transparent
+					border: none
+					padding-right: 15px
+					color: #48576a
+					font-family: GothamPro
+					font-size: 12px
+					font-weight: 400
+					text-transform: uppercase
+					outline: none
+
+.form-light
+	width: 100vw
+	position: relative
+	padding-right: 20px
+	padding-left: 20px
+	padding-top: 11px
+	h5
+		color: #48576a
+		font-family: GothamPro
+		font-size: 20px
+		font-weight: 700
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 15px
+.exp-table-holder
+	table
+		border-collapse: collapse
+		width: 100%
+
+	tr
+		td
+			padding-left: 5px
+			padding-right: 5px
+			height: 50px
+			vertical-align: bottom
+			input
+				display: inline-block
+				max-width: 150px
+				background: transparent
+				border: none
+				outline: none
+				border-bottom: 1px solid #bac0c7
+				color: #48576a
+				font-size: 13px
+				font-weight: 400
+		&:first-child
+			th,td
+				border: 1px solid #bac0c7
+				text-align: center
+				color: #48576a
+				font-size: 13px
+				font-weight: 500
+				text-transform: uppercase
+				vertical-align: middle
+				background: #fafafa
+
+		.selects-holder
+			border-bottom: 1px solid #bac0c7
+			white-space: nowrap
+			padding-bottom: 5px
+			.select-holder
+				position: relative
+				display: inline-block
+				&:after
+					content: ''
+					position: absolute
+					right: 0
+					top: 7px
+					height: 8px
+					width: 12px
+					background: url(../img/icons/select-apper.png)
+				select
+					width: 43px
+					appearance: none
+					background: transparent
+					border: none
+					padding-right: 15px
+					color: #48576a
+					font-family: GothamPro
+					font-size: 12px
+					font-weight: 400
+					text-transform: uppercase
+					outline: none
+					text-align: center
+					margin-left: 3px
+					margin-right: 3px
+					&.date
+						width: 31px
+					&.month
+						width: 31px
+	.btn-holder
+		text-align: left
+		margin-top: 11px
+		.button
+			font-size: 12px
+			font-weight: 500
+			width: 110px
+			height: 33px
+
+.exp-table-holder
+	&.ship
+		margin-bottom: 60px
+		tr
+			td
+				input
+					max-width: 100%
+					width: 100%
+		p
+			color: #48576a
+			font-size: 12px
+			line-height: 18px
+			max-width: 1194px
+			margin: 0 auto
+			margin-top: 34px
+		.btn-holder
+			margin-top: 38px
+			text-align: center
+			.button
+				font-size: 12px
+				font-weight: 500
+				width: 200px
+				height: 50px
+				font-size: 14px
+				font-weight: 700
+				text-align: center
+				padding-top: 15px
+				margin-left: 10px
+				margin-right: 10px
+				&.gray
+					border-color: #a8b0b8
+					color: #a8b0b8
+					transition: color, background .2s
+					&:hover
+						color: #fff
+						background: #a8b0b8
+						transition: color, background .2s

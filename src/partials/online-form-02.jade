@@ -1,0 +1,271 @@
+.main-modal
+	a.close-btn(href="#")
+		img(src="img/icons/modal-close.png", alt="")
+	.scroll-holder
+		form(action="")
+			.forms-gray
+				.online-forms-holder
+					.data-form
+						h5 Personal Data
+						ul
+							li
+								.input-group
+									label(for="") POSITION APPLIED FOR
+									input
+							li
+								.input-group
+									label(for="") FIRST NAME:
+									input
+							li
+								.input-group
+									label(for="") LAST NAME
+									input
+							li
+								.input-group
+									label(for="#year") DATE OF BIRTH
+									.select-holder
+										select#year(name="year")
+											option(value="month1", disabled, selected) YEAR
+											option(value="year1") 1995
+											option(value="year2") 2015
+											option(value="year3") 2016
+									.select-holder
+										select#date(name="date")
+											option(value="month1", disabled, selected) DATE
+											option(value="date1") 1
+											option(value="date2") 10
+											option(value="date3") 20
+									.select-holder
+										select#month(name="month")
+											option(value="month1", disabled, selected) MONTH
+											option(value="month1") 1
+											option(value="month2") 2
+											option(value="month3") 10
+							li
+								.input-group
+									label(for="#citizenship") CITIZENSHIP
+									.select-holder
+										select#citizenship(name="citizenship")
+											option(value="month1", disabled, selected)
+											option(value="citizenship1") Canadian
+											option(value="citizenship2") Kazakh
+											option(value="citizenship3") Salvadoran
+							li
+								.input-group
+									label(for="") COUNTRY OF BIRTH
+									.select-holder
+										select#country(name="country")
+											option(value="month1", disabled, selected)
+											option(value="country1") Australia
+											option(value="country2") Bosnia and Herzegovina
+											option(value="country3") Central African Republic
+						h5 Full mailing address
+						ul
+							li
+								.input-group
+									label(for="") STREET ADDRESS
+									input
+							li.half.first
+								.input-group
+									label(for="") CITY
+									input
+							li.half
+								.input-group
+									label(for="") ZIP CODE
+									input
+							li
+								.input-group
+									label(for="") REGION (optional)
+									input
+							li
+								.input-group
+									label(for="") STATE (optional)
+									input
+							li
+								.input-group
+									label(for="") COUNTRY
+									.select-holder
+										select#country(name="country")
+											option(value="month1", disabled, selected)
+											option(value="country1") Australia
+											option(value="country2") Bosnia and Herzegovina
+											option(value="country3") Central African Republic
+							li
+								.input-group
+									label(for="") PHONE NUMBER
+									input
+							li
+								.input-group
+									label(for="") PHONE NUMBER 2
+									input
+							li
+								.input-group
+									label(for="") E-MAIL
+									input
+
+
+			.form-light
+				h5
+					| Your sea-going experience (last 5 years data)
+				.exp-table-holder
+					table
+						tbody
+							tr
+								td VESSEL'S NAME
+								td IMO Number
+								td TYPE
+								td DWT
+								td ENG.TYPE
+								td HP
+								td POSITION/RANK
+								td 
+									|FROM
+									br
+									|DD/MM/YYYY
+								td
+									|TILL
+									br
+									|DD/MM/YYYY
+								td
+									|CREWING
+									br
+									|AGENCY
+								td
+									|SHIP manager’s
+									br
+									|NAME
+								td
+									|ship manager’s
+									br
+									|COUNTRY
+							tr
+								td
+									input(type="text")
+								td
+									input(type="text")
+								td
+									input(type="text")
+								td
+									input(type="text")
+								td
+									input(type="text")
+								td
+									input(type="text")
+								td
+									input(type="text")
+								td
+									.selects-holder
+										.select-holder
+											select.date(name="f-date")
+												option(value="") 1
+												option(value="") 2
+												option(value="") 10
+												option(value="") 15
+												option(value="") 20
+												option(value="") 31
+										.select-holder
+											select.month(name="")
+												option(value="") 01
+												option(value="") 02
+												option(value="") 05
+												option(value="") 10
+												option(value="") 25
+												option(value="") 30
+										.select-holder
+											select(name="")
+												option(value="") 1998
+												option(value="") 2001
+												option(value="") 2012
+												option(value="") 2013
+												option(value="") 2014
+												option(value="") 2015
+								td
+									.selects-holder
+										.select-holder
+											select.date(name="f-date")
+												option(value="") 1
+												option(value="") 2
+												option(value="") 10
+												option(value="") 15
+												option(value="") 20
+												option(value="") 31
+										.select-holder
+											select.month(name="")
+												option(value="") 01
+												option(value="") 02
+												option(value="") 05
+												option(value="") 10
+												option(value="") 25
+												option(value="") 30
+										.select-holder
+											select(name="")
+												option(value="") 1998
+												option(value="") 2001
+												option(value="") 2012
+												option(value="") 2013
+												option(value="") 2014
+												option(value="") 2015
+								td
+									input(type="text")
+								td
+									input(type="text")
+								td
+									input(type="text")
+									
+
+							
+					.btn-holder
+						a.button(href="#") + Add more
+
+
+				h5 
+					| Ship manager’s Full Style of LAST THREE VESSELS
+				.exp-table-holder.ship
+					table
+						tbody
+							tr
+								td VESSEL'S NAME
+								td IMO Number
+								td TYPE
+								td DWT
+								td ENG.TYPE
+								
+							tr
+								td
+									input(type="text")
+								td
+									input(type="text")
+								td
+									input(type="text")
+								td
+									input(type="text")
+								td
+									input(type="text")
+							tr
+								td
+									input(type="text")
+								td
+									input(type="text")
+								td
+									input(type="text")
+								td
+									input(type="text")
+								td
+									input(type="text")
+							tr
+								td
+									input(type="text")
+								td
+									input(type="text")
+								td
+									input(type="text")
+								td
+									input(type="text")
+								td
+									input(type="text")
+
+					p
+						|Відповідно до Закону України "Про захист персональних даних" № 2297-IV, уповноважую Приватну Фірму "Альфа Навігейшн" обробляти та розповсюджувати власні персональні дані, з метою працевлаштування моєї кандидатури за кордон. Інформація надана мною особово та за моєї згоди.
+					.btn-holder
+						a.button(href="#") Submit
+						a.button.gray(href="#") Clear

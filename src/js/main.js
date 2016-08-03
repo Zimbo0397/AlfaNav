@@ -2,6 +2,13 @@ $('.vacitemslider').bxSlider({
   mode: 'fade'
 });
 
+$('.news-slider').bxSlider({
+  mode: 'fade'
+});
+$('.person-info-slider').bxSlider({
+  mode: 'fade'
+});
+
 
 
 $(window).on('load', function() {
@@ -94,6 +101,15 @@ $('.crossbtn').each(function () {
 		$(this).closest('.filters-item').toggleClass('open')
 	})
 })
+$('#side-open').on('click', function() {
+  $(this).toggleClass('open')
+  $('.side-panel').addClass('open')
+})
+$('#side-close').on('click', function() {
+  $('.side-panel').removeClass('open')
+  $('#side-open').removeClass('open')
+})
+
 // // init gogle maps
 // function initMap() {
 //   // Create a map object and specify the DOM element for display.
@@ -103,3 +119,4 @@ $('.crossbtn').each(function () {
 //     zoom: 8
 //   });
 // }
+//socials-counters

@@ -1,0 +1,54 @@
+.brand-holder
+	img(src="img/images/logo.png", alt="")
+.main-nav-holder.inline-holder
+	a(href="#" class='callback-holder inline-el')
+		span Call back
+		img(src="img/icons/callback-img.png", alt="")
+	a(href="#" class='menu-holder inline-el')
+		span menu
+		#side-open.nav-toggle-button
+			span.span1
+			span.span2
+			span.span3
+.side-panel
+	.close-btn
+		a#side-close(href="#")
+			i.material-icons clear
+	h4 HOME
+	ul.menu-list
+		li 
+			a(href="#") find a job
+		li.sec-lv
+			a(href="#") vacancies
+		li 
+			a(href="#") seafarers testimonials
+		li 
+			a(href="#") find talent
+		li.sec-lv
+			a(href="#") ship owners references
+		li 
+			a(href="#") our fleet
+		li
+			a(href="#") our principals list
+		li
+			a(href="#") company
+		li.sec-lv
+			a(href="#") our story
+		li 
+			a(href="#") our team
+		li
+			a(href="#") careers
+		li
+			a(href="#") news
+		li
+			a(href="#") contact us
+	.socials-holder
+		ul.inline-holder
+			mixin newsocitem(class1)
+				li
+					a(href="#")
+						i.fa(class= class1)
+			+newsocitem('fa-facebook')
+			+newsocitem('fa-twitter')
+			+newsocitem('fa-google-plus')
+			+newsocitem('fa-linkedin')
