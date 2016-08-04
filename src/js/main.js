@@ -115,13 +115,24 @@ $('.crossbtn').each(function () {
 $('#side-open').on('click', function() {
   $(this).toggleClass('open')
   $('.side-panel').addClass('open')
-  $('body').css('overflow','hidden')
+  $('body').addClass('blackshadow')
 })
 $('#side-close').on('click', function() {
   $('.side-panel').removeClass('open')
   $('#side-open').removeClass('open')
-  $('body').css('overflow','initial')
+  $('body').removeClass('blackshadow')
 })
+
+$('#callback1').on('click', function() {
+  $('.call-back-inner').parent().addClass('open')
+  $('body').addClass('blackshadow')
+})
+$('#callbackclose1').on('click', function() {
+  $('.call-back-inner').parent().removeClass('open')
+  $('body').removeClass('blackshadow')
+})
+
+
 // END click functions on pages
 
 
