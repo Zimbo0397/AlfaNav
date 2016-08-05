@@ -15,49 +15,35 @@ html(lang='en')
 
 	body
 
-		section.top-line(style='background-image: url("img/images/database-bg.png")')
+		section.top-line.database-sec
 			include ./partials/top-nav.jade
+			.table-holder
+				.vert-el
+					.description-in-top
+						h1 
+							|Alpha Vessel's Data Base
+							
+						img(src="img/icons/waves-icon.png", alt="")
 
-			.description-in-top
-				h1 
-					|Alpha Vessel's Data Base
-					
-				img(src="img/icons/waves-icon.png", alt="")
-
-				h2 
-					|1000+ vessels of various types and sizes, partially or fully manned 
-					br
-					by our company.
+						h2 
+							|1000+ vessels of various types and sizes, partially or fully manned 
+							br
+							by our company.
 		
 
 		section.database
 			.gray-bg
-				.main-container
-					.inline-holder
-						.filters-holder.inline-el
-							.search-holder
-								input(placeholder="Search")
-								a.searchbtn(href="#")
-									i.fa.fa-search
-						.table-holder.inline-el
-							table.head
-								tbody
-									tr
-										td.name-holder
-											span Vessel's Name
-										td.type-holder
-											span Type
-										td.dwt
-											span DWT
-										td.delivered 
-											span Delivered
-										td.manager
-											span Ship Manager	
-										td.country
-											span Country
-			.main-container
+			.main-container.rel-top
+				a#filtersOpen(href="#")
+					img(src="img/icons/ic_keyboard_arrow_right.svg", alt="")
 				.inline-holder
 					.filters-holder.main.inline-el
+						a#filtersClose(href="#")
+							img(src="img/icons/ic_clear.svg", alt="")
+						.search-holder
+							input(placeholder="Search")
+							a.searchbtn(href="#")
+								i.fa.fa-search
 						ul
 							li.filters-item.open
 								p Vessel Type: 
@@ -234,304 +220,322 @@ html(lang='en')
 
 								a.crossbtn(href="#")
 
-
 					.table-holder.main.inline-el
-						table.main
-							tbody
-								mixin newtr(name, type, dwt, deliver, ship, country)
+						.table-scroll
+							table.head
+								tbody
 									tr
 										td.name-holder
-											span= name
+											span Vessel's Name
 										td.type-holder
-											span= type
+											span Type
 										td.dwt
-											span= dwt
+											span DWT
 										td.delivered 
-											span= deliver
+											span Delivered
 										td.manager
-											span= ship
+											span Ship Manager	
 										td.country
-											span= country
-								+newtr(
-									'A.P. Moeller',
-									'Cont',
-									'104750',
-									'2000',
-									'A. P. Moller Maersk, Denmark',
-									'A. P. Moller Maersk, Denmark'
-								)
-								+newtr(
-									'Accord Express',
-									'Tank',
-									'19991',
-									'1985',
-									'Mms Shipmanagement Inc., Usa',
-									'Mms Shipmanagement Inc., Usa'
-								)
-								+newtr(
-									'African Begonia',
-									'Bulk',
-									'8986',
-									'1978',
-									'Dockendale Shipping Co Lt, Bahamas',
-									'Dockendale Shipping Co Lt, Bahamas'
-								)
-								+newtr(
-									'African Camellia',
-									'Bulk',
-									'8992',
-									'1979',
-									'Tsakos Shipping & Trading, Greece',
-									'Tsakos Shipping & Trading, Greece'
-								)
-								+newtr(
-									'African Dahlia',
-									'D/C',
-									'8996',
-									'1980',
-									'Maersk Ship Management B., Netherlands',
-									'Maersk Ship Management B., Netherlands'
-								)
-								+newtr(
-									'African Eagle',
-									'Ch/Tank',
-									'27000',
-									'1980',
-									'Wallem Shipmanagement Pvt, India',
-									'Wallem Shipmanagement Pvt, India'
-								)
-								+newtr(
-									'A.P. Moeller',
-									'Cont',
-									'104750',
-									'2000',
-									'A. P. Moller Maersk, Denmark',
-									'A. P. Moller Maersk, Denmark'
-								)
-								+newtr(
-									'Accord Express',
-									'Tank',
-									'19991',
-									'1985',
-									'Mms Shipmanagement Inc., Usa',
-									'Mms Shipmanagement Inc., Usa'
-								)
-								+newtr(
-									'African Begonia',
-									'Bulk',
-									'8986',
-									'1978',
-									'Dockendale Shipping Co Lt, Bahamas',
-									'Dockendale Shipping Co Lt, Bahamas'
-								)
-								+newtr(
-									'African Camellia',
-									'Bulk',
-									'8992',
-									'1979',
-									'Tsakos Shipping & Trading, Greece',
-									'Tsakos Shipping & Trading, Greece'
-								)
-								+newtr(
-									'African Dahlia',
-									'D/C',
-									'8996',
-									'1980',
-									'Maersk Ship Management B., Netherlands',
-									'Maersk Ship Management B., Netherlands'
-								)
-								+newtr(
-									'African Eagle',
-									'Ch/Tank',
-									'27000',
-									'1980',
-									'Wallem Shipmanagement Pvt, India',
-									'Wallem Shipmanagement Pvt, India'
-								)
-								+newtr(
-									'A.P. Moeller',
-									'Cont',
-									'104750',
-									'2000',
-									'A. P. Moller Maersk, Denmark',
-									'A. P. Moller Maersk, Denmark'
-								)
-								+newtr(
-									'Accord Express',
-									'Tank',
-									'19991',
-									'1985',
-									'Mms Shipmanagement Inc., Usa',
-									'Mms Shipmanagement Inc., Usa'
-								)
-								+newtr(
-									'African Begonia',
-									'Bulk',
-									'8986',
-									'1978',
-									'Dockendale Shipping Co Lt, Bahamas',
-									'Dockendale Shipping Co Lt, Bahamas'
-								)
-								+newtr(
-									'African Camellia',
-									'Bulk',
-									'8992',
-									'1979',
-									'Tsakos Shipping & Trading, Greece',
-									'Tsakos Shipping & Trading, Greece'
-								)
-								+newtr(
-									'African Dahlia',
-									'D/C',
-									'8996',
-									'1980',
-									'Maersk Ship Management B., Netherlands',
-									'Maersk Ship Management B., Netherlands'
-								)
-								+newtr(
-									'African Eagle',
-									'Ch/Tank',
-									'27000',
-									'1980',
-									'Wallem Shipmanagement Pvt, India',
-									'Wallem Shipmanagement Pvt, India'
-								)
-								+newtr(
-									'A.P. Moeller',
-									'Cont',
-									'104750',
-									'2000',
-									'A. P. Moller Maersk, Denmark',
-									'A. P. Moller Maersk, Denmark'
-								)
-								+newtr(
-									'Accord Express',
-									'Tank',
-									'19991',
-									'1985',
-									'Mms Shipmanagement Inc., Usa',
-									'Mms Shipmanagement Inc., Usa'
-								)
-								+newtr(
-									'African Begonia',
-									'Bulk',
-									'8986',
-									'1978',
-									'Dockendale Shipping Co Lt, Bahamas',
-									'Dockendale Shipping Co Lt, Bahamas'
-								)
-								+newtr(
-									'African Camellia',
-									'Bulk',
-									'8992',
-									'1979',
-									'Tsakos Shipping & Trading, Greece',
-									'Tsakos Shipping & Trading, Greece'
-								)
-								+newtr(
-									'African Dahlia',
-									'D/C',
-									'8996',
-									'1980',
-									'Maersk Ship Management B., Netherlands',
-									'Maersk Ship Management B., Netherlands'
-								)
-								+newtr(
-									'African Eagle',
-									'Ch/Tank',
-									'27000',
-									'1980',
-									'Wallem Shipmanagement Pvt, India',
-									'Wallem Shipmanagement Pvt, India'
-								)
-								+newtr(
-									'A.P. Moeller',
-									'Cont',
-									'104750',
-									'2000',
-									'A. P. Moller Maersk, Denmark',
-									'A. P. Moller Maersk, Denmark'
-								)
-								+newtr(
-									'Accord Express',
-									'Tank',
-									'19991',
-									'1985',
-									'Mms Shipmanagement Inc., Usa',
-									'Mms Shipmanagement Inc., Usa'
-								)
-								+newtr(
-									'African Begonia',
-									'Bulk',
-									'8986',
-									'1978',
-									'Dockendale Shipping Co Lt, Bahamas',
-									'Dockendale Shipping Co Lt, Bahamas'
-								)
-								+newtr(
-									'African Camellia',
-									'Bulk',
-									'8992',
-									'1979',
-									'Tsakos Shipping & Trading, Greece',
-									'Tsakos Shipping & Trading, Greece'
-								)
-								+newtr(
-									'African Dahlia',
-									'D/C',
-									'8996',
-									'1980',
-									'Maersk Ship Management B., Netherlands',
-									'Maersk Ship Management B., Netherlands'
-								)
-								+newtr(
-									'African Eagle',
-									'Ch/Tank',
-									'27000',
-									'1980',
-									'Wallem Shipmanagement Pvt, India',
-									'Wallem Shipmanagement Pvt, India'
-								)
-								+newtr(
-									'A.P. Moeller',
-									'Cont',
-									'104750',
-									'2000',
-									'A. P. Moller Maersk, Denmark',
-									'A. P. Moller Maersk, Denmark'
-								)
-								+newtr(
-									'Accord Express',
-									'Tank',
-									'19991',
-									'1985',
-									'Mms Shipmanagement Inc., Usa',
-									'Mms Shipmanagement Inc., Usa'
-								)
-								+newtr(
-									'African Begonia',
-									'Bulk',
-									'8986',
-									'1978',
-									'Dockendale Shipping Co Lt, Bahamas',
-									'Dockendale Shipping Co Lt, Bahamas'
-								)
-								+newtr(
-									'African Camellia',
-									'Bulk',
-									'8992',
-									'1979',
-									'Tsakos Shipping & Trading, Greece',
-									'Tsakos Shipping & Trading, Greece'
-								)
-								+newtr(
-									'African Dahlia',
-									'D/C',
-									'8996',
-									'1980',
-									'Maersk Ship Management B., Netherlands',
-									'Maersk Ship Management B., Netherlands'
-								)
+											span Country
+							table.main
+								tbody
+									mixin newtr(name, type, dwt, deliver, ship, country)
+										tr
+											td.name-holder
+												span= name
+											td.type-holder
+												span= type
+											td.dwt
+												span= dwt
+											td.delivered 
+												span= deliver
+											td.manager
+												span= ship
+											td.country
+												span= country
+									+newtr(
+										'A.P. Moeller',
+										'Cont',
+										'104750',
+										'2000',
+										'A. P. Moller Maersk, Denmark',
+										'A. P. Moller Maersk, Denmark'
+									)
+									+newtr(
+										'Accord Express',
+										'Tank',
+										'19991',
+										'1985',
+										'Mms Shipmanagement Inc., Usa',
+										'Mms Shipmanagement Inc., Usa'
+									)
+									+newtr(
+										'African Begonia',
+										'Bulk',
+										'8986',
+										'1978',
+										'Dockendale Shipping Co Lt, Bahamas',
+										'Dockendale Shipping Co Lt, Bahamas'
+									)
+									+newtr(
+										'African Camellia',
+										'Bulk',
+										'8992',
+										'1979',
+										'Tsakos Shipping & Trading, Greece',
+										'Tsakos Shipping & Trading, Greece'
+									)
+									+newtr(
+										'African Dahlia',
+										'D/C',
+										'8996',
+										'1980',
+										'Maersk Ship Management B., Netherlands',
+										'Maersk Ship Management B., Netherlands'
+									)
+									+newtr(
+										'African Eagle',
+										'Ch/Tank',
+										'27000',
+										'1980',
+										'Wallem Shipmanagement Pvt, India',
+										'Wallem Shipmanagement Pvt, India'
+									)
+									+newtr(
+										'A.P. Moeller',
+										'Cont',
+										'104750',
+										'2000',
+										'A. P. Moller Maersk, Denmark',
+										'A. P. Moller Maersk, Denmark'
+									)
+									+newtr(
+										'Accord Express',
+										'Tank',
+										'19991',
+										'1985',
+										'Mms Shipmanagement Inc., Usa',
+										'Mms Shipmanagement Inc., Usa'
+									)
+									+newtr(
+										'African Begonia',
+										'Bulk',
+										'8986',
+										'1978',
+										'Dockendale Shipping Co Lt, Bahamas',
+										'Dockendale Shipping Co Lt, Bahamas'
+									)
+									+newtr(
+										'African Camellia',
+										'Bulk',
+										'8992',
+										'1979',
+										'Tsakos Shipping & Trading, Greece',
+										'Tsakos Shipping & Trading, Greece'
+									)
+									+newtr(
+										'African Dahlia',
+										'D/C',
+										'8996',
+										'1980',
+										'Maersk Ship Management B., Netherlands',
+										'Maersk Ship Management B., Netherlands'
+									)
+									+newtr(
+										'African Eagle',
+										'Ch/Tank',
+										'27000',
+										'1980',
+										'Wallem Shipmanagement Pvt, India',
+										'Wallem Shipmanagement Pvt, India'
+									)
+									+newtr(
+										'A.P. Moeller',
+										'Cont',
+										'104750',
+										'2000',
+										'A. P. Moller Maersk, Denmark',
+										'A. P. Moller Maersk, Denmark'
+									)
+									+newtr(
+										'Accord Express',
+										'Tank',
+										'19991',
+										'1985',
+										'Mms Shipmanagement Inc., Usa',
+										'Mms Shipmanagement Inc., Usa'
+									)
+									+newtr(
+										'African Begonia',
+										'Bulk',
+										'8986',
+										'1978',
+										'Dockendale Shipping Co Lt, Bahamas',
+										'Dockendale Shipping Co Lt, Bahamas'
+									)
+									+newtr(
+										'African Camellia',
+										'Bulk',
+										'8992',
+										'1979',
+										'Tsakos Shipping & Trading, Greece',
+										'Tsakos Shipping & Trading, Greece'
+									)
+									+newtr(
+										'African Dahlia',
+										'D/C',
+										'8996',
+										'1980',
+										'Maersk Ship Management B., Netherlands',
+										'Maersk Ship Management B., Netherlands'
+									)
+									+newtr(
+										'African Eagle',
+										'Ch/Tank',
+										'27000',
+										'1980',
+										'Wallem Shipmanagement Pvt, India',
+										'Wallem Shipmanagement Pvt, India'
+									)
+									+newtr(
+										'A.P. Moeller',
+										'Cont',
+										'104750',
+										'2000',
+										'A. P. Moller Maersk, Denmark',
+										'A. P. Moller Maersk, Denmark'
+									)
+									+newtr(
+										'Accord Express',
+										'Tank',
+										'19991',
+										'1985',
+										'Mms Shipmanagement Inc., Usa',
+										'Mms Shipmanagement Inc., Usa'
+									)
+									+newtr(
+										'African Begonia',
+										'Bulk',
+										'8986',
+										'1978',
+										'Dockendale Shipping Co Lt, Bahamas',
+										'Dockendale Shipping Co Lt, Bahamas'
+									)
+									+newtr(
+										'African Camellia',
+										'Bulk',
+										'8992',
+										'1979',
+										'Tsakos Shipping & Trading, Greece',
+										'Tsakos Shipping & Trading, Greece'
+									)
+									+newtr(
+										'African Dahlia',
+										'D/C',
+										'8996',
+										'1980',
+										'Maersk Ship Management B., Netherlands',
+										'Maersk Ship Management B., Netherlands'
+									)
+									+newtr(
+										'African Eagle',
+										'Ch/Tank',
+										'27000',
+										'1980',
+										'Wallem Shipmanagement Pvt, India',
+										'Wallem Shipmanagement Pvt, India'
+									)
+									+newtr(
+										'A.P. Moeller',
+										'Cont',
+										'104750',
+										'2000',
+										'A. P. Moller Maersk, Denmark',
+										'A. P. Moller Maersk, Denmark'
+									)
+									+newtr(
+										'Accord Express',
+										'Tank',
+										'19991',
+										'1985',
+										'Mms Shipmanagement Inc., Usa',
+										'Mms Shipmanagement Inc., Usa'
+									)
+									+newtr(
+										'African Begonia',
+										'Bulk',
+										'8986',
+										'1978',
+										'Dockendale Shipping Co Lt, Bahamas',
+										'Dockendale Shipping Co Lt, Bahamas'
+									)
+									+newtr(
+										'African Camellia',
+										'Bulk',
+										'8992',
+										'1979',
+										'Tsakos Shipping & Trading, Greece',
+										'Tsakos Shipping & Trading, Greece'
+									)
+									+newtr(
+										'African Dahlia',
+										'D/C',
+										'8996',
+										'1980',
+										'Maersk Ship Management B., Netherlands',
+										'Maersk Ship Management B., Netherlands'
+									)
+									+newtr(
+										'African Eagle',
+										'Ch/Tank',
+										'27000',
+										'1980',
+										'Wallem Shipmanagement Pvt, India',
+										'Wallem Shipmanagement Pvt, India'
+									)
+									+newtr(
+										'A.P. Moeller',
+										'Cont',
+										'104750',
+										'2000',
+										'A. P. Moller Maersk, Denmark',
+										'A. P. Moller Maersk, Denmark'
+									)
+									+newtr(
+										'Accord Express',
+										'Tank',
+										'19991',
+										'1985',
+										'Mms Shipmanagement Inc., Usa',
+										'Mms Shipmanagement Inc., Usa'
+									)
+									+newtr(
+										'African Begonia',
+										'Bulk',
+										'8986',
+										'1978',
+										'Dockendale Shipping Co Lt, Bahamas',
+										'Dockendale Shipping Co Lt, Bahamas'
+									)
+									+newtr(
+										'African Camellia',
+										'Bulk',
+										'8992',
+										'1979',
+										'Tsakos Shipping & Trading, Greece',
+										'Tsakos Shipping & Trading, Greece'
+									)
+									+newtr(
+										'African Dahlia',
+										'D/C',
+										'8996',
+										'1980',
+										'Maersk Ship Management B., Netherlands',
+										'Maersk Ship Management B., Netherlands'
+									)
+
+								
+
 						ul.pagination
 							li
 								a(href="#") 0
@@ -551,8 +555,29 @@ html(lang='en')
 								a(href="#") 525
 							li
 								a(href="#") 600
+					
 
+					ul.pagination.mobile
+						li
+							a(href="#") 0
+						li
+							a(href="#") 75
+						li
+							a.active(href="#") 150
+						li
+							a(href="#") 225
+						li
+							a(href="#") 300
+						li
+							a(href="#") 375
+						li
+							a(href="#") 450
+						li
+							a(href="#") 525
+						li
+							a(href="#") 600
 
+					
 
 
 
@@ -560,6 +585,7 @@ html(lang='en')
 
 
 		include ./partials/footer.jade
+		include ./partials/call-back-modal.jade
 
 
 

@@ -75,7 +75,18 @@ h4
 			font-size: 6.1vw
 			line-height: 6.1vw
 h4
-	font-size: 30px
+	font-size: 1.55vw
+	letter-spacing: -1.5px
+	@media (max-width: $medium)
+		font-size: 2vw
+		line-height: 2vw
+	@media (max-width: $tablet)
+		font-size: 3vw
+		line-height: 3vw
+	@media (max-width: $mobile-medium-small)
+		font-size: 6vw
+		line-height: 6vw
+
 ul 
 	padding-left: 0
 	li
@@ -108,6 +119,12 @@ ul.pagination
 			&.active
 				background: #81bb41
 				color: #fff
+	&.mobile
+		display: none
+		@media (max-width: $mobile-large)
+			display: block
+
+
 .hidden
 	display: none
 
@@ -194,6 +211,7 @@ ul.pagination
 		display: table
 		height: 100%
 		width: 100%
+		text-align: center
 		span
 			display: table-cell
 			vertical-align: middle
@@ -213,7 +231,9 @@ ul.pagination
 
 
 
-
+#side-close
+	img
+		width: 44px
 
 
 .top-line
@@ -222,6 +242,60 @@ ul.pagination
 	max-width: 100vw
 	position: relative
 	overflow: hidden
+	&.job
+		background-image: url("../img/images/top-line-bg-3.jpg")
+		height: 50vh
+		@media (max-width: $mobile-medium-small)
+			height: 100vh
+	&.vacancies
+		background-image: url("../img/images/vacancies.jpg")
+		height: 50vh
+		@media (max-width: $mobile-medium-small)
+			height: 100vh
+	&.seafarers-section
+		padding-top: 131px
+		background-image: url("../img/images/sefarers.jpg")
+		height: 50vh
+	&.team-section
+		padding-top: 131px
+		background-image: url("../img/images/our-team-bg.jpg")
+		height: 50vh
+	&.story-section
+		padding-top: 131px
+		background-image: url("../img/images/our-story-bg.jpg")
+		height: 100vh
+		@media (max-width: $tablet)
+			height: auto
+	&.news-sec
+		padding-top: 50px
+		background-image: url("../img/images/news-bg.jpg")
+		height: 50vh
+		@media (max-width: $tablet)
+			height: auto
+			padding-bottom: 150px
+			padding-top: 150px
+	&.database-sec
+		padding-top: 150px
+		background-image: url("../img/images/database-bg.png")
+		height: 50vh
+		@media (max-width: $tablet)
+			height: auto
+			padding-bottom: 150px
+	&.contacts-sec
+		padding-top: 150px
+		background-image: url("../img/images/contacts-bg.jpg")
+		height: 50vh
+		@media (max-width: $tablet)
+			height: auto
+			padding-bottom: 150px
+	&.career-sec
+		padding-top: 150px
+		background-image: url("../img/images/top-line-bg-4.jpg")
+		height: 50vh
+		@media (max-width: $tablet)
+			height: auto
+			padding-bottom: 150px
+
 	.btn-holder
 		margin-top: 58px
 		@media (max-width: $medium)
@@ -319,10 +393,13 @@ ul.pagination
 	h1
 		color: white
 		font-family: GenplanFree
-		font-size: 50px
-		line-height: 50px
+		font-size: 2.6vw
+		line-height: 2.6vw
 		font-weight: normal
 		margin-bottom: 21px
+		@media (max-width: $mobile-large)
+			font-size: 7vw
+			line-height: 7vw
 		&.index																																	
 			font-size: 3.6vw
 			@media (max-width: $mobile-large)
@@ -330,8 +407,13 @@ ul.pagination
 	h2
 		color: white
 		font-family: GothamPro
-		font-size: 30px
+		font-size: 1.55vw
+		line-height: 1.55vw
 		margin-top: 11px
+		text-transform: uppercase
+		@media (max-width: $mobile-large)
+			font-size: 4.55vw
+			line-height: 4.55vw
 	.rope-icons
 		width: 17vw
 		margin: 0 auto
@@ -354,6 +436,8 @@ ul.pagination
 	padding-bottom: 57px
 	.inline-el
 		width: 50%
+		@media (max-width: $mobile-large)
+			width: 100%
 	.desc-head
 		text-align: left
 		padding-right: 75px
@@ -434,7 +518,15 @@ ul.pagination
 				transition: .2s
 				color: white
 .shipowners
-	padding-bottom: 110px
+	overflow: hidden
+	max-height: 0
+	transition: max-height .2s 
+	&.open
+		padding-bottom: 110px
+		max-height: 9999px
+		transition: max-height .2s 
+	.gray-bg
+		padding-top: 14px
 	h4
 		text-align: center
 		margin-bottom: 7px
@@ -444,6 +536,15 @@ ul.pagination
 		max-height: 815px
 		overflow: hidden
 		position: relative
+		@media (max-width: $medium)
+			padding-left: 90px
+			padding-right: 90px
+		@media (max-width: $tablet)
+			padding-left: 20px
+			padding-right: 20px
+		@media (max-width: $mobile-large)
+			padding-left: 0
+			padding-right: 0
 		table
 			width: 100%
 			border-collapse: collapse
@@ -458,11 +559,13 @@ ul.pagination
 				td
 					width: 33.33%
 					text-align: left
-					padding-left: 157px
+					padding-left: 13%
 					color: #48576a
 					font-size: 12px
 					padding-bottom: 15px
 					padding-top: 9px
+					@media (max-width: $mobile-large)
+						padding-left: 5%
 
 
 					&:first-child
@@ -472,8 +575,10 @@ ul.pagination
 						font-weight: 500
 					&:last-child
 						text-align: right
-						padding-right: 157px
+						padding-right: 13%
 						padding-left: 0
+						@media (max-width: $mobile-large)
+							padding-right: 5%
 			tr
 
 				&:nth-child(odd)
@@ -1328,11 +1433,20 @@ ul.pagination
 	&:after
 		content: ''
 		position: absolute
-		height: 100px
-		width: 100px
-		background: url('../img/icons/helm-icon.png')
-		bottom: 0
-		left: 0
+		height: 563px
+		width: 680px
+		background: url("../img/icons/wheel.svg")
+		bottom: -129px
+		left: -254px
+		background-size: cover
+		@media (max-width: $large)
+			height: 403px
+			width: 430px
+			bottom: -149px
+			left: -164px
+		@media (max-width: $tablet)
+			width: 360px
+			height: 340px
 
 	.text-holder
 		max-width: 905px
@@ -1350,27 +1464,47 @@ ul.pagination
 		padding-top: 26px
 		.counter-holder
 			width: 50%
-			padding-left: 39px
+			@media (max-width: $mobile-large)
+				width: 100%
+				padding-left: 0
+				margin-top: 30px
 			.number
 				text-align: center
-				width: 200px
+				width: 35%
+				@media (max-width: $mobile-large)
+					width: 28%
 				span
 					color: #81bb41
 					font-size: 80px
 					line-height: 70px
 					font-weight: 700
+					@media (max-width: $large)
+						font-size: 70px
+					@media (max-width: $medium)
+						font-size: 60px
+					@media (max-width: $mobile-large)
+						font-size: 40px
+
 				p
 					color: #48576a
 					font-size: 16px
 					text-transform: uppercase
 					margin-top: 10px
+					@media (max-width: $medium)
+						font-size: 14px
+					@media (max-width: $mobile-large)
+						font-size: 12px
+						margin-top: 0
 			.description
 				color: #48576a
 				font-size: 18px
 				line-height: 24px
-				max-width: 290px
-				max-width: 362px
+				width: 65%
 				padding-left: 73px
+				@media (max-width: $large)
+					padding-left: 23px
+				@media (max-width: $mobile-large)
+					width: 72%
 	.btn-holder
 		margin-top: 46px
 		.button
@@ -1380,7 +1514,16 @@ ul.pagination
 			margin-right: 9px
 			font-size: 18px
 			text-transform: uppercase
-			padding-top: 14px
+			position: relative
+			z-index: 2
+			@media (max-width: $medium)
+				height: 40px
+				width: 230px
+				font-size: 14px
+			@media (max-width: $mobile-medium-small)
+				display: block
+				margin: 20px auto
+
 
 .whyalfanav
 	.gray-strip
@@ -1390,21 +1533,32 @@ ul.pagination
 		padding-top: 31px
 		.hotvac
 			margin-right: 227px
+			@media (max-width: $medium)
+				margin-right: 40px
+			@media (max-width: $mobile-medium-small)
+				margin-right: 31px
 			span
 				color: #48576a
 				font-size: 18px
 				font-weight: 700
 				text-transform: uppercase
+				@media (max-width: $mobile-medium-small)
+					font-size: 13px
 		.allurl
 			margin-right: 34px
+			@media (max-width: $mobile-medium-small)
+				margin-right: 0
 			a
 				color: #81bb41
 				font-size: 14px
 				text-transform: uppercase
+				@media (max-width: $mobile-medium-small)
+					font-size: 12px
 	.description-part
-		width: 100%
-		max-width: 945px
+		width: 60%
 		padding-right: 40px
+		@media (max-width: $medium)
+			width: 100%
 		h3
 			margin-top: 58px
 			margin-bottom: 34px
@@ -1414,6 +1568,9 @@ ul.pagination
 			line-height: 30px
 			max-width: 801px
 			padding-right: 50px
+			@media (max-width: $tablet)
+				font-size: 19px
+				line-height: 25px
 		ul
 			margin-top: 29px
 			li
@@ -1431,13 +1588,17 @@ ul.pagination
 					width: 22px
 					background: url('../img/icons/list-sucs-icon.png')
 	.slider-holder
-		width: 100%
-		max-width: 600px
+		width: 40%
+		@media (max-width: $medium)
+			width: 100%
 		.vacitem
 			padding-left: 59px
 			position: relative
 			padding-bottom: 20px
 			margin-bottom: 15px
+			@media (max-width: $mobile-medium-small)
+				padding-left: 10px
+				padding-top: 60px
 			&:before
 				content: ''
 				position: absolute
@@ -1446,6 +1607,8 @@ ul.pagination
 				height: 42px
 				width: 42px
 				background: url('../img/icons/mini-helm-icon.png') 50% 50%
+				@media (max-width: $mobile-medium-small)
+					display: none
 			&:after
 				content: ''
 				position: absolute
@@ -1457,13 +1620,19 @@ ul.pagination
 
 			table
 				width: 281px
+				@media (max-width: $mobile-medium-small)
+					width: 100%
 				td
 					color: #48576a
 					font-size: 13px
 					font-weight: 400
+					@media (max-width: $mobile-medium-small)
+						width: 50%
 					&:first-child
 						font-weight: 500
 						width: 147px
+						@media (max-width: $mobile-medium-small)
+							width: 50%
 			.button
 				position: absolute
 				right: 25px
@@ -1472,6 +1641,10 @@ ul.pagination
 				transform: translateY(-75%)
 				width: 100px
 				height: 40px
+				@media (max-width: $mobile-medium-small)
+					transform: none
+					top: 9px
+					right: 0px
 			&:hover
 				&:before
 					background: url('../img/icons/mini-helm-icon-active.png') 50% 50%
@@ -1480,6 +1653,12 @@ ul.pagination
 					color: #fff
 					background: #81bb41
 					transition: background, color .2s
+			&:nth-child(odd)
+				.button
+					@media (max-width: $mobile-medium-small)
+						right: auto
+						left: 10px
+
 .slider-holder
 	.bx-wrapper
 		max-width: 100%
@@ -1539,6 +1718,11 @@ ul.pagination
 			width: 50%
 			padding-left: 10px
 			padding-right: 10px
+			@media (max-width: $tablet)
+				width: 100%
+				padding-left: 0
+				padding-right: 0
+				margin-bottom: 10px
 			ul 
 				li 
 					border-bottom: 1px solid #dadde1
@@ -1555,9 +1739,13 @@ ul.pagination
 						font-family: GothamPro
 						font-size: 14px
 						font-weight: 400
+						@media (max-width: $mobile-medium-small)
+							font-size: 11px
 					.input-item
 						padding-left: 190px
 						position: relative
+						@media (max-width: $mobile-medium-small)
+							padding-left: 115px
 						label
 							position: absolute
 							left: 0
@@ -1575,6 +1763,9 @@ ul.pagination
 							font-size: 14px
 							font-weight: 400
 							width: 100%
+							@media (max-width: $mobile-medium-small)
+								background: #fff
+								z-index: 1
 							&::-webkit-input-placeholder
 								color: #333
 								font-family: GothamPro
@@ -1605,6 +1796,11 @@ ul.pagination
 							height: 42px
 							top: -7px
 							left: -84px
+							@media (max-width: $mobile-medium-small)
+								width: 160px
+								height: 42px
+								top: 2px
+								left: -45px
 						.ref-button
 							position: absolute
 							right: 0
@@ -1642,12 +1838,19 @@ ul.pagination
 			text-align: left
 			margin-top: 33px
 			padding-left: 10px
+			@media (max-width: $mobile-medium-small)
+				text-align: center
+				padding-left: 0
 			.button
 				cursor: pointer
 				background: transparent
 				width: 200px
 				height: 50px
 				font-family: GothamPro
+				@media (max-width: $medium)
+					height: 40px
+					width: 150px
+
 				&:hover
 					background: #81bb41
 
@@ -1660,12 +1863,16 @@ ul.pagination
 		margin: 0 auto
 		.description-part
 			width: 50%
+			@media (max-width: $mobile-large)
+				width: 100%
 			ul
 				margin-top: 0
 				li
 					padding-right: 126px
 					position: relative
 					margin-bottom: 39px
+					@media (max-width: $mobile-large)
+						padding-right: 104px
 					.office-type
 						padding-top: 11px
 						position: relative
@@ -1696,6 +1903,8 @@ ul.pagination
 						right: -4px
 						top: -2px
 						width: 120px
+						@media (max-width: $mobile-large)
+							right: -34px
 						&:hover
 							color: #81bb41
 						&.active
@@ -1703,15 +1912,88 @@ ul.pagination
 
 		.map-part
 			width: 50%
+			height: 630px
+			@media (max-width: $mobile-large)	
+				width: 100%
+				height: 450px
+				margin-bottom: 40px
+			#map
+				height: 100%
 
 .database
 	.gray-bg
 		    border: 1px solid #e2e2e2
+		    height: 49px
+	.rel-top
+		top: -49px
+	.table-scroll
+		&::-webkit-scrollbar-track
+			background-color: #F5F5F5
+		&::-webkit-scrollbar
+			width: 12px
+			background-color: #F5F5F5
+		&::-webkit-scrollbar-thumb
+			background-color: #81bd41
+		@media (max-width: $medium)
+			overflow-x: auto
+			max-width: 100%
+	#filtersOpen
+		height: 49px
+		width: 50px
+		background: #81bd41
+		border: 2px solid #81bd41
+		text-align: center
+		position: absolute
+		left: 0
+		top: 0
+		display: none
+		@media (max-width: $mobile-large)
+			display: inline-block
+		img
+			width: 50px
+	#filtersClose
+		height: 49px
+		width: 50px
+		position: absolute
+		right: -50px
+		z-index: 0
+		background: #fff
+		box-shadow: 3px -1px 25px 0px rgba(0, 0, 0, 0.75)
+		display: none
+		@media (max-width: $mobile-large)
+			display: inline-block
+		img
+			width: 50px
 	.filters-holder
 		max-width: 297px
 		width: 100%
 		border-left: 1px solid #f4f4f4
 		border-right: 1px solid #f4f4f4
+		position: relative
+		@media (max-width: $mobile-large)
+			position: absolute
+			left: -600px
+			top: 0px
+			background: #fff
+			-webkit-box-shadow: 3px -1px 25px 0px rgba(0,0,0,0.75)
+			-moz-box-shadow: 3px -1px 25px 0px rgba(0,0,0,0.75)
+			box-shadow: 3px -1px 25px 0px rgba(0,0,0,0.75)
+			transition: left .2s
+			z-index: 2
+			#filtersClose
+				opacity: 0
+				pointer-events: none
+				transition: opacity .2s
+			&.open
+				left: 0px
+				transition: left .2s
+				#filtersClose
+					opacity: 1
+					pointer-events: inherit
+					transition: opacity .8s
+		@media (max-width: $mobile-small)
+			max-width: 268px
+
 		&.main
 			height: 1570px
 		.search-holder
@@ -1721,6 +2003,7 @@ ul.pagination
 			padding-top: 13px
 			padding-right: 50px
 			position: relative
+			border: 1px solid #e2e2e2
 			input
 				border: none
 				background: transparent
@@ -1741,6 +2024,8 @@ ul.pagination
 				font-size: 18px
 				padding-top: 14px
 				padding-left: 17px
+				@media (max-width: $mobile-large)
+					height: 49px
 		.filters-item
 			padding: 10px 12px 20px 35px
 			position: relative
@@ -1786,6 +2071,8 @@ ul.pagination
 			left: -19px
 			top: -3px
 			margin-bottom: 10px
+			@media (max-width: $mobile-small)
+				width: 240px
 			input
 				width: 122px
 				height: 30px
@@ -1799,6 +2086,8 @@ ul.pagination
 				font-size: 12px
 				outline: none
 				margin-left: 5px
+				@media (max-width: $mobile-small)
+					width: 102px
 			.ui-slider-horizontal
 				height: 3px
 				background: #e2e2e2
@@ -1824,11 +2113,18 @@ ul.pagination
 		margin: 0
 
 	.table-holder
-		max-width: 1258px
-		width: 100%
-		padding-left: 20px
+		width: calc(100% - 297px)
+		padding-left: 30px
+		@media (max-width: $mobile-large)
+			width: 100%
+		.pagination
+			@media (max-width: $mobile-large)
+				display: none
+
 		table
 			width: 100%
+			@media (max-width: $medium)
+				width: 894px
 			.name-holder
 				width: 21.7%
 				padding-left: 22px
@@ -1859,6 +2155,8 @@ ul.pagination
 				padding-left: 77px
 				font-weight: 500
 				text-transform: uppercase
+				@media (max-width: $large)
+					padding-left: 20px
 			.vtype
 				width: 16.76%
 				text-transform: uppercase
@@ -1872,6 +2170,8 @@ ul.pagination
 				padding-left: 72px
 				position: relative
 				text-transform: uppercase
+				@media (max-width: $large)
+					padding-left: 32px
 				.apply-btn
 					position: absolute
 					width: 66px
@@ -1882,7 +2182,6 @@ ul.pagination
 					transform: translateY(-50%)
 					top: 50%
 					right: 18px
-					padding-top: 2px
 		.head
 			td
 				color: #48576a
@@ -1904,6 +2203,9 @@ ul.pagination
 			tr
 				&:hover
 					background: #f6f6f6
+					.button
+						color: #fff
+						background: #81bb41
 
 .news
 	.border-el
@@ -1914,6 +2216,8 @@ ul.pagination
 		left: 0
 		top: -90px
 		padding: 22px
+		@media (max-width: $mobile-large)
+			top: -22px
 		.white-bg
 			background: #fff
 			width: 100%
@@ -1924,6 +2228,11 @@ ul.pagination
 			padding-left: 209px
 			position: relative
 			height: 239px
+			@media (max-width: $tablet)
+				padding-left: 89px
+			@media (max-width: $mobile-large)
+				padding-left: 50px
+				height: auto
 			.date-holder
 				color: #48576a
 				font-size: 12px
@@ -1934,19 +2243,32 @@ ul.pagination
 				position: absolute
 				top: 33px
 				left: 131px
+				@media (max-width: $tablet)
+					left: 0
+				@media (max-width: $mobile-large)
+					left: -15px
+					font-size: 11px
 				.number
 					font-size: 36px
 					font-weight: 700
 					margin-bottom: 8px
+					@media (max-width: $mobile-large)
+						font-size: 25px
 
 		.image-holder
 			width: 33.85%
 			height: 100%
-			filter: grayscale(1)
-			transition: filter .2s
+			@media (max-width: $mobile-large)
+				width: 100%
+				height: auto
 		.text-holder
 			width: 55.1%
 			padding-left: 70px
+			@media (max-width: $tablet)
+				padding-left: 30px
+			@media (max-width: $mobile-large)
+				padding-left: 0
+				width: 100%
 			h4
 				color: #48576a
 				font-family: GothamPro
@@ -1958,6 +2280,8 @@ ul.pagination
 				margin-top: 26px
 				margin-bottom: 15px
 				transition: color .2s
+				@media (max-width: $mobile-large)
+					font-size: 14px
 			p
 				color: #48576a
 				font-size: 13px
@@ -1978,6 +2302,8 @@ ul.pagination
 				width: 110px
 				height: 1px
 				background: #c4c8ce
+				@media (max-width: $tablet)
+					left: 0
 			&:last-child:after
 				content: ''
 				position: absolute
@@ -1986,6 +2312,9 @@ ul.pagination
 				width: 110px
 				height: 1px
 				background: #c4c8ce
+				@media (max-width: $mobile-large)
+					display: none
+
 			&:hover
 				background: #fafafa
 				transition: background .2s
@@ -2001,7 +2330,9 @@ ul.pagination
 		.button
 			width: 200px
 			height: 50px
-			padding-top: 15px
+			@media (max-width: $tablet)
+				height: 40px
+				width: 150px
 
 
 .our-team
@@ -2013,6 +2344,15 @@ ul.pagination
 			width: 16%
 			margin: $gap / 2
 			margin-top: 0
+			@media (max-width: $medium)
+				width: 21%
+			@media (max-width: $tablet)
+				width: 29.3%
+			@media (max-width: $mobile-large)
+				width: 46%
+			@media (max-width: $mobile-small)
+				width: 96%
+
 	.team-title
 		text-align: center
 		position: relative
@@ -2035,11 +2375,11 @@ ul.pagination
 			padding-left: 20px
 			padding-right: 20px
 	.team-item
-		filter: grayscale(1)
-		transition: filter .2s
+		// filter: grayscale(1)
+		// transition: filter .2s
 		&:hover
-			filter: grayscale(0)
-			transition: filter .2s
+			.img
+				-webkit-filter: grayscale(0.9)
 		&.last
 			filter: grayscale(0)
 			.item-name
@@ -2071,8 +2411,6 @@ ul.pagination
 		.image-holder
 			height: 350px
 			.img
-				filter: grayscale(1)
-				transition: filter .2s
 			&:after
 				content: ''
 				position: absolute
@@ -2080,7 +2418,7 @@ ul.pagination
 				right: 10px
 				width: 26px
 				height: 26px 
-				background: url('../img/icons/filters-cross.png') 50% 50%
+				background: url('../img/icons/patti-hover.png') 50% 50%
 				transition: bottom .2s
 			&:hover:after
 				content: ''
@@ -2089,15 +2427,13 @@ ul.pagination
 				right: 10px
 				width: 26px
 				height: 26px 
-				background: url('../img/icons/filters-cross.png') 50% 50%
+				background: url('../img/icons/patti-hover.png') 50% 50%
 				transition: bottom .2s
 
 
 .add-rev
 	.btn-holder
 		margin-top: 11px
-		.button	
-			padding-top: 13px
 
 
 .seafarers
@@ -2112,6 +2448,15 @@ ul.pagination
 			position: relative
 			padding-bottom: 24px
 			padding-top: 3px
+			@media (max-width: $large)
+				padding-left: 160px
+				padding-right: 158px
+			@media (max-width: $medium)
+				padding-left: 80px
+				padding-right: 80px
+			@media (max-width: $mobile-large)
+				padding-left: 10px
+				padding-right: 10px
 			&:hover
 				border: 1px solid #81bb41
 				&:before
@@ -2125,6 +2470,14 @@ ul.pagination
 				top: 60px
 				background: url('../img/icons/mini-helm-icon.png') 50% 50%
 				transition: background .2s
+				@media (max-width: $large)
+					left: 17px
+				@media (max-width: $mobile-large)
+					left: 4px
+					top: 27px
+			.title
+				@media (max-width: $mobile-large)
+					padding-left: 60px
 			h5
 				color: #48576a
 				font-size: 16px
@@ -2148,24 +2501,33 @@ ul.pagination
 		.button
 			width: 200px
 			height: 50px
-			padding-top: 15px
 
 
 .ourstr-buttons
-	margin-top: 359px
-	margin-bottom: 154px
+	margin-top: 150px
+	@media (max-width: $tablet)
+		margin-top: 60px
+		margin-bottom: 60px
+
 	.btn-holder
 		.button
 			width: 247px
 			height: 50px
 			font-size: 16px
-			padding-top: 13px
-			margin: 0 8px
+			margin: 5px 8px
+			@media (max-width: $tablet)
+				width: 167px
+				height: 40px
+				font-size: 14px
+				display: inline-block
 
 .policy-holder
 	border: 1px solid #fff
 	padding: 20px
 	margin-top: 180px
+	margin-bottom: 60px
+	@media (max-width: $mobile-medium-small)
+		padding: 0
 	.white-bg
 		position: relative
 		&:after
@@ -2185,6 +2547,12 @@ ul.pagination
 			padding-bottom: 80px
 			max-height: 800px
 			overflow-y: auto
+			@media (max-width: $medium)
+				padding-left: 40px
+				padding-right: 40px
+			@media (max-width: $mobile-medium-small)
+				padding-left: 10px
+				padding-right: 10px
 			&::-webkit-scrollbar
 				height: 0
 				width: 0
@@ -2219,6 +2587,10 @@ ul.pagination
 	max-width: 771px
 	margin: 0 auto
 	padding-top: 30px
+	@media (max-width: $tablet)
+		padding-right: 30px
+		padding-left: 30px
+		padding-top: 90px
 	.person-info-slider
 		margin: 0
 	.image-holder
@@ -2253,14 +2625,21 @@ ul.pagination
 			list-style: none
 			display: inline-block
 			font-size: 22px
-			width: 50px
-			height: 50px
-			border-radius: 50%
-			border: 1px solid #48576a
-			padding-top: 11px
 			color: #48576a
 			margin-left: 10px
 			margin-right: 10px
+			a
+				display: inline-block
+				width: 50px
+				height: 50px
+				border-radius: 50%
+				border: 2px solid #48576a
+				padding-top: 11px
+				@media (max-width: $mobile-large)
+					width: 40px
+					height: 40px
+					padding-top: 6px
+
 	.bx-controls-direction
 		position: absolute
 		top: 60px
@@ -2278,11 +2657,15 @@ ul.pagination
 			width: 20px
 			background: url(../img/icons/arrow-left.svg)
 			left: -50px
+			@media (max-width: $tablet)
+				left: -22px
 		.bx-next
 			height: 37px
 			width: 20px
 			right: -50px
 			background: url(../img/icons/arrow-right.svg)
+			@media (max-width: $tablet)
+				right: -22px
 		.bx-pager
 			display: none
 
@@ -2292,13 +2675,21 @@ ul.pagination
 	background: url('../img/icons/miles-bg.png')
 	padding-bottom: 60px
 	padding-top: 60px
+	width: 100vw
+	height: 100vh
+	overflow: hidden
+	@media (max-width: $medium)
+		height: auto
 	.timeline-holder
-		margin-top: 265px
 		margin-bottom: 60px
 		position: relative
+		@media (max-width: $medium)
+			margin-top: 130px
 		li
 			width: 12.8%
 			position: relative
+			@media (max-width: $mobile-small)
+				font-size: 11px
 			.time
 				color: #2d4170
 				font-weight: 700
@@ -2327,6 +2718,10 @@ ul.pagination
 					background-color: #81bb41
 					bottom: 0
 					right: -30px
+					@media (max-width: $mobile-large)
+						right: -21px
+						height: 4px
+						width: 40px
 				.time
 					&:after
 						content: ''
@@ -2348,16 +2743,43 @@ ul.pagination
 		margin-top: 14px
 		li
 			padding-left: 150px
+			@media (max-width: $large)
+				padding-left: 100px
+				@media (max-width: $medium)
+					padding-right: 40px
+					padding-left: 40px
+				@media (max-width: $mobile-large)
+					padding-left: 10px
+					padding-right: 10px
+
 			.image-holder
-				max-width: 455px
+				width: 30%
+				@media (max-width: $large)
+					width: 40%
+				@media (max-width: $medium)
+					width: 70%
+					margin: 0 auto
+					margin-bottom: 40px
+					display: block
+				@media (max-width: $mobile-large)
+					width: 100%
 			.text-holder
-				max-width: 630px
+				width: 40%
 				padding-left: 180px
+				@media (max-width: $large)
+					padding-left: 80px
+					width: 50%
+				@media (max-width: $medium)
+					padding-left: 0
+					width: 100%
 				h4
 					color: #48576a
 					font-size: 50px
 					text-transform: none
 					margin-bottom: 13px
+					letter-spacing: normal
+					@media (max-width: $mobile-large)
+						font-size: 35px
 				p
 					color: #48576a
 					font-size: 18px
@@ -2370,8 +2792,12 @@ ul.pagination
 			background: url('../img/icons/sliderPrev.svg')
 			height: 37px
 			width: 20px
+			@media (max-width: $mobile-large)
+				left: -16px
 		.bx-next
 			background: url('../img/icons/sliderNext.svg')
+			@media (max-width: $mobile-large)
+				right: -16px
 		.bx-controls-direction
 			a
 				height: 37px
@@ -2394,12 +2820,19 @@ ul.pagination
 			text-align: center
 			margin-top: 0
 			margin-bottom: 15px
+			@media (max-width: $mobile-large)
+				font-size: 18px
 	.inline-el
 		width: 50%
 		text-align: center
+		@media (max-width: $mobile-large)
+			width: 100%
+
 		.text-holder
 			display: inline-block
 			max-width: 440px
+			@media (max-width: $mobile-large)
+				max-width: 100%
 			p
 				color: #48576a
 				line-height: 24px
@@ -2408,7 +2841,9 @@ ul.pagination
 				.button
 					width: 155px
 					height: 50px
-					padding-top: 15px
+					@media (max-width: $tablet) 
+						height: 40px
+						width: 130px
 
 .main-modal
 	position: fixed
@@ -2769,6 +3204,9 @@ ul.pagination
 	position: relative
 	z-index: 2
 	padding-top: 43px
+	@media (max-width: $tablet)
+		padding-left: 20px
+		padding-right: 20px
 	.news-slider
 		margin: 0
 	.breadcrumbs
@@ -2780,25 +3218,35 @@ ul.pagination
 			height: 25px
 			padding-right: 6px
 			color: #48576a
+			position: relative
 			&:first-child
 				color: #81bb41
 				font-weight: 500
 				padding-left: 0
+	.news-slider > li
+		padding-bottom: 102px
+		position: relative
 	.text-holder
 		padding-left: 158px
 		position: relative
 		margin-bottom: 38px
+		@media (max-width: $mobile-large)
+			padding-left: 0
 		.date
 			position: absolute
 			left: 58px
 			top: 10px
 			text-align: right
+			@media (max-width: $mobile-large)
+				left: 0
 			.number
 				color: #48576a
 				font-size: 36px
 				font-weight: 700
 				line-height: 20px
 				margin-bottom: 7px
+				@media (max-width: $mobile-large)
+					font-size: 25px
 				
 			.month
 				span
@@ -2810,11 +3258,14 @@ ul.pagination
 					text-transform: uppercase
 		h5
 			color: #48576a
-			font-size: 18px
+			font-size: 15px
 			line-height: 24px
 			text-transform: uppercase
 			margin-bottom: 0
 			margin-top: 24px
+			@media (max-width: $mobile-large)
+				padding-left: 80px
+				font-size: 18px
 		p
 			color: #48576a
 			font-size: 13px
@@ -2824,6 +3275,12 @@ ul.pagination
 	.social-counters
 		text-align: center
 		padding-top: 32px
+		position: absolute
+		transform: translateX(-50%)
+		left: 50%
+		bottom: 10px
+		height: 102px
+		width: 100%
 		.ya-share2__item_service_twitter,
 		.ya-share2__item_service_gplus,
 		.ya-share2__item_service_facebook,
@@ -2833,32 +3290,53 @@ ul.pagination
 				height: 50px
 				width: 50px
 				text-align: center
+				@media (max-width: $mobile-large)
+					height: 40px
+					width: 40px
 				.ya-share2__icon
 					height: 50px
 					width: 50px
 					background-position: 50% 50%
 					background-size: 30px 30px 
 					background-repeat: no-repeat
+					@media (max-width: $mobile-large)
+						height: 40px
+						width: 40px
+						background-size: 25px 25px 
 		.ya-share2__item_service_gplus
 			.ya-share2__icon
 				background-size: 47px 46px !important
+				@media (max-width: $mobile-large)
+					background-size: 48px 37px !important
 		.ya-share2__item_service_vkontakte
 			.ya-share2__icon
 				background-size: 50px 40px !important
+				@media (max-width: $mobile-large)
+					background-size: 47px 30px !important
 		.ya-share2__item
 			&.ya-share2__item_service_facebook
 				margin: 10px
+				@media (max-width: $mobile-large)
+					margin: 5px
 			&.ya-share2__item_service_twitter
 				margin: 10px
+				@media (max-width: $mobile-large)
+					margin: 5px
 			&.ya-share2__item_service_gplus
 				margin: 10px
+				@media (max-width: $mobile-large)
+					margin: 5px
 			&.ya-share2__item_service_vkontakte
 				margin: 10px
+				@media (max-width: $mobile-large)
+					margin: 5px
 	.related-news
 		position: relative
 		margin-top: 63px
 		padding-top: 36px
 		padding-bottom: 58px
+		@media (max-width: $mobile-large)
+			margin-top: 0
 		&:before
 			content: ""
 			position: absolute
@@ -2883,6 +3361,11 @@ ul.pagination
 				margin-left: $gap / 2
 				margin-right: $gap / 2
 				width: 20.6%
+				@media (max-width: $mobile-large)
+					width: 45.6%
+					margin-top: $gap / 2
+				@media (max-width: $mobile-small)
+					width: 95.6%
 				.date-holder
 					display: inline-block
 					text-align: right
@@ -2921,11 +3404,17 @@ ul.pagination
 					width: 200px
 					height: 50px
 					padding-top: 15px
+					@media (max-width: $tablet)
+						width: 150px
+						height: 40px
+
 	.bx-controls-direction
 		position: absolute
 		top: 60px
 		left: 0
 		width: 100%
+		@media (max-width: $mobile-large)
+			top: 130px
 	.bx-wrapper
 		border: none
 		box-shadow: none
@@ -2938,11 +3427,15 @@ ul.pagination
 			width: 20px
 			background: url(../img/icons/arrow-left.svg)
 			left: -50px
+			@media (max-width: $tablet)
+				left: -10px
 		.bx-next
 			height: 37px
 			width: 20px
 			right: -50px
 			background: url(../img/icons/arrow-right.svg)
+			@media (max-width: $tablet)
+				right: -10px
 		.bx-pager
 			display: none
 
@@ -2955,6 +3448,9 @@ ul.pagination
 	max-width: 613px
 	margin: 0 auto
 	position: relative
+	@media (max-width: $tablet)
+		padding-right: 10px
+		padding-left: 10px
 	h5
 		color: #48576a
 		font-size: 20px
@@ -2975,13 +3471,19 @@ ul.pagination
 			position: relative
 			margin-bottom: 12px
 			padding-right: 10px
+			@media (max-width: $mobile-small)
+				padding-left: 84px
 			&.half
 				width: 50%
 				display: inline-block
+				@media (max-width: $mobile-small)
+					width: 100%
 			&.half
 				&.first
 					width: 47%
-					margin-right: 2%	
+					margin-right: 2%
+					@media (max-width: $mobile-small)
+						width: 100%
 			label
 				color: #48576a
 				font-size: 14px
@@ -2989,6 +3491,13 @@ ul.pagination
 				position: absolute
 				left: 0
 				top: 14px
+				@media (max-width: $mobile-small)
+					max-width: 77px
+					text-align: left
+					top: 1px
+					height: 30px
+					overflow: hidden
+
 			input
 				color: #333
 				font-family: GothamPro
@@ -3001,6 +3510,8 @@ ul.pagination
 				position: relative
 				display: inline-block
 				margin-left: 40px
+				@media (max-width: $mobile-small)
+					margin-left: 0
 				&:after
 					content: ''
 					position: absolute
@@ -3009,6 +3520,7 @@ ul.pagination
 					height: 8px
 					width: 12px
 					background: url(../img/icons/select-apper.png)
+					pointer-events: none
 				select
 					min-width: 65px
 					appearance: none
@@ -3021,6 +3533,8 @@ ul.pagination
 					font-weight: 400
 					text-transform: uppercase
 					outline: none
+					position: relative
+					z-index: 2
 
 .form-light
 	width: 100vw
@@ -3028,6 +3542,10 @@ ul.pagination
 	padding-right: 20px
 	padding-left: 20px
 	padding-top: 11px
+	.scroll-holder
+		overflow-x: auto 
+		.scroll-content
+			width: 1880px
 	h5
 		color: #48576a
 		font-family: GothamPro
@@ -3036,6 +3554,33 @@ ul.pagination
 		text-transform: uppercase
 		text-align: center
 		margin-bottom: 15px
+	.btn-holder
+			margin-top: 38px
+			text-align: center
+			@media (max-width: $mobile-large)
+				margin-top: 0
+			.button
+				font-size: 12px
+				font-weight: 500
+				width: 200px
+				height: 50px
+				font-size: 14px
+				font-weight: 700
+				text-align: center
+				margin-left: 10px
+				margin-right: 10px
+				@media (max-width: $mobile-large)
+					width: 160px
+					height: 40px
+					margin-bottom: 20px
+				&.gray
+					border-color: #a8b0b8
+					color: #a8b0b8
+					transition: color, background .2s
+					&:hover
+						color: #fff
+						background: #a8b0b8
+						transition: color, background .2s
 .exp-table-holder
 	table
 		border-collapse: collapse
@@ -3098,6 +3643,8 @@ ul.pagination
 					text-align: center
 					margin-left: 3px
 					margin-right: 3px
+					position: relative
+					z-index: 2
 					&.date
 						width: 31px
 					&.month
@@ -3126,28 +3673,7 @@ ul.pagination
 			max-width: 1194px
 			margin: 0 auto
 			margin-top: 34px
-		.btn-holder
-			margin-top: 38px
-			text-align: center
-			.button
-				font-size: 12px
-				font-weight: 500
-				width: 200px
-				height: 50px
-				font-size: 14px
-				font-weight: 700
-				text-align: center
-				padding-top: 15px
-				margin-left: 10px
-				margin-right: 10px
-				&.gray
-					border-color: #a8b0b8
-					color: #a8b0b8
-					transition: color, background .2s
-					&:hover
-						color: #fff
-						background: #a8b0b8
-						transition: color, background .2s
+		
 
 .carousel
 	h5

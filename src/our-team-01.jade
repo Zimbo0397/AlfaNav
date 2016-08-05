@@ -15,25 +15,26 @@ html(lang='en')
 
 	body
 
-		section.top-line(style='background-image: url("img/images/database-bg.png")')
+		section.top-line.team-section
 			include ./partials/top-nav.jade
-
-			.description-in-top
-				h1  OUR CREW
-				img(src="img/icons/waves-icon.png", alt="")
-				h2 
-					|The team whose life path is creating opportunities 
-					br
-					for thousands of seafarers and hundreds of shipowners.
+			.table-holder
+				.vert-el
+					.description-in-top
+						h1  OUR CREW
+						img(src="img/icons/waves-icon.png", alt="")
+						h2 
+							|The team whose life path is creating opportunities 
+							br
+							for thousands of seafarers and hundreds of shipowners.
 
 		section.our-team
 			.main-container
 				.team-title
 					h4 Our Leaders
 				ul.leaders-holder.inline-holder
-					mixin newteamitem(src, name, manage)
+					mixin newteamitem(dataslide, src, name, manage)
 						li.team-item.inline-el
-							a(href="#")
+							a.teamLink(href="#", dataslide= dataslide)
 								.image-holder
 									img.fake-img(src= src, alt= src)
 									.img(style='background-image: url( '+src+')')
@@ -41,26 +42,31 @@ html(lang='en')
 									h6= name
 									p= manage
 					+newteamitem(
+						'0',
 						'img/images/team1.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'1',
 						'img/images/team2.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'2',
 						'img/images/team3.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'3',
 						'img/images/team4.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'4',
 						'img/images/team5.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
@@ -71,100 +77,96 @@ html(lang='en')
 
 				ul.leaders-holder.inline-holder
 					+newteamitem(
+						'0',
 						'img/images/team1.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'1',
 						'img/images/team2.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'2',
 						'img/images/team3.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'3',
 						'img/images/team4.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'4',
 						'img/images/team5.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'0',
 						'img/images/team1.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'1',
 						'img/images/team2.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'2',
 						'img/images/team3.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'3',
 						'img/images/team4.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'4',
 						'img/images/team5.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'0',
 						'img/images/team1.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'1',
 						'img/images/team2.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'2',
 						'img/images/team3.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'3',
 						'img/images/team4.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
 					+newteamitem(
+						'4',
 						'img/images/team5.jpg',
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group'
 					)
-					+newteamitem(
-						'img/images/team1.jpg',
-						'Patti Clifford',
-						'Chief Talent Officer, Havas Group'
-					)
-					+newteamitem(
-						'img/images/team2.jpg',
-						'Patti Clifford',
-						'Chief Talent Officer, Havas Group'
-					)
-					+newteamitem(
-						'img/images/team3.jpg',
-						'Patti Clifford',
-						'Chief Talent Officer, Havas Group'
-					)
-					+newteamitem(
-						'img/images/team4.jpg',
-						'Patti Clifford',
-						'Chief Talent Officer, Havas Group'
-					)
+					
 					li.team-item.last.inline-el
 						a(href="#")
 							.image-holder
@@ -184,6 +186,8 @@ html(lang='en')
 
 
 		include ./partials/footer.jade
+		include ./partials/call-back-modal.jade
+		include ./partials/personal-info.jade
 
 
 

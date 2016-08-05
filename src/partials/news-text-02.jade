@@ -1,5 +1,5 @@
-.main-modal
-	a.close-btn(href="#")
+.main-modal.news-modal
+	a#newsModalClose.close-btn(href="#")
 		img(src="img/icons/modal-close.png", alt="")
 	.scroll-holder
 		.news-hoolder
@@ -26,8 +26,8 @@
 						p
 							|CrewInspector an online ship crew management system provider has been chosen by BachmannHR Group Ltd to integrate crewing process across the group of companies. Crewing software allows employees to maintain crew data, prepare crew employment contracts and share data easily with rest of the teams residing in different geographic locations at single access point without having any additional software to install. An overview of crew certificate expiry enables to keep the information up to date and to initiate any training activities for respective crew members as soon as required.
 					.image-holder
-						img.fake-img(src="img/images/newsslider-1.jpg", alt="")
-						.img(style='background-image: url(img/images/newsslider-1.jpg)')
+						img.fake-img(src="img/images/news1.jpg", alt="")
+						.img(style='background-image: url(img/images/news1.jpg)')
 					.social-counters
 						<div class="ya-share2" data-services="facebook,twitter,gplus,vkontakte"></div>
 				li
@@ -44,8 +44,8 @@
 						p
 							|CrewInspector an online ship crew management system provider has been chosen by BachmannHR Group Ltd to integrate crewing process across the group of companies. Crewing software allows employees to maintain crew data, prepare crew employment contracts and share data easily with rest of the teams residing in different geographic locations at single access point without having any additional software to install. An overview of crew certificate expiry enables to keep the information up to date and to initiate any training activities for respective crew members as soon as required.
 					.image-holder
-						img.fake-img(src="img/images/news2.png", alt="")
-						.img(style='background-image: url(img/images/news2.png)')
+						img.fake-img(src="img/images/news2.jpg", alt="")
+						.img(style='background-image: url(img/images/news2.jpg)')
 					.social-counters
 						<div class="ya-share2" data-services="facebook,twitter,gplus,vkontakte"></div>
 				li
@@ -66,6 +66,42 @@
 						.img(style='background-image: url(img/images/news3.png)')
 					.social-counters
 						<div class="ya-share2" data-services="facebook,twitter,gplus,vkontakte"></div>
+				li
+					.text-holder
+						.date
+							.number 05
+							.month
+								span January
+								span 2015
+						h5
+							| LATVIA: BACHMANNHR CHOOSES CREWINSPECTOR 
+							br
+							|CREWING SOFTWARE
+						p
+							|CrewInspector an online ship crew management system provider has been chosen by BachmannHR Group Ltd to integrate crewing process across the group of companies. Crewing software allows employees to maintain crew data, prepare crew employment contracts and share data easily with rest of the teams residing in different geographic locations at single access point without having any additional software to install. An overview of crew certificate expiry enables to keep the information up to date and to initiate any training activities for respective crew members as soon as required.
+					.image-holder
+						img.fake-img(src="img/images/news4.jpg", alt="")
+						.img(style='background-image: url(img/images/news4.jpg)')
+					.social-counters
+						<div class="ya-share2" data-services="facebook,twitter,gplus,vkontakte"></div>
+				li
+					.text-holder
+						.date
+							.number 05
+							.month
+								span January
+								span 2015
+						h5
+							| LATVIA: BACHMANNHR CHOOSES CREWINSPECTOR 
+							br
+							|CREWING SOFTWARE
+						p
+							|CrewInspector an online ship crew management system provider has been chosen by BachmannHR Group Ltd to integrate crewing process across the group of companies. Crewing software allows employees to maintain crew data, prepare crew employment contracts and share data easily with rest of the teams residing in different geographic locations at single access point without having any additional software to install. An overview of crew certificate expiry enables to keep the information up to date and to initiate any training activities for respective crew members as soon as required.
+					.image-holder
+						img.fake-img(src="img/images/news5.jpg", alt="")
+						.img(style='background-image: url(img/images/news5.jpg)')
+					.social-counters
+						<div class="ya-share2" data-services="facebook,twitter,gplus,vkontakte"></div>
 			.related-news
 				h3 RELATED NEWS
 				.related-holder.inline-holder
@@ -79,7 +115,7 @@
 							img.fake-img(src="img/images/news1.jpg", alt="")
 							.img(style='background-image: url(img/images/news1.jpg)')
 						.tittle
-							a(href="#")
+							a.newsLink(href="#", dataslide='0')
 								|V. Ships Turkey Enters Offshore Crewing Contract with Polarcus
 					.news-item.inline-el
 						.date-holder
@@ -91,7 +127,7 @@
 							img.fake-img(src="img/images/news2.png", alt="")
 							.img(style='background-image: url(img/images/news2.png)')
 						.tittle
-							a(href="#")
+							a.newsLink(href="#", dataslide='1')
 								|Norway: Shipowners Should Hold Crewing Agents More Accountable
 					.news-item.inline-el
 						.date-holder
@@ -103,7 +139,7 @@
 							img.fake-img(src="img/images/news3.png", alt="")
 							.img(style='background-image: url(img/images/news3.png)')
 						.tittle
-							a(href="#")
+							a.newsLink(href="#", dataslide='2')
 								|Latvia: BachmannHR Chooses CrewInspector Crewing Software
 					.news-item.inline-el
 						.date-holder
@@ -115,7 +151,7 @@
 							img.fake-img(src="img/images/news4.jpg", alt="")
 							.img(style='background-image: url(img/images/news4.jpg)')
 						.tittle
-							a(href="#")
+							a.newsLink(href="#", dataslide='3')
 								|Latvia: BachmannHR Chooses CrewInspector Crewing Software
 					.btn-holder
 						a.button(href="#") show more

@@ -15,15 +15,18 @@ html(lang='en')
 
 	body
 
-		section.top-line(style='background-image: url("img/images/sefarers.jpg.jpg")')
+		section.top-line.seafarers-section
 			include ./partials/top-nav.jade
-
-			.description-in-top
-				h1  Seafarers Testimonials
-				img(src="img/icons/waves-icon.png", alt="")
-				.add-rev
-					.btn-holder
-						a.button(href="#") Add review
+			.table-holder
+				.vert-el
+					.description-in-top
+						h1  Seafarers Testimonials
+						img(src="img/icons/waves-icon.png", alt="")
+						.add-rev
+							.btn-holder
+								a#addrev.button(href="#")
+									.t-holder
+										span Add review
 
 		section.seafarers
 			.main-container
@@ -31,8 +34,9 @@ html(lang='en')
 					mixin newcomment(name, manage, text)
 						a(href="#")
 							li
-								h5= name
-								h6= manage
+								.title
+									h5= name
+									h6= manage
 								p= text
 					+newcomment(
 						'Patti Clifford',
@@ -56,7 +60,9 @@ html(lang='en')
 					)
 
 				.btn-holder
-					a(href="#").button Show more
+					a(href="#").button
+						.t-holder
+							span Show more
 
 
 
@@ -68,6 +74,8 @@ html(lang='en')
 
 
 		include ./partials/footer.jade
+		include ./partials/call-back-modal.jade
+		include ./partials/add-rev.jade
 
 
 

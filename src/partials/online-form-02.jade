@@ -1,5 +1,5 @@
-.main-modal
-	a.close-btn(href="#")
+.main-modal.find-job-form
+	a#jobFormClose.close-btn(href="#")
 		img(src="img/icons/modal-close.png", alt="")
 	.scroll-holder
 		form(action="")
@@ -105,167 +105,176 @@
 
 
 			.form-light
-				h5
-					| Your sea-going experience (last 5 years data)
-				.exp-table-holder
-					table
-						tbody
-							tr
-								td VESSEL'S NAME
-								td IMO Number
-								td TYPE
-								td DWT
-								td ENG.TYPE
-								td HP
-								td POSITION/RANK
-								td 
-									|FROM
-									br
-									|DD/MM/YYYY
-								td
-									|TILL
-									br
-									|DD/MM/YYYY
-								td
-									|CREWING
-									br
-									|AGENCY
-								td
-									|SHIP manager’s
-									br
-									|NAME
-								td
-									|ship manager’s
-									br
-									|COUNTRY
-							tr
-								td
-									input(type="text")
-								td
-									input(type="text")
-								td
-									input(type="text")
-								td
-									input(type="text")
-								td
-									input(type="text")
-								td
-									input(type="text")
-								td
-									input(type="text")
-								td
-									.selects-holder
-										.select-holder
-											select.date(name="f-date")
-												option(value="") 1
-												option(value="") 2
-												option(value="") 10
-												option(value="") 15
-												option(value="") 20
-												option(value="") 31
-										.select-holder
-											select.month(name="")
-												option(value="") 01
-												option(value="") 02
-												option(value="") 05
-												option(value="") 10
-												option(value="") 25
-												option(value="") 30
-										.select-holder
-											select(name="")
-												option(value="") 1998
-												option(value="") 2001
-												option(value="") 2012
-												option(value="") 2013
-												option(value="") 2014
-												option(value="") 2015
-								td
-									.selects-holder
-										.select-holder
-											select.date(name="f-date")
-												option(value="") 1
-												option(value="") 2
-												option(value="") 10
-												option(value="") 15
-												option(value="") 20
-												option(value="") 31
-										.select-holder
-											select.month(name="")
-												option(value="") 01
-												option(value="") 02
-												option(value="") 05
-												option(value="") 10
-												option(value="") 25
-												option(value="") 30
-										.select-holder
-											select(name="")
-												option(value="") 1998
-												option(value="") 2001
-												option(value="") 2012
-												option(value="") 2013
-												option(value="") 2014
-												option(value="") 2015
-								td
-									input(type="text")
-								td
-									input(type="text")
-								td
-									input(type="text")
+				.scroll-holder
+					.scroll-content
+						h5
+							| Your sea-going experience (last 5 years data)
+						.exp-table-holder
+							table
+								tbody
+									tr
+										td VESSEL'S NAME
+										td IMO Number
+										td TYPE
+										td DWT
+										td ENG.TYPE
+										td HP
+										td POSITION/RANK
+										td 
+											|FROM
+											br
+											|DD/MM/YYYY
+										td
+											|TILL
+											br
+											|DD/MM/YYYY
+										td
+											|CREWING
+											br
+											|AGENCY
+										td
+											|SHIP manager’s
+											br
+											|NAME
+										td
+											|ship manager’s
+											br
+											|COUNTRY
+									tr
+										td
+											input(type="text")
+										td
+											input(type="text")
+										td
+											input(type="text")
+										td
+											input(type="text")
+										td
+											input(type="text")
+										td
+											input(type="text")
+										td
+											input(type="text")
+										td
+											.selects-holder
+												.select-holder
+													select.date(name="f-date")
+														option(value="") 1
+														option(value="") 2
+														option(value="") 10
+														option(value="") 15
+														option(value="") 20
+														option(value="") 31
+												.select-holder
+													select.month(name="")
+														option(value="") 01
+														option(value="") 02
+														option(value="") 05
+														option(value="") 10
+														option(value="") 25
+														option(value="") 30
+												.select-holder
+													select(name="")
+														option(value="") 1998
+														option(value="") 2001
+														option(value="") 2012
+														option(value="") 2013
+														option(value="") 2014
+														option(value="") 2015
+										td
+											.selects-holder
+												.select-holder
+													select.date(name="f-date")
+														option(value="") 1
+														option(value="") 2
+														option(value="") 10
+														option(value="") 15
+														option(value="") 20
+														option(value="") 31
+												.select-holder
+													select.month(name="")
+														option(value="") 01
+														option(value="") 02
+														option(value="") 05
+														option(value="") 10
+														option(value="") 25
+														option(value="") 30
+												.select-holder
+													select(name="")
+														option(value="") 1998
+														option(value="") 2001
+														option(value="") 2012
+														option(value="") 2013
+														option(value="") 2014
+														option(value="") 2015
+										td
+											input(type="text")
+										td
+											input(type="text")
+										td
+											input(type="text")
+											
+
 									
+							.btn-holder
+								a.button(href="#")
+									.t-holder
+										span + Add more
 
-							
-					.btn-holder
-						a.button(href="#") + Add more
 
+						h5 
+							| Ship manager’s Full Style of LAST THREE VESSELS
+						.exp-table-holder.ship
+							table
+								tbody
+									tr
+										td VESSEL'S NAME
+										td IMO Number
+										td TYPE
+										td DWT
+										td ENG.TYPE
+										
+									tr
+										td
+											input(type="text")
+										td
+											input(type="text")
+										td
+											input(type="text")
+										td
+											input(type="text")
+										td
+											input(type="text")
+									tr
+										td
+											input(type="text")
+										td
+											input(type="text")
+										td
+											input(type="text")
+										td
+											input(type="text")
+										td
+											input(type="text")
+									tr
+										td
+											input(type="text")
+										td
+											input(type="text")
+										td
+											input(type="text")
+										td
+											input(type="text")
+										td
+											input(type="text")
 
-				h5 
-					| Ship manager’s Full Style of LAST THREE VESSELS
-				.exp-table-holder.ship
-					table
-						tbody
-							tr
-								td VESSEL'S NAME
-								td IMO Number
-								td TYPE
-								td DWT
-								td ENG.TYPE
-								
-							tr
-								td
-									input(type="text")
-								td
-									input(type="text")
-								td
-									input(type="text")
-								td
-									input(type="text")
-								td
-									input(type="text")
-							tr
-								td
-									input(type="text")
-								td
-									input(type="text")
-								td
-									input(type="text")
-								td
-									input(type="text")
-								td
-									input(type="text")
-							tr
-								td
-									input(type="text")
-								td
-									input(type="text")
-								td
-									input(type="text")
-								td
-									input(type="text")
-								td
-									input(type="text")
+							p
+								|Відповідно до Закону України "Про захист персональних даних" № 2297-IV, уповноважую Приватну Фірму "Альфа Навігейшн" обробляти та розповсюджувати власні персональні дані, з метою працевлаштування моєї кандидатури за кордон. Інформація надана мною особово та за моєї згоди.
 
-					p
-						|Відповідно до Закону України "Про захист персональних даних" № 2297-IV, уповноважую Приватну Фірму "Альфа Навігейшн" обробляти та розповсюджувати власні персональні дані, з метою працевлаштування моєї кандидатури за кордон. Інформація надана мною особово та за моєї згоди.
-					.btn-holder
-						a.button(href="#") Submit
-						a.button.gray(href="#") Clear
+				.btn-holder
+					a.button(href="#")
+						.t-holder
+							span Submit
+					a.button.gray(href="#")
+						.t-holder
+							span Clear

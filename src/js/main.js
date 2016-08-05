@@ -3,12 +3,13 @@ $('.vacitemslider').bxSlider({
   mode: 'fade'
 });
 
-$('.news-slider').bxSlider({
-  mode: 'fade'
-});
-$('.person-info-slider').bxSlider({
-  mode: 'fade'
-});
+var newsSlider = $('.news-slider').bxSlider({
+    mode: 'fade'
+  });
+
+var personSlider = $('.person-info-slider').bxSlider({
+    mode: 'fade'  
+  });
 $(window).on('load', function() {
 		var setCurrentTime = function() {
 			$('.timeline-holder li').each(function() {
@@ -132,8 +133,81 @@ $('#callbackclose1').on('click', function() {
   $('body').removeClass('blackshadow')
 })
 
+$('#readTestimonials1').on('click', function(e) {
+  e.preventDefault();
+  $('#shipowners1').addClass('open')
+})
+
+$('#filtersOpen').on('click', function(e) {
+  e.preventDefault();
+  $('.filters-holder').addClass('open')
+})
+$('#filtersClose').on('click', function(e) {
+  e.preventDefault();
+  $('.filters-holder').removeClass('open')
+})
+
+$('#addrev').on('click', function(e) {
+  e.preventDefault();
+  $('.rewiew-holder').parent().addClass('open')
+})
+$('#rewiewClose').on('click', function() {
+  $('.rewiew-holder').parent().removeClass('open')
+})
+$('#find-job-form').on('click', function(e) {
+  e.preventDefault();
+  $('.find-job-form').addClass('open')
+  $('body').addClass('blackshadow');
+})
+$('#jobFormClose').on('click', function() {
+  $('.find-job-form').removeClass('open')
+  $('body').removeClass('blackshadow');
+})
+
+
+$('.teamLink').each(function() {
+    var dataSlide = $(this).attr('dataslide');
+  $(this).on('click', function() {
+    $('.person-info-modal').addClass('open');
+    $('body').addClass('blackshadow');
+    personSlider.goToSlide(dataSlide);
+  })
+})
+
+$('#personModalClose').on('click', function(e) {
+  e.preventDefault();
+  $('.person-info-modal').removeClass('open');
+  $('body').removeClass('blackshadow');
+})
+
+$('.newsLink').each(function() {
+    var dataSlide = $(this).attr('dataslide');
+  $(this).on('click', function() {
+    $('.news-modal').addClass('open');
+    $('body').addClass('blackshadow');
+    newsSlider.goToSlide(dataSlide);
+  })
+})
+
+$('#newsModalClose').on('click', function(e) {
+  e.preventDefault();
+  $('.news-modal').removeClass('open');
+  $('body').removeClass('blackshadow');
+})
 
 // END click functions on pages
+
+//smooth scroll function
+$(document).ready(function(){
+    $("#ourstrnav").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+});
+
+// END smooth scroll function
 
 
 
@@ -160,13 +234,27 @@ $('#animateNumber1')
   
 // END animate numbers init
 
-// // init gogle maps
-// function initMap() {
-//   // Create a map object and specify the DOM element for display.
-//   var map = new google.maps.Map(document.getElementById('map'), {
-//     center: {lat: -34.397, lng: 150.644},
-//     scrollwheel: false,
-//     zoom: 8
-//   });
-// }
-//socials-counters
+// init gogle maps
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 46.4828766, lng: 30.6859532},
+    zoom: 8
+  });
+}
+$('.city').each(function() {
+      var $self = $(this),
+      lat = $self.attr('lat'),
+      lng = $self.attr('lng'),
+      LatLng = {lat: parseInt(lat), lng: parseInt(lng)};
+  $(this).on('click', function(e) {
+    e.preventDefault();
+    $('.city').removeClass('active')
+    $(this).addClass('active')
+    map.setCenter(LatLng)
+  })
+})
+
+
+// map.setCenter(marker.getPosition());

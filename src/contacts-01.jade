@@ -15,7 +15,7 @@ html(lang='en')
 
 	body
 
-		section.top-line(style='background-image: url("img/images/contacts-bg.jpg")')
+		section.top-line.contacts-sec
 			include ./partials/top-nav.jade
 
 			.description-in-top
@@ -102,29 +102,38 @@ html(lang='en')
 				.map-holder.inline-holder
 					.description-part.inline-el
 						ul
-							mixin newoffice(place, adress, city)
+							mixin newoffice(lat, lng, place, adress, city, count)
 								li
 									.office-type
 										h6= place
 										p!= adress
-									a.city(href="#")= city
+									a.city(href="#", class= count ? 'active' : '' lat= lat, lng= lng)= city
 
 							+newoffice(
+							'46.4828766',
+							'30.6859532',
 							'Main Office',
 							'Main Office </br>Alpha Navigation </br>10/2 Marshala Govorova str </br>Odessa 65063 Ukraine </br> Tel: +380 48 783 80 80',
-							'ODESSA'
+							'ODESSA',
+							'active'
 							)
 							+newoffice(
+							'14.5965787',
+							'120.9446319',
 							'Manila Branch',
 							'BZ Alpha Navigation Inc </br> Unit 501 Doña Felisa Building </br> 5th floor Taft Avenue Corner Remedios street., </br> Malate Manila Philippines </br> Tel: +632 354 88 31',
 							'MANILA'
 							)
 							+newoffice(
+							'47.1226904',
+							'37.5119229',
 							'Mariupol Branch',
 							'Alpha Navigation Mariupol </br> 7, Aerodromnaya  str, </br> Business Center Avers, office 52, </br> Mariupol Ukraine </br> Tel: +38 0629 405 260',
 							'MARIUPOL'
 							)
 							+newoffice(
+							'50.4629665',
+							'30.3850554',
 							'Kiev Branch',
 							'Alpha Navigation Kiev </br> 2A Petrozavodskaya str, office 604 </br> Keiv 03035 Ukraine </br> Tel: + 380 66 569 08 91',
 							'KIEV'
@@ -136,6 +145,7 @@ html(lang='en')
 
 
 		include ./partials/footer.jade
+		include ./partials/call-back-modal.jade
 
 
 
