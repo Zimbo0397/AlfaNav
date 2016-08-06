@@ -1,3 +1,5 @@
+
+
 // init bx-sliders
 $('.vacitemslider').bxSlider({
   mode: 'fade'
@@ -113,7 +115,8 @@ $('.crossbtn').each(function () {
 		$(this).closest('.filters-item').toggleClass('open')
 	})
 })
-$('#side-open').on('click', function() {
+$('#side-open').on('click', function(e) {
+  e.preventDefault();
   $(this).toggleClass('open')
   $('.side-panel').addClass('open')
   $('body').addClass('blackshadow')
@@ -124,7 +127,8 @@ $('#side-close').on('click', function() {
   $('body').removeClass('blackshadow')
 })
 
-$('#callback1').on('click', function() {
+$('#callback1').on('click', function(e) {
+  e.preventDefault();
   $('.call-back-inner').parent().addClass('open')
   $('body').addClass('blackshadow')
 })
@@ -195,6 +199,22 @@ $('#newsModalClose').on('click', function(e) {
   $('body').removeClass('blackshadow');
 })
 
+
+  $('#tab-sv1').on('click', function(e) {
+    e.preventDefault();
+    $('.tab-sv').removeClass('active');
+    $(this).addClass('active');
+    $('#carousel-holder2').removeClass('active');
+    $('#carousel-holder1').addClass('active');
+  })
+  $('#tab-sv2').on('click', function(e) {
+    e.preventDefault();
+    $('.tab-sv').removeClass('active');
+    $(this).addClass('active');
+    $('#carousel-holder1').removeClass('active');
+    $('#carousel-holder2').addClass('active');
+  })
+
 // END click functions on pages
 
 //smooth scroll function
@@ -257,4 +277,8 @@ $('.city').each(function() {
 })
 
 
-// map.setCenter(marker.getPosition());
+// init slider carousel
+$('.carousel').alphaSlider();
+$('.carousel2').alphaSlider();
+
+

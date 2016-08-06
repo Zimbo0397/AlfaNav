@@ -147,6 +147,7 @@ ul.pagination
 	.vert-el
 		display: table-cell
 		vertical-align: middle
+		position: relative
 
 // image-holder
 .image-holder
@@ -242,6 +243,9 @@ ul.pagination
 	max-width: 100vw
 	position: relative
 	overflow: hidden
+	.brand-holder
+		position: fixed
+		z-index: 5
 	&.job
 		background-image: url("../img/images/top-line-bg-3.jpg")
 		height: 50vh
@@ -295,6 +299,14 @@ ul.pagination
 		@media (max-width: $tablet)
 			height: auto
 			padding-bottom: 150px
+	&.talent-sec
+		padding-top: 150px
+		background-image: url("../img/images/stock-photo-115909437.jpg")
+		height: 50vh
+		@media (max-width: $tablet)
+			height: auto
+			padding-bottom: 150px
+
 
 	.btn-holder
 		margin-top: 58px
@@ -322,6 +334,217 @@ ul.pagination
 				margin: 20px auto
 	&.index
 		height: 100vh
+		&:before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			background: url("../img/images/back01.jpg")
+			background-size: cover
+			animation: bgchange 25s infinite
+			transition: animation 1s 
+
+@keyframes bgchange
+	1%
+		transform: scale(1.001)
+	2%
+		transform: scale(1.002)
+	3%
+		transform: scale(1.003)
+	4%
+		transform: scale(1.004)
+	5%
+		transform: scale(1.005)
+	6%
+		transform: scale(1.006)
+	7%
+		transform: scale(1.007)
+	8%
+		transform: scale(1.008)
+	9%
+		transform: scale(1.009)
+	10%
+		transform: scale(1.010)
+	11%
+		transform: scale(1.011)
+	12%
+		transform: scale(1.012)
+	13%
+		transform: scale(1.013)
+	14%
+		transform: scale(1.014)
+	15%
+		transform: scale(1.015)
+	16%
+		transform: scale(1.016)
+	17%
+		transform: scale(1.017)
+	18%
+		transform: scale(1.018)
+	19%
+		transform: scale(1.019)
+	20%
+		transform: scale(1.020)
+	21%
+		transform: scale(1.021)
+	22%
+		transform: scale(1.022)
+	23%
+		transform: scale(1.023)
+	24%
+		transform: scale(1.024)
+	25%
+		transform: scale(1.025)
+	26%
+		transform: scale(1.026)
+	27%
+		transform: scale(1.027)
+	28%
+		transform: scale(1.028)
+	29%
+		transform: scale(1.029)
+	30%
+		transform: scale(1.030)
+	31%
+		transform: scale(1.031)
+	32%
+		transform: scale(1.032)
+	33%
+		transform: scale(1.033)
+	34%
+		transform: scale(1.034)
+	35%
+		transform: scale(1.035)
+	36%
+		transform: scale(1.036)
+	37%
+		transform: scale(1.037)
+	38%
+		transform: scale(1.038)
+	39%
+		transform: scale(1.039)
+	40%
+		transform: scale(1.040)
+	41%
+		transform: scale(1.041)
+	42%
+		transform: scale(1.042)
+	43%
+		transform: scale(1.043)
+	44%
+		transform: scale(1.044)
+	45%
+		transform: scale(1.045)
+	46%
+		transform: scale(1.046)
+	47%
+		transform: scale(1.047)
+	48%
+		transform: scale(1.048)
+	49%
+		transform: scale(1.049)
+	50%
+		transform: scale(1.050)
+	51%
+		transform: scale(1.049)
+	52%
+		transform: scale(1.048)
+	53%
+		transform: scale(1.047)
+	54%
+		transform: scale(1.046)
+	55%
+		transform: scale(1.045)
+	56%
+		transform: scale(1.044)
+	57%
+		transform: scale(1.043)
+	58%
+		transform: scale(1.042)
+	59%
+		transform: scale(1.041)
+	60%
+		transform: scale(1.040)
+	61%
+		transform: scale(1.039)
+	62%
+		transform: scale(1.038)
+	63%
+		transform: scale(1.037)
+	64%
+		transform: scale(1.036)
+	65%
+		transform: scale(1.035)
+	66%
+		transform: scale(1.034)
+	67%
+		transform: scale(1.033)
+	68%
+		transform: scale(1.032)
+	69%
+		transform: scale(1.031)
+	70%
+		transform: scale(1.030)
+	71%
+		transform: scale(1.029)
+	72%
+		transform: scale(1.028)
+	73%
+		transform: scale(1.027)
+	74%
+		transform: scale(1.026)
+	75%
+		transform: scale(1.025)
+	76%
+		transform: scale(1.024)
+	77%
+		transform: scale(1.023)
+	78%
+		transform: scale(1.022)
+	79%
+		transform: scale(1.021)
+	80%
+		transform: scale(1.020)
+	81%
+		transform: scale(1.019)
+	82%
+		transform: scale(1.018)
+	83%
+		transform: scale(1.017)
+	84%
+		transform: scale(1.016)
+	85%
+		transform: scale(1.015)
+	86%
+		transform: scale(1.014)
+	87%
+		transform: scale(1.013)
+	88%
+		transform: scale(1.012)
+	89%
+		transform: scale(1.011)
+	90%
+		transform: scale(1.010)
+	91%
+		transform: scale(1.009)
+	92%
+		transform: scale(1.008)
+	93%
+		transform: scale(1.007)
+	94%
+		transform: scale(1.006)
+	95%
+		transform: scale(1.005)
+	96%
+		transform: scale(1.004)
+	97%
+		transform: scale(1.003)
+	98%
+		transform: scale(1.002)
+	99%
+		transform: scale(1.001)
+	100%
+		transform: scale(1.000)
 
 .brand-holder
 	position: absolute
@@ -346,7 +569,8 @@ ul.pagination
 	font-size: 18px
 	font-weight: 700
 	line-height: 20px
-	position: absolute
+	position: fixed
+	z-index: 5
 	top: 0
 	right: 0
 	@media (max-width: $medium)
@@ -468,6 +692,9 @@ ul.pagination
 	width: 100vw
 	overflow: hidden
 	padding-top: 70px
+	&.talent
+		background: url(../img/images/talent-bg.jpg) no-repeat
+		background-size: cover
 	@media (max-width: $medium)
 		height: auto
 		padding-top: 90px
@@ -487,6 +714,7 @@ ul.pagination
 	.tabs-holder
 		text-align: center
 		margin-top: 71px
+		margin-bottom: 70px
 		.tab-sv
 			width: 200px
 			height: 40px
@@ -495,21 +723,26 @@ ul.pagination
 			font-weight: 700
 			text-transform: uppercase
 			padding-top: 10px
-			transition: .2s
 			color: #81bb41
+			@media (max-width: $mobile-large)
+				width: 140px
+			&:after
+				content: ''
+				height: 20px
+				width: 20px
+				bottom: -15px
+				left: 50%
+				background: #81bb41
+				position: absolute
+				transform: rotate(45deg) translateX(-50%)
+				opacity: 0
 			&.active
 				background-color: #81bb41
 				position: relative
 				color: white
 				&:after
-					height: 20px
-					width: 20px
 					content: ''
-					bottom: -15px
-					left: 50%
-					background: #81bb41
-					position: absolute
-					transform: rotate(45deg) translateX(-50%)
+					opacity: 1
 			span
 				position: relative
 				z-index: 5
@@ -517,6 +750,7 @@ ul.pagination
 				background-color: #81bb41
 				transition: .2s
 				color: white
+				
 .shipowners
 	overflow: hidden
 	max-height: 0
@@ -536,6 +770,7 @@ ul.pagination
 		max-height: 815px
 		overflow: hidden
 		position: relative
+		z-index: 1
 		@media (max-width: $medium)
 			padding-left: 90px
 			padding-right: 90px
@@ -606,14 +841,20 @@ ul.pagination
 	.btn-holder
 		margin-top: 40px
 		.button
-			padding-top: 15px
 			width: 200px
 			height: 50px
+			@media (max-width: $tablet)
+				height: 40px
+				width: 150px
 
 
 .our-services
-	background: url('../img/images/serv-bg.svg')
+	background: url('../img/images/serv-bg.svg') 100% 0% no-repeat
 	padding-top: 112px
+	@media (max-width: $tablet)
+		background: url('../img/images/serv-bg.svg') 100% 132% no-repeat
+	@media (max-width: $mobile-medium-small)
+		background: url('../img/images/serv-bg.svg') 100% 141% no-repeat
 	h3
 		margin-bottom: 58px
 	.services
@@ -627,6 +868,11 @@ ul.pagination
 				color: #48576a
 				font-weight: 700
 				text-transform: uppercase
+				@media (max-width: $tablet)
+					width: 33.3%
+					font-size: 14px
+				@media (max-width: $mobile-medium-small)
+					width: 50%
 				.undersc
 					width: 120px
 					height: 1px
@@ -1031,6 +1277,7 @@ ul.pagination
 			text-align: center
 			width: 235px
 			margin: $gap / 2
+			transform: translateZ(0)
 			@media (max-width: $large)
 				width: 185px
 			@media (max-width: $medium)
@@ -3675,7 +3922,8 @@ ul.pagination
 			margin-top: 34px
 		
 
-.carousel
+.carousel,
+.carousel2
 	h5
 		color: #48576a
 		font-family: GothamPro
@@ -3711,3 +3959,22 @@ ul.pagination
 	@media (max-width: $tablet)
 		left: 10px
 		opacity: 0.8
+
+#carousel-holder2
+	height: 0px
+	overflow: hidden
+	opacity: 0
+	transition: opacity .6s
+	&.active
+		height: auto
+		opacity: 1
+		transition: opacity .6s
+#carousel-holder1
+	height: 0px
+	overflow: hidden
+	opacity: 0
+	transition: opacity .6s
+	&.active
+		opacity: 1
+		height: auto
+		transition: opacity .6s
