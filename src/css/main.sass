@@ -2733,20 +2733,41 @@ ul.pagination
 					background: url('../img/icons/patti-hover.png') 50% 50%
 					transition: bottom .2s
 		&.last
-			.item-name
+			.table-holder
+				height: 350px
 				text-align: center
-			.image-holder
-				.img
-					background-size: 150px
-				&:after
-					content: ''
-					position: absolute
-					bottom: -100px
-					right: 10px
-					width: 26px
-					height: 26px 
-					background: url('../img/icons/patti-hover.png') 50% 50%
-					transition: bottom .2s
+				a
+					display: inline-block
+					height: 150px
+					width: 150px
+					border: 2px solid #81bb41
+					text-align: center
+					padding-top: 38px
+					&:hover
+						background: #81bb41
+						transition: background .2s
+						svg
+							path
+								fill: #fff
+								transition: fill .2s
+					.item-name
+						text-align: center
+					.image-holder
+						height: 150px
+						width: 150px
+						svg
+							width: 71px
+							height: 71px
+							display: inline-block
+						&:after
+							content: ''
+							position: absolute
+							bottom: -100px
+							right: 10px
+							width: 26px
+							height: 26px 
+							background: url('../img/icons/patti-hover.png') 50% 50%
+							transition: bottom .2s
 
 		h6
 			color: #48576a
