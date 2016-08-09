@@ -6,11 +6,14 @@ $('.vacitemslider').bxSlider({
 });
 
 var newsSlider = $('.news-slider').bxSlider({
-    mode: 'fade'
+    mode: 'fade',
+    easing: 'easeInQuint',
+    speed: 200
   });
 
 var personSlider = $('.person-info-slider').bxSlider({
-    mode: 'fade'  
+    mode: 'fade',
+    speed: 200
   });
 $(window).on('load', function() {
 		var setCurrentTime = function() {
@@ -29,6 +32,7 @@ $(window).on('load', function() {
 		$milestonesSlider = $('.milestonesSlider')
 		.bxSlider({
 			mode: 'fade',
+      speed: 200,
 			onSlideNext: function($slideElement, oldIndex, newIndex) {
 				setCurrentTime();
 			},
@@ -109,6 +113,7 @@ $( function() {
 
 
 // click functions on pages
+
 $('.crossbtn').each(function () {
 	$(this).on('click', function(e) {
 		e.preventDefault();
@@ -121,13 +126,18 @@ $('#side-open').on('click', function(e) {
   $('.side-panel').addClass('open')
   $('body').addClass('blackshadow')
 })
-$('#side-close').on('click', function() {
+$('#side-close').on('click', function(e) {
+  e.preventDefault();
   $('.side-panel').removeClass('open')
   $('#side-open').removeClass('open')
   $('body').removeClass('blackshadow')
 })
-
 $('#callback1').on('click', function(e) {
+  e.preventDefault();
+  $('.call-back-inner').parent().addClass('open')
+  $('body').addClass('blackshadow')
+})
+$('#callback2').on('click', function(e) {
   e.preventDefault();
   $('.call-back-inner').parent().addClass('open')
   $('body').addClass('blackshadow')
@@ -145,18 +155,23 @@ $('#readTestimonials1').on('click', function(e) {
 $('#filtersOpen').on('click', function(e) {
   e.preventDefault();
   $('.filters-holder').addClass('open')
+  $('.database').addClass('blackshadow')
+  
 })
 $('#filtersClose').on('click', function(e) {
   e.preventDefault();
   $('.filters-holder').removeClass('open')
+  $('.database').removeClass('blackshadow')
 })
 
 $('#addrev').on('click', function(e) {
   e.preventDefault();
   $('.rewiew-holder').parent().addClass('open')
+  $('body').addClass('blackshadow')
 })
 $('#rewiewClose').on('click', function() {
   $('.rewiew-holder').parent().removeClass('open')
+  $('body').removeClass('blackshadow')
 })
 $('#find-job-form').on('click', function(e) {
   e.preventDefault();
@@ -214,7 +229,6 @@ $('#newsModalClose').on('click', function(e) {
     $('#carousel-holder1').removeClass('active');
     $('#carousel-holder2').addClass('active');
   })
-
 // END click functions on pages
 
 //smooth scroll function
@@ -230,28 +244,110 @@ $(document).ready(function(){
 // END smooth scroll function
 
 
+//nav scroll hide
+$(window).on('scroll', function () {
+  if ($(this).scrollTop() > 450) {
+    $('.main-nav-holder').addClass('hideit');
+  } else
+    $('.main-nav-holder').removeClass('hideit');
+})
+
+$(window).on('scroll', function () {
+  if ($(this).scrollTop() > 450) {
+    $('.b-in-top').addClass('hideit');
+  } else
+    $('.b-in-top').removeClass('hideit');
+})
+//END nav scroll hide
+
 
 // animate numbers init
 
+$(window).on('scroll', function() {
+  if($('.info-block').length) {
+      var targOffsetTop = $('.counters-holder').offset().top,
+          targScrollTop = $(window).scrollTop(),
+          winHeight =$(window).height();
+          if (!targOffsetTop) {
+            targOffsetTop = 100000;
+          }
+          if (targOffsetTop - winHeight < targScrollTop) {
+            if (!$('.counters-holder').hasClass('numbers')) {
+                $('#animateNumber1')
+                  .prop('number', 0)
+                  .animateNumber(
+                    {
+                      number: 16648
+                    },
+                    2000
+                  );
 
-$('#animateNumber1')
-  .prop('number', 16500)
+                  $('#animateNumber2')
+                  .prop('number', 0)
+                  .animateNumber(
+                    {
+                      number: 1243
+                    },
+                    2000
+                  );
+            }
+            $('.counters-holder').addClass('numbers')
+          }
+    
+  }
+})
+
+$(window).on('load', function() {
+  if($('.info-block').length) {
+      var targOffsetTop = $('.counters-holder').offset().top,
+          targScrollTop = $(window).scrollTop(),
+          winHeight =$(window).height();
+          if (!targOffsetTop) {
+            targOffsetTop = 100000;
+          }
+          if (targOffsetTop - winHeight < targScrollTop) {
+            if (!$('.counters-holder').hasClass('numbers')) {
+                $('#animateNumber1')
+                  .prop('number', 0)
+                  .animateNumber(
+                    {
+                      number: 16648
+                    },
+                    2000
+                  );
+
+                  $('#animateNumber2')
+                  .prop('number', 0)
+                  .animateNumber(
+                    {
+                      number: 1243
+                    },
+                    2000
+                  );
+            }
+            $('.counters-holder').addClass('numbers')
+          }
+    
+  }
+})
+
+$('#animateNumber3')
+  .prop('number', 0)
   .animateNumber(
     {
-      number: 16648
+      number: 17
     },
     2000
   );
 
-  $('#animateNumber2')
-  .prop('number', 1100)
+  $('#animateNumber4')
+  .prop('number', 0)
   .animateNumber(
     {
-      number: 1243
+      number: 20
     },
     2000
   );
-  
 // END animate numbers init
 
 // init gogle maps

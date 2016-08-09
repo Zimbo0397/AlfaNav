@@ -44,24 +44,47 @@ html(lang='en')
 									.input-item
 										label First Name
 										input(placeholder="Ivan")
+								li.mobile
+									.input-item
+										label Last Name
+										input(placeholder="Sidorov")
 								li
 									.input-item
 										label Email
 										input(placeholder="mail@mail.com")
+								li.mobile
+									.input-item
+										label Phone
+										input(placeholder="+38 (098) 765 43 21")
 								li
 									.input-item
 										label Age
 										input(placeholder="45")
+								li.mobile
+									.input-item.selectable
+										label Country
+										select
+											option(value="1") Ukraine
+											option(value="2") Russia
+											option(value="3") Andorra
+											option(value="4") Denmark
+											option(value="5") Estonia
+											option(value="6") Germany
+											option(value="7") Iceland
 								li
 									.browse
 										button(href="#") Browse
 										span  Curriculum Vitae
+								li.mobile
+									.browse
+										button(href="#") Browse
+										span  Cover Letter
 
 
 
 
 
-						.form-part.inline-el
+						.form-part.mobile.inline-el
 							ul
 								li
 									.input-item

@@ -32,12 +32,11 @@ html(lang='en')
 			.main-container
 				ul.comments-holder
 					mixin newcomment(name, manage, text)
-						a(href="#")
-							li.wow.fadeInUp
-								.title
-									h5= name
-									h6= manage
-								p= text
+						li.wow.fadeInUp
+							.title
+								h5= name
+								h6= manage
+							p= text
 					+newcomment(
 						'Patti Clifford',
 						'Chief Talent Officer, Havas Group',

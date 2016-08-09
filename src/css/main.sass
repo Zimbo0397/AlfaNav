@@ -24,9 +24,6 @@ a
 		color: inherit
 // body
 // 	background: #E4E1E1
-body::-webkit-scrollbar
-	height: 0
-	width: 0
 body 
 	margin: 0
 	font-family: GothamPro
@@ -54,26 +51,38 @@ a
 h3,
 h4
 	font-family: GothamPro
-	font-size: 2.47vw
-	line-height: 2.47vw
+	font-size: 60px
+	line-height: 65px
 	text-transform: uppercase
 	color: #2d4170
 	margin-top: 0px
 	letter-spacing: -2.2px
-	@media (max-width: $mobile-large)
-		font-size: 5.47vw
-		line-height: 5.47vw
-	@media (max-width: $mobile-small)
-		font-size: 6.47vw
-		line-height: 7.47vw
+	@media (max-width: $medium)
+		font-size: 50px
+		line-height: 55px
+	@media (max-width: $tablet)
+		font-size: 30px
+		line-height: 35px
 	.green
 		color: #81bb41
-	&.big
-		font-size: 3.1vw
-		line-height: 3.1vw
-		@media (max-width: $mobile-large)
-			font-size: 6.1vw
-			line-height: 6.1vw
+	&.small
+		font-size: 50px
+		line-height: 55px
+		@media (max-width: $medium)
+			font-size: 40px
+			line-height: 45px
+		@media (max-width: $tablet)
+			font-size: 28px
+			line-height: 32px
+	&.dude
+		font-size: 70px
+		line-height: 75px
+		@media (max-width: $medium)
+			font-size: 60px
+			line-height: 65px
+		@media (max-width: $tablet)
+			font-size: 35px
+			line-height: 40px
 h4
 	font-size: 1.55vw
 	letter-spacing: -1.5px
@@ -93,7 +102,8 @@ ul
 		list-style: none
 .clearfix 
     zoom: 1
-
+.scroll-holder
+	position: relative
 .clearfix:before,
 .clearfix:after 
     content: ""
@@ -246,6 +256,10 @@ ul.pagination
 	.brand-holder
 		position: fixed
 		z-index: 5
+		&.hideit
+			opacity: 0
+			pointer-events: none
+			transition: opacity.2s
 	&.job
 		background-image: url("../img/images/top-line-bg-3.jpg")
 		height: 50vh
@@ -567,7 +581,7 @@ ul.pagination
 	padding-right: 19px
 	font-family: GothamPro
 	font-size: 18px
-	font-weight: 700
+	font-weight: 500
 	line-height: 20px
 	position: fixed
 	z-index: 5
@@ -585,6 +599,9 @@ ul.pagination
 		margin-right: 42px
 		font-size: inherit
 		text-transform: uppercase
+		opacity: 1
+		pointer-events: inherit
+		transition: opacity.2s
 		@media (max-width: $tablet)
 			padding-right: 47px
 			margin-right: 22px
@@ -611,6 +628,16 @@ ul.pagination
 			position: absolute
 			top: -4px
 			right: 8px
+	&.hideit
+		.callback-holder
+			pointer-events: none
+			opacity: 0
+			transition: opacity.2s
+		.menu-holder > span
+			pointer-events: none
+			opacity: 0
+			transition: opacity.2s
+
 
 .description-in-top
 	text-align: center
@@ -625,9 +652,14 @@ ul.pagination
 			font-size: 7vw
 			line-height: 7vw
 		&.index																																	
-			font-size: 3.6vw
-			@media (max-width: $mobile-large)
-				font-size: 4.6vw
+			font-size: 70px
+			line-height: 75px
+			@media (max-width: $medium)
+				font-size: 60px
+				line-height: 65px
+			@media (max-width: $tablet)
+				font-size: 40px
+				line-height: 45px
 	h2
 		color: white
 		font-family: GothamPro
@@ -646,8 +678,7 @@ ul.pagination
 			margin-top: 50px
 		@media (max-width: $tablet)
 			margin-top: 30px
-		@media (max-width: $mobile-large)
-			width: 28vw
+			width: 200px
 		.rope
 			margin: 5px auto
 		img
@@ -685,16 +716,14 @@ ul.pagination
 		background: #f6f6f6
 
 .reviews
-	height: 100vh
 	background: url(../img/images/back02.jpg) no-repeat
 	background-size: cover
 	position: relative
-	width: 100vw
-	overflow: hidden
-	padding-top: 70px
+	padding-top: 180px
 	&.talent
 		background: url(../img/images/talent-bg.jpg) no-repeat
 		background-size: cover
+		padding-bottom: 150px
 	@media (max-width: $medium)
 		height: auto
 		padding-top: 90px
@@ -815,13 +844,8 @@ ul.pagination
 						@media (max-width: $mobile-large)
 							padding-right: 5%
 			tr
-
-				&:nth-child(odd)
-					td,th
-						border-bottom: 2px solid #ebebeb
-				&:nth-child(even)
-					td,th
-						border-bottom: 1px solid #ebebeb
+				td,th
+					border-bottom: 1px solid #ebebeb
 		&.gradient
 			&:after
 				content: ''
@@ -881,6 +905,8 @@ ul.pagination
 				span
 					display: inline-block
 					margin-top: 9px
+				a
+					cursor: normal
 
 .footer
 	background: url('../img/images/back05.jpg')
@@ -900,12 +926,15 @@ ul.pagination
 	.brand-holder
 		top: 3px
 		left: -6px
+		opacity: 1
+		pointer-events: inherit
+		transition: opacity.2s
 		@media (max-width: $large)
 			left: 94px
 		@media (max-width: $medium)
 			left: 54px
 		@media (max-width: $tablet)
-			left: 134px
+			left: 21px
 		@media (max-width: $mobile-medium-small)
 			position: static
 			width: 100px
@@ -923,9 +952,11 @@ ul.pagination
 		@media (max-width: $medium)
 			padding-left: 150px
 		@media (max-width: $tablet)
-			width: 100%
+			width: 29%
 			margin-bottom: 50px
-			padding-left: 250px
+			padding-left: 0
+			display: block
+			margin: 0 auto 50px
 		@media (max-width: $mobile-medium-small)
 			width: 100%
 			text-align: center
@@ -1023,6 +1054,11 @@ ul.pagination
 					border: 2px solid #fff
 					height: 50px
 					display: inline-block
+					&:hover
+						background: #81bb41
+						color: #fff
+						border: 2px solid #81bb41
+						transition: border .2s, color .2s, background .2s
 
 	.pre-links,
 	.Copyright
@@ -1105,6 +1141,7 @@ ul.pagination
 	.counters-holder
 		padding-left: 274px
 		padding-top: 111px
+		transform: translateZ(0)
 		@media (max-width: $large)
 			padding-left: 100px
 			padding-top: 120px
@@ -1156,16 +1193,23 @@ ul.pagination
 			padding-top: 70px
 		.counters-holder
 			@media (max-width: $tablet)
+				padding-left: 55px
+				.counter-item
+					display: block
+					margin-bottom: 40px
+			@media (max-width: $mobile-large)
 				width: 100%
 				position: absolute
 				top: 0
 				padding-top: 10px
 				left: 50%
-				transform: translateX(-50%)
+				transform: translateX(-50%) translateZ(0)
 				padding-left: 0
+				.counter-item
+					display: inline-block
 		.text-holder
 			@media (max-width: $tablet)
-				text-align: justify
+				text-align: left
 			.btn-holder
 				@media (max-width: $tablet)
 					text-align: center
@@ -1281,7 +1325,7 @@ ul.pagination
 			@media (max-width: $large)
 				width: 185px
 			@media (max-width: $medium)
-				width: 150px
+				width: 163px
 				margin: $gap / 4
 			.image-holder
 				border-radius: 50%
@@ -1372,8 +1416,6 @@ ul.pagination
 			line-height: 4vw
 	.cards-holder
 		$gap: 8.1%
-		margin-left: $gap / -2
-		margin-right: $gap / -2
 		text-align: center
 		@media (max-width: $large)
 			margin: 0
@@ -1386,13 +1428,20 @@ ul.pagination
 			position: relative
 			@media (max-width: $large)
 				padding: $gap / 4
+
 			@media (max-width: $medium)
-				width: 40%
+				width: 33.33%
+				&:nth-child(1n+4)
+					display: none
 			@media (max-width: $tablet)
 				width: 50%
+				&:nth-child(1n+3)
+					display: none
 			@media (max-width: $mobile-large)
 				width: 70%
 				margin-bottom: 30px
+				&:nth-child(1n+2)
+					display: none
 			@media (max-width: $mobile-medium-small)
 				width: 100%
 			.image-holder
@@ -1448,17 +1497,8 @@ ul.pagination
 					background: -ms-linear-gradient(top, rgba(246,246,246,0) 0%, rgba(246,246,246,0) 0%, rgba(246,246,246,1) 81%, rgba(246,246,246,1) 94%)
 					background: linear-gradient(to bottom, rgba(246,246,246,0) 0%, rgba(246,246,246,0) 0%, rgba(246,246,246,1) 81%, rgba(246,246,246,1) 94%)
 					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 )
-					@media (max-width: $medium)
-						background: rgba(255,255,255,0)
-						background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(246,246,246,0) 0%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 100%)
-						background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(0%, rgba(246,246,246,0)), color-stop(81%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)))
-						background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(246,246,246,0) 0%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 100%)
-						background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(246,246,246,0) 0%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 100%)
-						background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(246,246,246,0) 0%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 100%)
-						background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(246,246,246,0) 0%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 100%)
-						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 )
 			.backplate
-				padding: $gap
+				padding: 15.9%
 				padding-top: 40px
 				position: absolute
 				top: -20px
@@ -1470,7 +1510,17 @@ ul.pagination
 				z-index: 0
 				opacity: 0
 				@media (max-width: $mobile-medium)
-					padding: $gap / 2 
+					padding: $gap / 2
+				@media (max-width: $large)
+					padding: 8.1%
+				@media (max-width: $medium)
+					padding: 6.1%
+				@media (max-width: $tablet)
+					padding: 4.1%
+				@media (max-width: $mobile-large)
+					padding: 2.9%
+				@media (max-width: $mobile-medium-small)
+					padding: 2%
 
 				.image-holder
 					border-radius: 0
@@ -1484,6 +1534,7 @@ ul.pagination
 						overflow: inherit
 						height: auto
 						max-height: 100%
+						margin-top: 30px
 						&:before
 							display: none
 						&:after
@@ -1503,6 +1554,8 @@ ul.pagination
 	background: url(../img/images/back04.jpg) no-repeat
 	background-size: cover
 	.btn-holder
+		@media (max-width: $mobile-large)
+			margin-top: 20px
 		.button
 			width: 260px
 			height: 50px
@@ -1517,23 +1570,21 @@ ul.pagination
 		@media (max-width: $large)
 			max-width: 60%
 		@media (max-width: $medium)
-			max-width: 100%
+			max-width: 50%
 			width: 100%
 			&.float-el
 				max-width: 50%
 				width: 50%
 				.btn-holder
 					text-align: center
-		@media (max-width: $mobile-medium-small)
-			&.float-el
-				max-width: 100%
-				width: 100%
-				.btn-holder
-					margin-top: 20px
+		@media (max-width: $mobile-large)
+			max-width: 100%
+			width: 100%
+			margin-bottom: 70px
 		.column
 			width: 50%
 			padding-right: 20px
-			@media (max-width: $mobile-large)
+			@media (max-width: $medium)
 				width: 100%
 			.post-item
 				padding-bottom: 28px
@@ -1604,14 +1655,11 @@ ul.pagination
 		@media (max-width: $large)
 			max-width: 40%
 		@media (max-width: $medium)
+			max-width: 50%
+			width: 100%
+		@media (max-width: $mobile-large)
 			max-width: 100%
 			width: 100%
-			&.float-el
-				max-width: 50%
-				width: 50%
-				.btn-holder
-					text-align: center
-		@media (max-width: $mobile-medium-small)
 			&.float-el
 				max-width: 100%
 				width: 100%
@@ -1778,12 +1826,22 @@ ul.pagination
 		background-color: #f6f6f6
 		text-align: right
 		padding-top: 31px
+		&.mobile
+			display: none
+		@media (max-width: $medium)
+			display: none
+			&.mobile
+				display: block
+		@media (max-width: $mobile-medium-small)
+			padding-left: 5px
+			padding-right: 5px
+			font-size: 12px
 		.hotvac
 			margin-right: 227px
 			@media (max-width: $medium)
 				margin-right: 40px
 			@media (max-width: $mobile-medium-small)
-				margin-right: 31px
+				margin-right: 13px
 			span
 				color: #48576a
 				font-size: 18px
@@ -1845,7 +1903,7 @@ ul.pagination
 			margin-bottom: 15px
 			@media (max-width: $mobile-medium-small)
 				padding-left: 10px
-				padding-top: 60px
+				padding-bottom: 60px
 			&:before
 				content: ''
 				position: absolute
@@ -1890,7 +1948,8 @@ ul.pagination
 				height: 40px
 				@media (max-width: $mobile-medium-small)
 					transform: none
-					top: 9px
+					top: auto
+					bottom: 15px
 					right: 0px
 			&:hover
 				&:before
@@ -1900,11 +1959,8 @@ ul.pagination
 					color: #fff
 					background: #81bb41
 					transition: background, color .2s
-			&:nth-child(odd)
-				.button
-					@media (max-width: $mobile-medium-small)
-						right: auto
-						left: 10px
+		.bx-controls-direction
+			padding-top: 20px
 
 .slider-holder
 	.bx-wrapper
@@ -1936,7 +1992,7 @@ ul.pagination
 
 .careers-form
 	padding-top: 47px
-	padding-bottom: 235px
+	padding-bottom: 135px
 	p
 		color: #48576a
 		font-size: 16px
@@ -1945,6 +2001,8 @@ ul.pagination
 		margin-bottom: 25px
 	.text-holder
 		margin-bottom: 162px
+		@media (max-width: $tablet)
+			margin-bottom: 70px
 	.textarea-holder
 		padding: 9px
 		label
@@ -1970,11 +2028,21 @@ ul.pagination
 				padding-left: 0
 				padding-right: 0
 				margin-bottom: 10px
+			&.mobile
+				@media (max-width: $tablet)
+					display: none
+
 			ul 
 				li 
 					border-bottom: 1px solid #dadde1
 					margin-bottom: 36px
 					padding-bottom: 5px
+					&:focus
+						border-bottom: 2px solid #81bb41
+					&.mobile
+						display: none
+						@media (max-width: $tablet)
+							display: block
 					label,
 					input,
 					select
@@ -2044,7 +2112,7 @@ ul.pagination
 							top: -7px
 							left: -84px
 							@media (max-width: $mobile-medium-small)
-								width: 160px
+								width: 144px
 								height: 42px
 								top: 2px
 								left: -45px
@@ -2205,12 +2273,14 @@ ul.pagination
 		right: -50px
 		z-index: 0
 		background: #fff
-		box-shadow: 3px -1px 25px 0px rgba(0, 0, 0, 0.75)
 		display: none
+		text-align: center
+		padding-top: 2px
 		@media (max-width: $mobile-large)
 			display: inline-block
 		img
-			width: 50px
+			width: 44px
+			display: inline-block
 	.filters-holder
 		max-width: 297px
 		width: 100%
@@ -2242,7 +2312,7 @@ ul.pagination
 			max-width: 268px
 
 		&.main
-			height: 1570px
+			height: 1222px
 		.search-holder
 			height: 49px
 			background: #fff
@@ -2453,6 +2523,18 @@ ul.pagination
 					.button
 						color: #fff
 						background: #81bb41
+	&.blackshadow
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+			background: #000
+			opacity: 0.4
+			z-index: 1
 
 .news
 	.border-el
@@ -2622,24 +2704,52 @@ ul.pagination
 			padding-left: 20px
 			padding-right: 20px
 	.team-item
-		// filter: grayscale(1)
-		// transition: filter .2s
+		.image-holder
+			opacity: 1
+			transition: opacity .2s
+			&:after
+				content: ''
+				position: absolute
+				bottom: -100px
+				right: 10px
+				width: 26px
+				height: 26px 
+				background: url('../img/icons/patti-hover.png') 50% 50%
+				transition: bottom .2s
 		&:hover
-			.img
-				-webkit-filter: grayscale(0.9)
+			h6
+				color: #81bb41
+				transition: color .2s
+			.image-holder
+				opacity: 0.8
+				transition: opacity .2s
+				&:after
+					content: ''
+					position: absolute
+					bottom: 10px
+					right: 10px
+					width: 26px
+					height: 26px 
+					background: url('../img/icons/patti-hover.png') 50% 50%
+					transition: bottom .2s
 		&.last
-			filter: grayscale(0)
 			.item-name
 				text-align: center
 			.image-holder
 				.img
 					background-size: 150px
-					filter: grayscale(0)
 				&:after
-					display: none
+					content: ''
+					position: absolute
+					bottom: -100px
+					right: 10px
+					width: 26px
+					height: 26px 
+					background: url('../img/icons/patti-hover.png') 50% 50%
+					transition: bottom .2s
 
 		h6
-			color: #81bb41
+			color: #48576a
 			font-size: 16px
 			text-transform: uppercase
 			margin-top: 17px
@@ -2647,6 +2757,7 @@ ul.pagination
 			white-space: nowrap
 			overflow: hidden
 			text-overflow: ellipsis
+			transition: color .2s
 		p
 			color: #48576a
 			font-size: 14px
@@ -2658,24 +2769,6 @@ ul.pagination
 		.image-holder
 			height: 350px
 			.img
-			&:after
-				content: ''
-				position: absolute
-				bottom: -100px
-				right: 10px
-				width: 26px
-				height: 26px 
-				background: url('../img/icons/patti-hover.png') 50% 50%
-				transition: bottom .2s
-			&:hover:after
-				content: ''
-				position: absolute
-				bottom: 10px
-				right: 10px
-				width: 26px
-				height: 26px 
-				background: url('../img/icons/patti-hover.png') 50% 50%
-				transition: bottom .2s
 
 
 .add-rev
@@ -2742,8 +2835,30 @@ ul.pagination
 				font-weight: 400
 				line-height: 20px
 				margin-top: 11px
+				@media (max-width: $mobile-medium-small)
+					max-height: 205px
+					overflow: hidden
+					&:after
+						content: ''
+						position: absolute
+						width: 100%
+						height: 100px
+						bottom: 0
+						left: 0
+						background: rgba(255,255,255,0)
+						background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 94%)
+						background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(0%, rgba(255,255,255,0)), color-stop(81%, rgba(255,255,255,1)), color-stop(94%, rgba(255,255,255,1)))
+						background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 94%)
+						background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 94%)
+						background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 94%)
+						background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 94%)
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 )
+					&:hover
+						max-height: 1000px
+						&:after
+							background: transparent
 	.btn-holder
-		margin-top: 75px
+		margin-top: 45px
 		margin-bottom: 20px
 		.button
 			width: 200px
@@ -2843,7 +2958,6 @@ ul.pagination
 	.image-holder
 		width: 250px
 		margin: 0 auto
-		-webkit-filter: grayscale(1)
 		margin-bottom: 35px
 	.tittle
 		text-align: center
@@ -2882,6 +2996,11 @@ ul.pagination
 				border-radius: 50%
 				border: 2px solid #48576a
 				padding-top: 11px
+				&:hover
+					background: #81bb41
+					color: #fff
+					border: 2px solid #81bb41
+					transition: border .2s, color .2s, background .2s
 				@media (max-width: $mobile-large)
 					width: 40px
 					height: 40px
@@ -2922,14 +3041,14 @@ ul.pagination
 	background: url('../img/icons/miles-bg.png')
 	padding-bottom: 60px
 	padding-top: 60px
-	width: 100vw
-	height: 100vh
+	width: 100%
 	overflow: hidden
 	@media (max-width: $medium)
 		height: auto
 	.timeline-holder
 		margin-bottom: 60px
 		position: relative
+		margin-top: 180px
 		@media (max-width: $medium)
 			margin-top: 130px
 		li
@@ -2948,6 +3067,16 @@ ul.pagination
 				height: 60px
 				width: 39px
 				text-align: center
+				&:after
+					content: ''
+					position: absolute
+					left: 0px
+					bottom: -20px
+					width: 11px
+					height: 9px
+					background: url('../img/icons/time-pin.png')
+					opacity: 0
+					transition: opacity, left .5s
 			&:after
 				content: ''
 				position: absolute
@@ -2978,6 +3107,9 @@ ul.pagination
 						width: 11px
 						height: 9px
 						background: url('../img/icons/time-pin.png')
+						opacity: 1
+					    transition: opacity, left .5s cubic-bezier(0, 1.59, 0.57, 0.58)
+						transition-delay: 0.1s
 		&:before
 			content: ''
 			position: absolute
@@ -3025,7 +3157,9 @@ ul.pagination
 					text-transform: none
 					margin-bottom: 13px
 					letter-spacing: normal
-					@media (max-width: $mobile-large)
+					@media (max-width: $large)
+						font-size: 40px
+					@media (max-width: $tablet)
 						font-size: 35px
 				p
 					color: #48576a
@@ -3121,9 +3255,7 @@ ul.pagination
 	.scroll-holder
 		overflow-y: auto
 		max-height: 95vh
-		&::-webkit-scrollbar
-			height: 0
-			width: 0
+		position: relative
 	.rewiew-holder
 		max-width: 614px
 		width: 100%
@@ -3131,6 +3263,9 @@ ul.pagination
 		left: 50%
 		top: 50%
 		transform: translateX(-50%) translateY(-50%) translateZ(0)
+		@media (max-width: $mobile-large)
+			padding-left: 20px
+			padding-right: 20px
 		h6
 			color: #48576a
 			font-family: GothamPro
@@ -3154,6 +3289,8 @@ ul.pagination
 			line-height: 15px
 			margin-bottom: 20px
 			background: transparent
+			&:focus
+				border-bottom: 2px solid #81bb41
 		label
 			color: #A9A9A9
 			font-family: GothamPro
@@ -3188,6 +3325,11 @@ ul.pagination
 					position: absolute
 					top: -11px
 					right: -11px
+					@media (max-width: $mobile-large)
+						top: -31px
+						right: -21px
+						height: 22px
+						width: 150px
 			input
 				width: 50%
 				margin-bottom: 0
@@ -3246,6 +3388,8 @@ ul.pagination
 			line-height: 15px
 			margin-bottom: 10px
 			background: transparent
+			&:focus
+				border-bottom: 2px solid #81bb41
 		label
 			color: #A9A9A9
 			font-family: GothamPro
@@ -3343,8 +3487,8 @@ ul.pagination
 	top: 0
 	right: -200%
 	height: 100vh
-	width: 475px
-	padding-left: 106px
+	width: 415px
+	padding-left: 60px
 	padding-right: 60px
 	transition: right .2s
 	background: url(../img/images/aside-bg.jpg)
@@ -3356,8 +3500,9 @@ ul.pagination
 	@media (max-width: $medium)
 		width: 385px
 		padding-left: 56px
+	@media (max-width: $mobile-large)
+		width: 100%
 	@media (max-width: $mobile-medium-small)
-		width: 320px
 		padding-left: 44px
 		padding-right: 36px
 	&.open
@@ -3379,7 +3524,7 @@ ul.pagination
 				border: 2px solid #81bb41
 			a
 				display: block
-				padding: 10px
+				padding: 8px
 				@media (max-width: $medium)
 					padding: 5px
 				@media (max-width: $mobile-medium-small)
@@ -3388,6 +3533,32 @@ ul.pagination
 				font-weight: 400
 				font-size: 14px
 				padding-left: 20px
+	.callback-holder
+		padding-right: 57px
+		position: relative
+		margin-right: 42px
+		font-size: inherit
+		text-transform: uppercase
+		opacity: 1
+		pointer-events: inherit
+		transition: opacity.2s
+		position: absolute
+		top: 40px
+		left: 105px
+		color: #48576a
+		font-weight: 500
+		z-index: 2
+		@media (max-width: $mobile-medium-small)
+			display: none
+
+		img
+			position: absolute
+			top: -8px
+			right: 8px
+			width: 32px
+			@media (max-width: $medium)
+				width: 26px
+				top: -5px
 
 	.socials-holder
 		text-align: center
@@ -3395,11 +3566,14 @@ ul.pagination
 		transform: translateX(-50%)
 		left: 50%
 		width: 280px
-		bottom: 69px
+		bottom: 40px
+		@media (max-width: $mobile-medium-small)
+			position: static
+			transform: none
 		@media (max-width: $medium)
 			bottom: 30px
 		@media (max-width: $mobile-medium-small)
-			bottom: 10px
+			bottom: -50px
 		ul
 			padding-left: 0
 			li
@@ -3419,6 +3593,11 @@ ul.pagination
 					border-radius: 50%
 					border: 2px solid #48576a
 					display: inline-block
+					&:hover
+						background: #81bb41
+						color: #fff
+						border: 2px solid #81bb41
+						transition: border .2s, color .2s, background .2s
 					@media (max-width: $mobile-medium-small)
 						width: 40px
 						height: 40px
@@ -3593,13 +3772,7 @@ ul.pagination
 			height: 100%
 			background: url(../img/images/related-bg.png)
 		h3
-			color: #48576a
-			font-family: GenplanFree
-			font-size: 30px
-			text-transform: uppercase
 			text-align: center
-			font-weight: 400
-			letter-spacing: normal
 		.related-holder
 			$gap: 4.4%
 			margin-left: $gap / -2
@@ -3608,6 +3781,7 @@ ul.pagination
 				margin-left: $gap / 2
 				margin-right: $gap / 2
 				width: 20.6%
+				margin-bottom: 40px
 				@media (max-width: $mobile-large)
 					width: 45.6%
 					margin-top: $gap / 2
@@ -3646,11 +3820,10 @@ ul.pagination
 						transition: color .2s
 			.btn-holder
 				position: relative
-				margin-top: 60px
+				margin-top: 20px
 				.button
 					width: 200px
 					height: 50px
-					padding-top: 15px
 					@media (max-width: $tablet)
 						width: 150px
 						height: 40px
@@ -3753,6 +3926,7 @@ ul.pagination
 				background: transparent
 				border: none
 				outline: none
+				width: 90%
 			.select-holder
 				position: relative
 				display: inline-block
@@ -3784,13 +3958,14 @@ ul.pagination
 					z-index: 2
 
 .form-light
-	width: 100vw
+	width: 100%
 	position: relative
 	padding-right: 20px
 	padding-left: 20px
 	padding-top: 11px
 	.scroll-holder
 		overflow-x: auto 
+		position: relative
 		.scroll-content
 			width: 1880px
 	h5
@@ -3944,7 +4119,7 @@ ul.pagination
 	@media (max-width: $mobile-large)
 		height: 100%
 		max-height: 580px
-		padding: 10px
+		padding: 20px
 	@media (max-width: $mobile-medium-small)
 		height: 100%
 		max-height: 620px
@@ -3978,3 +4153,10 @@ ul.pagination
 		opacity: 1
 		height: auto
 		transition: opacity .6s
+
+#ourstrnav
+	@media (max-width: $large)
+		max-width: 790px
+		margin: 0 auto
+	@media (max-width: $tablet)
+		max-width: 550px
