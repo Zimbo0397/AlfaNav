@@ -9,7 +9,7 @@ mixin aboutitem(header, text)
 doctype html
 html(lang='en')
 	head
-		title find-talent-01
+		title careers-01
 
 		include ./partials/head.jade
 
@@ -17,17 +17,18 @@ html(lang='en')
 
 		section.top-line.career-sec
 			include ./partials/top-nav.jade
-
-			.description-in-top
-				h1 
-					|WE ARE HIRING! WELCOME TO 
-					br
-					|YOUR OPPORTUNITY OF A LIFETME!
-				img(src="img/icons/waves-icon.png", alt="")
-				h2 
-					|Regardless of differences, we strive shoulder to shoulder... 
-					br
-					|Teamwork can be summed up in five short words: "We believe in each other"
+			.table-holder
+				.vert-el
+					.description-in-top
+						h1 
+							|WE ARE HIRING! WELCOME TO 
+							br
+							|YOUR OPPORTUNITY OF A LIFETiME!
+						img(src="img/icons/waves-icon.png", alt="")
+						h2 
+							//- |Regardless of differences, we strive shoulder to shoulder... 
+							//- br
+							|Teamwork can be summed up in five short words: "We believe in each other"
 
 		section.careers-form
 			.main-container

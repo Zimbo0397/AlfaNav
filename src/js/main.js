@@ -1,6 +1,13 @@
 
 
 // init bx-sliders
+$('.animate-slider').bxSlider({
+  mode: 'fade',
+  speed: 800,
+  auto: true,
+  pause: 10000,
+  controls: false
+});
 $('.vacitemslider').bxSlider({
   mode: 'fade'
 });
@@ -61,6 +68,9 @@ $(window).on('load', function() {
 new WOW().init();
 //END wow animation init
 
+
+
+$('.top-line.index:before')
 
 
 
@@ -244,16 +254,39 @@ $(document).ready(function(){
 // END smooth scroll function
 
 
+
+$(window).on('load', function() {
+  var href = window.location.hash.replace("#","");
+  if (href = 'shipowners1') {
+    $('#shipowners1').addClass('open')
+    console.log(1)
+  }
+})
+
 //nav scroll hide
 $(window).on('scroll', function () {
-  if ($(this).scrollTop() > 450) {
+  if ($(this).scrollTop() > 100) {
     $('.main-nav-holder').addClass('hideit');
   } else
     $('.main-nav-holder').removeClass('hideit');
 })
 
 $(window).on('scroll', function () {
-  if ($(this).scrollTop() > 450) {
+  if ($(this).scrollTop() > 100) {
+    $('.b-in-top').addClass('hideit');
+  } else
+    $('.b-in-top').removeClass('hideit');
+})
+
+$(window).on('load', function () {
+  if ($(this).scrollTop() > 100) {
+    $('.main-nav-holder').addClass('hideit');
+  } else
+    $('.main-nav-holder').removeClass('hideit');
+})
+
+$(window).on('load', function () {
+  if ($(this).scrollTop() > 100) {
     $('.b-in-top').addClass('hideit');
   } else
     $('.b-in-top').removeClass('hideit');
@@ -373,8 +406,40 @@ $('.city').each(function() {
 })
 
 
+
 // init slider carousel
 $('.carousel').alphaSlider();
 $('.carousel2').alphaSlider();
 
+
+if( /Android/i.test(navigator.userAgent) ) {
+ $('.button').each(function() {
+  $(this).css("padding-top", "5px")
+  })
+ $('.find-job-form li label').each(function() {
+  $(this).css("padding-top", "5px")
+  })
+  $('.menu-list li a').each(function() {
+    $(this).css("padding-top", "10px")
+  })
+  $('.tabs-holder .tab-sv').each(function() {
+    $(this).css("padding-top", "14px")
+  })
+}
+
+$('.form-part li').each(function() {
+  var $this =  $(this);
+  $this.find('input').on('click', function() {
+    $('.form-part li').removeClass('active');
+    $this.addClass('active');
+  })
+})
+
+$('.data-form li').each(function() {
+  var $this =  $(this);
+  $this.find('input').on('click', function() {
+    $('.data-form li').removeClass('active');
+    $this.addClass('active');
+  })
+})
 

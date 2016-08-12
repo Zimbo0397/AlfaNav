@@ -9,7 +9,7 @@ mixin aboutitem(header, text)
 doctype html
 html(lang='en')
 	head
-		title find-talent-01
+		title news-01
 
 		include ./partials/head.jade
 
@@ -35,8 +35,8 @@ html(lang='en')
 			.main-container
 				ul.news-list
 					mixin newnewslist(dataSlide, number, month, year, src, head, text)
-						a.newsLink(href="#", dataslide= dataSlide)
-							li.news-item.inline-holder.wow.fadeInUp
+						a.newsLink.wow.fadeInUp(href="#", dataslide= dataSlide)
+							li.news-item.inline-holder
 								.date-holder
 									.number= number
 									.month= month

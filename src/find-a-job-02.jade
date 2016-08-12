@@ -9,7 +9,7 @@ mixin aboutitem(header, text)
 doctype html
 html(lang='en')
 	head
-		title find-talent-01
+		title find-a-job-02
 
 		include ./partials/head.jade
 
@@ -130,17 +130,20 @@ html(lang='en')
 						+newtr('CHINA NAVIGATION CO LTD.', 'Kifisia, Greece', 'January 31, 2004')
 						+newtr('CHIOS MARITIME', 'Hong Kong', 'August 21, 2003')
 				.btn-holder
-					a(href="#").button Show all
+					a(href="#").button
+						.t-holder
+							span Show all
 
 
 		section.whyalfanav.wow.fadeInUp
 			.gray-strip.inline-holder
-				.main-container
-					.hotvac.inline-el
-						span Hot vacances
-					.allurl.inline-el
-						a(href="#")
-							span Show all vacancies
+				.main-container.clearfix
+					.t-title-holder.clearfix
+						.hotvac.inline-el
+							span Hot vacances
+						.allurl.inline-el
+							a(href="#")
+								span Show all vacancies
 			.main-container
 				.inline-holder
 					.description-part.inline-el
@@ -154,11 +157,13 @@ html(lang='en')
 							li Time efficient application process
 							li 24/7 support for you and your family
 					.gray-strip.mobile.inline-holder
-						.hotvac.inline-el
-							span Hot vacances
-						.allurl.inline-el
-							a(href="#")
-								span Show all vacancies
+						.clearfix
+							.t-title-holder.clearfix
+								.hotvac.inline-el
+									span Hot vacances
+								.allurl.inline-el
+									a(href="#")
+										span Show all vacancies
 					.slider-holder.inline-el
 						ul.vacitemslider
 							li
