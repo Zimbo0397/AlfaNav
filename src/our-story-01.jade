@@ -14,8 +14,11 @@ html(lang='en')
 		include ./partials/head.jade
 
 	body
-
+		include ./partials/preloader.jade
 		section.top-line.story-section
+			.animate-bg
+				.image-holder
+					img(src="img/images/our-story-bg.jpg", alt="")
 			include ./partials/top-nav.jade
 			.table-holder
 				.vert-el
@@ -46,7 +49,7 @@ html(lang='en')
 							a.button(href="/contacts-01.html")
 								.t-holder
 									span Contact Us
-
+			include ./partials/down-btn.jade
 		
 		section#our-story-sec.minidescription.story.wow.fadeInUp
 			.main-container
@@ -66,92 +69,93 @@ html(lang='en')
 							|best practices to exceed the both sides' expectations. Today, AlphaNavigation's close-knit team continues sticking with the company core principle to provide strong competitive advantages to seafarers and shipowners.
 
 		section#milestones-sec.milestones
-			.main-container
-				h3 Our 
-					span.green  Milestones
-				
-			.main-container
-				.timeline-holder
-					ul.inline-holder
-						li.active.inline-el(data-slide='0')
-							a.time(href="#")
-								span 1999
-						li.inline-el(data-slide='1')
-							a.time(href="#")
-								span 2000
-						li.inline-el(data-slide='2')
-							a.time(href="#")
-								span 2004
-						li.inline-el(data-slide='3')
-							a.time(href="#")
-								span 2005
-						li.inline-el(data-slide='4')
-							a.time(href="#")
-								span 2010
-						li.inline-el(data-slide='5')
-							a.time(href="#")
-								span 2013
-						li.inline-el(data-slide='6')
-							a.time(href="#")
-								span 2016
-				.milestonesSlider-holder
-					ul.milestonesSlider
-						li.inline-holder
-							.image-holder.inline-el
-								img.fake-img(src='img/images/time-line-slide-1.jpg')
-								.img(style='background-image: url(../img/images/time-line-slide-1.jpg)')
-							.text-holder.inline-el
-								h4 January 1999
-								p
-									|Alpha Navigation won 25 competitors tender contract and signed an agreement with the first big container carrier entered Ukrainian HR marker P&O Nedlloyd.
-						li.inline-holder
-							.image-holder.inline-el
-								img.fake-img(src='img/images/time-line-slide-1.jpg')
-								.img(style='background-image: url(../img/images/time-line-slide-1.jpg)')
-							.text-holder.inline-el
-								h4 January 2000
-								p
-									|Alpha Navigation won 25 competitors tender contract and signed an agreement with the first big container carrier entered Ukrainian HR marker P&O Nedlloyd.
-						li.inline-holder
-							.image-holder.inline-el
-								img.fake-img(src='img/images/time-line-slide-1.jpg')
-								.img(style='background-image: url(../img/images/time-line-slide-1.jpg)')
-							.text-holder.inline-el
-								h4 January 2004
-								p
-									|Alpha Navigation won 25 competitors tender contract and signed an agreement with the first big container carrier entered Ukrainian HR marker P&O Nedlloyd.
-						li.inline-holder
-							.image-holder.inline-el
-								img.fake-img(src='img/images/time-line-slide-1.jpg')
-								.img(style='background-image: url(../img/images/time-line-slide-1.jpg)')
-							.text-holder.inline-el
-								h4 January 2005
-								p
-									|Alpha Navigation won 25 competitors tender contract and signed an agreement with the first big container carrier entered Ukrainian HR marker P&O Nedlloyd.
-						li.inline-holder
-							.image-holder.inline-el
-								img.fake-img(src='img/images/time-line-slide-1.jpg')
-								.img(style='background-image: url(../img/images/time-line-slide-1.jpg)')
-							.text-holder.inline-el
-								h4 January 2010
-								p
-									|Alpha Navigation won 25 competitors tender contract and signed an agreement with the first big container carrier entered Ukrainian HR marker P&O Nedlloyd.
-						li.inline-holder
-							.image-holder.inline-el
-								img.fake-img(src='img/images/time-line-slide-1.jpg')
-								.img(style='background-image: url(../img/images/time-line-slide-1.jpg)')
-							.text-holder.inline-el
-								h4 January 2013
-								p
-									|Alpha Navigation won 25 competitors tender contract and signed an agreement with the first big container carrier entered Ukrainian HR marker P&O Nedlloyd.
-						li.inline-holder
-							.image-holder.inline-el
-								img.fake-img(src='img/images/time-line-slide-1.jpg')
-								.img(style='background-image: url(../img/images/time-line-slide-1.jpg)')
-							.text-holder.inline-el
-								h4 January 2016
-								p
-									|Alpha Navigation won 25 competitors tender contract and signed an agreement with the first big container carrier entered Ukrainian HR marker P&O Nedlloyd.
+			.table-holder
+				.vert-el
+					.main-container
+						h3 Our 
+							span.green  Milestones
+					.main-container
+						.timeline-holder
+							ul.inline-holder
+								li.active.inline-el(data-slide='0')
+									a.time(href="#")
+										span 1999
+								li.inline-el(data-slide='1')
+									a.time(href="#")
+										span 2000
+								li.inline-el(data-slide='2')
+									a.time(href="#")
+										span 2004
+								li.inline-el(data-slide='3')
+									a.time(href="#")
+										span 2005
+								li.inline-el(data-slide='4')
+									a.time(href="#")
+										span 2010
+								li.inline-el(data-slide='5')
+									a.time(href="#")
+										span 2013
+								li.inline-el(data-slide='6')
+									a.time(href="#")
+										span 2016
+						.milestonesSlider-holder
+							ul.milestonesSlider
+								li.inline-holder
+									.image-holder.inline-el
+										img.fake-img(src='img/images/time-line-slide-1.jpg')
+										.img(style='background-image: url(../img/images/time-line-slide-1.jpg)')
+									.text-holder.inline-el
+										h4 January 1999
+										p
+											|Alpha Navigation won 25 competitors tender contract and signed an agreement with the first big container carrier entered Ukrainian HR marker P&O Nedlloyd.
+								li.inline-holder
+									.image-holder.inline-el
+										img.fake-img(src='img/images/time-line-slide-1.jpg')
+										.img(style='background-image: url(../img/images/time-line-slide-1.jpg)')
+									.text-holder.inline-el
+										h4 January 2000
+										p
+											|Alpha Navigation won 25 competitors tender contract and signed an agreement with the first big container carrier entered Ukrainian HR marker P&O Nedlloyd.
+								li.inline-holder
+									.image-holder.inline-el
+										img.fake-img(src='img/images/time-line-slide-1.jpg')
+										.img(style='background-image: url(../img/images/time-line-slide-1.jpg)')
+									.text-holder.inline-el
+										h4 January 2004
+										p
+											|Alpha Navigation won 25 competitors tender contract and signed an agreement with the first big container carrier entered Ukrainian HR marker P&O Nedlloyd.
+								li.inline-holder
+									.image-holder.inline-el
+										img.fake-img(src='img/images/time-line-slide-1.jpg')
+										.img(style='background-image: url(../img/images/time-line-slide-1.jpg)')
+									.text-holder.inline-el
+										h4 January 2005
+										p
+											|Alpha Navigation won 25 competitors tender contract and signed an agreement with the first big container carrier entered Ukrainian HR marker P&O Nedlloyd.
+								li.inline-holder
+									.image-holder.inline-el
+										img.fake-img(src='img/images/time-line-slide-1.jpg')
+										.img(style='background-image: url(../img/images/time-line-slide-1.jpg)')
+									.text-holder.inline-el
+										h4 January 2010
+										p
+											|Alpha Navigation won 25 competitors tender contract and signed an agreement with the first big container carrier entered Ukrainian HR marker P&O Nedlloyd.
+								li.inline-holder
+									.image-holder.inline-el
+										img.fake-img(src='img/images/time-line-slide-1.jpg')
+										.img(style='background-image: url(../img/images/time-line-slide-1.jpg)')
+									.text-holder.inline-el
+										h4 January 2013
+										p
+											|Alpha Navigation won 25 competitors tender contract and signed an agreement with the first big container carrier entered Ukrainian HR marker P&O Nedlloyd.
+								li.inline-holder
+									.image-holder.inline-el
+										img.fake-img(src='img/images/time-line-slide-1.jpg')
+										.img(style='background-image: url(../img/images/time-line-slide-1.jpg)')
+									.text-holder.inline-el
+										h4 January 2016
+										p
+											|Alpha Navigation won 25 competitors tender contract and signed an agreement with the first big container carrier entered Ukrainian HR marker P&O Nedlloyd.
 
 		section#mission-sec.our-mission.wow.fadeInUp
 			.main-container

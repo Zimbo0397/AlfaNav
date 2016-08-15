@@ -14,36 +14,38 @@ html(lang='en')
 		include ./partials/head.jade
 
 	body
+		include ./partials/preloader.jade
 
-		.animate-bg
-			.video-holder
-				video(autoplay='autoplay', loop='loop', poster='/videos/bck.jpg')
-					source(src='http://ak5.picdn.net/shutterstock/videos/8136025/preview/stock-footage-high-quality-looping-animation-of-ocean-waves-from-underwater-with-floating-plankton-light-rays-shi.mp4', type='video/mp4')
-			ul.animate-slider
-				li
-					.image-holder(style='background-image: url("img/images/back01.jpg")')
-				li
-					.image-holder(style='background-image: url("img/images/back01-02.jpg")')
 		section.top-line.index
+			.animate-bg
+				.video-holder
+					video(autoplay='autoplay', loop='loop', poster='/videos/bck.jpg')
+						source(src='http://ak5.picdn.net/shutterstock/videos/8136025/preview/stock-footage-high-quality-looping-animation-of-ocean-waves-from-underwater-with-floating-plankton-light-rays-shi.mp4', type='video/mp4')
+				ul.animate-slider
+					li
+						.image-holder(style='background-image: url("img/images/back01.jpg")')
+					li
+						.image-holder(style='background-image: url("img/images/back01-02.jpg")')
 
-				include ./partials/top-nav.jade
-		
-				.table-holder
-					.vert-el
-						.description-in-top.wow.fadeInUp
-							h1.index HUMAN FACTOR. REDEFINED.
-							.rope-icons
-								div.image-holder.rope
-									img(src="img/icons/logo2.svg", alt="")
-						.btn-holder.wow.fadeInUp
-							a(href="#").button
-								.t-holder
-									span For Job seekers
-							a(href="#").button 
-								.t-holder
-									span For crew seekers
+			include ./partials/top-nav.jade
+	
+			.table-holder
+				.vert-el
+					.description-in-top.wow.fadeInUp
+						h1.index HUMAN FACTOR. REDEFINED.
+						.rope-icons
+							div.image-holder.rope
+								img(src="img/icons/logo2.svg", alt="")
+					.btn-holder.wow.fadeInUp
+						a(href="#").button
+							.t-holder
+								span For Job seekers
+						a(href="#").button 
+							.t-holder
+								span For crew seekers
+			include ./partials/down-btn.jade
 
-		section.reviews
+		section#reviews1.reviews
 			.section-icon
 				.image-holder
 					img(src="img/icons/gray-rope-icon.png", alt="")
@@ -51,9 +53,9 @@ html(lang='en')
 			.table-holder
 				.vert-el
 					.main-container
-						h3.wow.fadeInUp WE GET
+						h3 WE GET
 							span.green SEAFARERS TALKING
-					.carousel.wow.fadeInUp
+					.carousel
 						.slide
 							.slide-text
 								h5 E OLEKSANDR / MAERSK ERIMO
@@ -357,7 +359,7 @@ html(lang='en')
 					.twitt-holder.wow.fadeInUp.inline-el
 						ul
 							mixin newtwittitem(post, text)
-								li.twittitem.wow.fadeInUp
+								li.twittitem
 									h6= post
 									p= text
 									.icon-holder

@@ -1,4 +1,20 @@
 
+var arrayOfImageUrls = [];
+
+$('img').each(function() {
+  arrayOfImageUrls.push($(this).attr('src'));
+})
+console.log(arrayOfImageUrls)
+var percentCounter = 0;
+
+$.each(arrayOfImageUrls, function(index, value) {
+  $('<img></img>').attr('src', value)    //load image
+      .load(function() {
+          percentCounter = (index / arrayOfImageUrls.length) * 100;
+          $('#preloader .load-indocator').css('width', percentCounter + '%' );
+    });
+});
+
 
 // init bx-sliders
 $('.animate-slider').bxSlider({
@@ -239,6 +255,11 @@ $('#newsModalClose').on('click', function(e) {
     $('#carousel-holder1').removeClass('active');
     $('#carousel-holder2').addClass('active');
   })
+$('.down-btn').on('click', function(e) {
+    e.preventDefault();
+    $("html, body").animate({scrollTop: 25});
+})
+
 // END click functions on pages
 
 //smooth scroll function
@@ -265,32 +286,17 @@ $(window).on('load', function() {
 
 //nav scroll hide
 $(window).on('scroll', function () {
-  if ($(this).scrollTop() > 100) {
-    $('.main-nav-holder').addClass('hideit');
+  if ($(this).scrollTop() > 20) {
+    $('.top-line').addClass('close');
   } else
-    $('.main-nav-holder').removeClass('hideit');
+    $('.top-line').removeClass('close');
 })
+if ($(this).scrollTop() > 20) {
+  $('.top-line').addClass('close');
+} else {
+  $('.top-line').removeClass('close');
+}
 
-$(window).on('scroll', function () {
-  if ($(this).scrollTop() > 100) {
-    $('.b-in-top').addClass('hideit');
-  } else
-    $('.b-in-top').removeClass('hideit');
-})
-
-$(window).on('load', function () {
-  if ($(this).scrollTop() > 100) {
-    $('.main-nav-holder').addClass('hideit');
-  } else
-    $('.main-nav-holder').removeClass('hideit');
-})
-
-$(window).on('load', function () {
-  if ($(this).scrollTop() > 100) {
-    $('.b-in-top').addClass('hideit');
-  } else
-    $('.b-in-top').removeClass('hideit');
-})
 //END nav scroll hide
 
 
@@ -442,4 +448,14 @@ $('.data-form li').each(function() {
     $this.addClass('active');
   })
 })
+
+
+// preloader
+jQuery(document).ready(function($) {  
+    $(window).load(function(){
+        $('#preloader').fadeOut('slow',function(){$(this).remove();});
+    });
+
+});
+
 

@@ -14,8 +14,12 @@ html(lang='en')
 		include ./partials/head.jade
 
 	body
+		include ./partials/preloader.jade
 
 		section.top-line.vacancies
+			.animate-bg
+				.image-holder
+					img(src="img/images/vacancies.jpg", alt="")
 			include ./partials/top-nav.jade
 			.table-holder
 				.vert-el
@@ -28,6 +32,7 @@ html(lang='en')
 							|600+ vessels of various types and sizes, partially or fully 
 							br
 							|manned by Crewing Company Alpha Navigation.
+			include ./partials/down-btn.jade
 		
 
 		section.database

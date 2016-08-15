@@ -40,7 +40,9 @@ body
 			opacity: 0.4
 			z-index: 5
 
-
+.waves
+	width: 81px
+	
 .ellipsis-text
 	overflow: hidden
 	white-space: nowrap
@@ -57,9 +59,12 @@ h4
 	color: #2d4170
 	margin-top: 0px
 	letter-spacing: -2.2px
+	@media (max-width: $large)
+		font-size: 40px
+		line-height: 45px
 	@media (max-width: $medium)
-		font-size: 50px
-		line-height: 55px
+		font-size: 35px
+		line-height: 40px
 	@media (max-width: $tablet)
 		font-size: 30px
 		line-height: 35px
@@ -77,9 +82,12 @@ h4
 	&.dude
 		font-size: 70px
 		line-height: 75px
+		@media (max-width: $large)
+			font-size: 50px
+			line-height: 55px
 		@media (max-width: $medium)
-			font-size: 60px
-			line-height: 65px
+			font-size: 40px
+			line-height: 45px
 		@media (max-width: $tablet)
 			font-size: 35px
 			line-height: 40px
@@ -233,7 +241,7 @@ ul.pagination
 	transform: translateX(-50%)
 	left: 50%
 	@media (max-width: $large)
-		top: 50px
+		top: 40px
 	@media (max-width: $medium)
 		top: 24px
 		width: 100px
@@ -260,6 +268,7 @@ ul.pagination
 	overflow: hidden
 	padding-top: 160px
 	padding-bottom: 40px
+	transition: height .8s cubic-bezier(0.25, 0.1, 0.21, 0.96)
 	@media (max-width: $medium)
 		padding-top: 120px
 	@media (max-width: $tablet)
@@ -304,6 +313,31 @@ ul.pagination
 		@media (max-width: $mobile-large)
 			min-height: 100vh
 			height: auto
+	&.close
+		@media (min-width: $mobile-large)
+			height: 250px !important
+			transition: height .8s cubic-bezier(0.25, 0.1, 0.21, 0.96)
+			.description-in-top
+				opacity: 0
+				transition: opacity .8s cubic-bezier(0.25, 0.1, 0.21, 0.96)
+			.down-btn
+				display: none
+			.animate-bg
+				top: -40px
+				transition: top 1s cubic-bezier(0.25, 0.1, 0.21, 0.96)
+		.b-in-top
+			pointer-events: none
+			opacity: 0
+			transition: opacity.2s
+		.callback-holder
+			pointer-events: none
+			opacity: 0
+			transition: opacity.2s
+		.menu-holder > span
+			pointer-events: none
+			opacity: 0
+			transition: opacity.2s
+
 
 	&.job
 		background-image: url("../img/images/top-line-bg-3.jpg")
@@ -564,7 +598,14 @@ ul.pagination
 	background: url(../img/images/back02.jpg) no-repeat
 	background-size: cover
 	position: relative
-	padding-top: 80px
+	padding-top: 100px
+	padding-bottom: 40px
+	height: 100vh
+	.table-holder
+		@media (max-width: $medium)
+			display: block
+			.vert-el
+				display: block
 	&.talent
 		background: url(../img/images/talent-bg.jpg) no-repeat
 		background-size: cover
@@ -591,6 +632,9 @@ ul.pagination
 		text-align: center
 		margin-top: 71px
 		margin-bottom: 70px
+		@media (max-width: $large)
+			margin-top: 30px
+			margin-bottom: 30px
 		.tab-sv
 			width: 200px
 			height: 40px
@@ -1074,6 +1118,8 @@ ul.pagination
 		padding-bottom: 235px
 		background: url(../img/images/back03.jpg) no-repeat 50%
 		background-size: cover
+		@media (max-width: $large)
+			padding-bottom: 65px
 		@media (max-width: $medium)
 			padding-bottom: 115px
 		@media (max-width: $mobile-large)
@@ -1085,6 +1131,7 @@ ul.pagination
 		transform: translateX(-50%)
 		@media (max-width: $large)
 			left: 45%
+			width: 270px
 		@media (max-width: $medium)
 			left: 75%
 			width: 420px
@@ -2001,7 +2048,7 @@ ul.pagination
 							width: 220px
 							height: 42px
 							top: -7px
-							left: -84px
+							left: -62px
 							@media (max-width: $mobile-medium-small)
 								width: 144px
 								height: 42px
@@ -2477,6 +2524,7 @@ ul.pagination
 		left: 0
 		top: -90px
 		padding: 22px
+		display: none
 		@media (max-width: $large)
 			display: none
 		.white-bg
@@ -3000,12 +3048,13 @@ ul.pagination
 	padding-top: 60px
 	width: 100%
 	overflow: hidden
+	height: 100vh
 	@media (max-width: $medium)
 		height: auto
 	.timeline-holder
 		margin-bottom: 60px
 		position: relative
-		margin-top: 180px
+		margin-top: 90px
 		@media (max-width: $medium)
 			margin-top: 130px
 		li
@@ -3116,8 +3165,10 @@ ul.pagination
 					letter-spacing: normal
 					@media (max-width: $large)
 						font-size: 40px
+						line-height: 45px
 					@media (max-width: $tablet)
 						font-size: 35px
+						line-height: 40px
 				p
 					color: #48576a
 					font-size: 18px
@@ -3439,7 +3490,7 @@ ul.pagination
 		position: absolute
 		height: 3px
 		width: 100%
-		//border-radius: 1px;
+		//border-radius: 1px
 		left: 0
 		transform: rotate(0deg)
 		transition: .25s ease-in-out
@@ -3512,7 +3563,11 @@ ul.pagination
 		transition: right .2s
 	h4
 		margin-bottom: 0px
+		line-height: 23px
+		margin-top: 25px
+		padding-left: 8px
 	ul.menu-list
+		margin-top: 0
 		li
 			color: #48576a
 			font-family: GothamPro
@@ -3545,8 +3600,8 @@ ul.pagination
 		pointer-events: inherit
 		transition: opacity.2s
 		position: absolute
-		top: 18px
-		left: 58px
+		top: 35px
+		left: 66px
 		color: #48576a
 		font-weight: 500
 		z-index: 2
@@ -4256,9 +4311,8 @@ ul.pagination
 		opacity: 0.3
 	video
 		width: 100%
-		@media (max-width: $medium)
-			width: auto
-			height: 100%
+		height: 100%
+		object-fit: cover
 
 .animate-bg
 	position: absolute
@@ -4266,6 +4320,13 @@ ul.pagination
 	left: 0
 	height: 100vh
 	width: 100vw
+	transition: top .8s cubic-bezier(0.25, 0.1, 0.21, 0.96)
+	.image-holder
+		height: 100%
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
 	@media (max-width: $mobile-large)
 		min-height: 100%
 	.bx-wrapper
@@ -4487,3 +4548,82 @@ ul.pagination
 		transform: scale(1.001)
 	100%
 		transform: scale(1.000)
+
+
+.down-btn
+	position: absolute
+	bottom: 11px
+	transform: translateX(-50%)
+	-webkit-transform: translateX(-50%)
+	-ms-transform: translateX(-50%)
+	-o-transform: translateX(-50%)
+	transform: translateX(-50%)
+	left: 50%
+	cursor: pointer
+	-webkit-animation: mymove .75s infinite
+	animation: mymove 1.75s infinite
+	-webkit-transition: all .5s
+	-o-transition: all .5s
+	transition: all .5s
+	img
+		width: 40px
+		height: 40px
+
+@keyframes mymove
+	0%
+		bottom: 10px
+	10%
+		bottom: 15px
+	20%
+		bottom: 20px
+	30%
+		bottom: 25px
+	40%
+		bottom: 30px
+	50%
+		bottom: 35px
+	60%
+		bottom: 30px
+	70%
+		bottom: 25px
+	80%
+		bottom: 20px
+	90%
+		bottom: 15px
+	100%
+		bottom: 10px
+
+
+
+@-webkit-keyframes fadeInUp
+	0%
+		opacity: 0
+		-webkit-transform: translateY(100px)
+		transform: translateY(100px)
+	100%
+		opacity: 1
+		-webkit-transform: translateY(0)
+		transform: translateY(0)
+@keyframes fadeInUp
+	0%
+		opacity: 0
+		-webkit-transform: translateY(100px)
+		-ms-transform: translateY(100px)
+		transform: translateY(100px)
+
+
+#preloader 
+	position: fixed
+	left: 0
+	top: 0
+	z-index: 99999
+	width: 100%
+	height: 100%
+	overflow: visible
+	background: #fff
+	.load-indocator
+		height: 10px
+		width: 0%
+		background: #81bd41
+		transition: width 1s
+

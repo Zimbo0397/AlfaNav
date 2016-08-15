@@ -14,8 +14,12 @@ html(lang='en')
 		include ./partials/head.jade
 
 	body
+		include ./partials/preloader.jade
 
 		section.top-line.talent-sec
+			.animate-bg
+				.image-holder
+					img(src="img/images/stock-photo-115909437.jpg", alt="")
 			include ./partials/top-nav.jade
 			.table-holder
 				.vert-el
@@ -23,6 +27,7 @@ html(lang='en')
 						h1 THINKERS. DOERS. THE CREW OF YOUR SUCCESS.
 						img(src="img/icons/waves-icon.png", alt="")
 						h2 RIGHT HERE. RIGHT NOW.
+			include ./partials/down-btn.jade
 
 		section.minidescription.wow.fadeInUp
 			.main-container

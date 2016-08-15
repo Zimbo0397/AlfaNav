@@ -14,8 +14,11 @@ html(lang='en')
 		include ./partials/head.jade
 
 	body
-
+		include ./partials/preloader.jade
 		section.top-line.database-sec
+			.animate-bg
+				.image-holder
+					img(src="img/images/database-bg.png", alt="")
 			include ./partials/top-nav.jade
 			.table-holder
 				.vert-el
@@ -29,6 +32,7 @@ html(lang='en')
 							|1000+ vessels of various types and sizes, partially or fully manned 
 							br
 							by our company.
+			include ./partials/down-btn.jade
 		
 
 		section.database

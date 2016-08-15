@@ -14,8 +14,11 @@ html(lang='en')
 		include ./partials/head.jade
 
 	body
-
+		include ./partials/preloader.jade
 		section.top-line.team-section
+			.animate-bg
+				.image-holder
+					img(src="img/images/our-team-bg.jpg", alt="")
 			include ./partials/top-nav.jade
 			.table-holder
 				.vert-el
@@ -26,6 +29,7 @@ html(lang='en')
 							|The team whose life path is creating opportunities 
 							br
 							for thousands of seafarers and hundreds of shipowners.
+			include ./partials/down-btn.jade
 
 		section.our-team
 			.main-container

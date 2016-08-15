@@ -14,8 +14,12 @@ html(lang='en')
 		include ./partials/head.jade
 
 	body
-
+		include ./partials/preloader.jade
+		
 		section.top-line.news-sec
+			.animate-bg
+				.image-holder
+					img(src="img/images/news-bg.jpg", alt="")
 			include ./partials/top-nav.jade
 			.table-holder
 				.vert-el
@@ -26,7 +30,7 @@ html(lang='en')
 							and Maritime Tricks
 							
 						img(src="img/icons/waves-icon.png", alt="")
-
+			include ./partials/down-btn.jade
 
 		section.news
 			.main-container
