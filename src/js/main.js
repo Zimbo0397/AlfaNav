@@ -35,7 +35,8 @@ var loading = {
   status: function (mult) {
 
     loading.preloader.find('> .load-indocator').css({
-      'width': mult * 100 + '%'
+      'clip-path': 'polygon(0% 0%, ' + mult * 100 + '% 0%, ' + mult * 100 + '% 100%, 0% 100%)',
+      '-webkit-clip-path': 'polygon(0% 0%, ' + mult * 100 + '% 0%, ' + mult * 100 + '% 100%, 0% 100%)'
     });
 
   },

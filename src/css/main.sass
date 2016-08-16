@@ -317,11 +317,17 @@ ul.pagination
 		.animate-bg
 			@media (max-width: $mobile-large)
 				display: block
+	&.policy
+		background-attachment: fixed
+		@media (max-width: $mobile-large)
+			padding-top: 0
 
 	&.close
 		@media (min-width: $mobile-large)
 			height: 250px !important
 			transition: height .8s cubic-bezier(0.25, 0.1, 0.21, 0.96)
+			&.policy
+				height: auto !important
 			.description-in-top
 				opacity: 0
 				transition: opacity .8s cubic-bezier(0.25, 0.1, 0.21, 0.96)
@@ -386,6 +392,7 @@ ul.pagination
 		height: 100vh
 		@media (max-width: $mobile-large)
 			height: auto
+			min-height: 100vh
 	&.career-sec
 		// padding-top: 150px
 		background-image: url("../img/images/top-line-bg-4.jpg")
@@ -793,6 +800,9 @@ ul.pagination
 					margin-top: 9px
 				a
 					cursor: normal
+				img
+					width: 63px
+					height: 57px
 
 .footer
 	background: url('../img/images/back05.jpg')
@@ -2904,8 +2914,8 @@ ul.pagination
 			margin: 0 auto
 			padding-top: 33px
 			padding-bottom: 80px
-			max-height: 800px
-			overflow-y: auto
+			// max-height: 800px
+			// overflow-y: auto
 			@media (max-width: $medium)
 				padding-left: 40px
 				padding-right: 40px
@@ -4618,10 +4628,30 @@ ul.pagination
 	width: 100%
 	height: 100%
 	overflow: visible
-	background: #fff
+	background: #d8dddf
+	.gray-bg
+		background: url('../img/images/preload1.svg') 50% 50% no-repeat
+		background-size: 250px
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
 	.load-indocator
-		height: 10px
-		background: #81bd41
-		transition: width 1s
-		width: 0px
+		height: 100%
+		background: #f6f6f6
+		transition: all 1s
+		width: 100%
+		position: absolute
+		overflow: hidden
+		clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)
+		.white-bg
+			background: url('../img/images/preload2.svg') 50% 50% no-repeat
+			background-size: 250px
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			z-index: 1
 

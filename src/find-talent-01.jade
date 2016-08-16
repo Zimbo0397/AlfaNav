@@ -25,7 +25,7 @@ html(lang='en')
 				.vert-el
 					.description-in-top
 						h1 THINKERS. DOERS. THE CREW OF YOUR SUCCESS.
-						img(src="img/icons/waves-icon.png", alt="")
+						img(src="img/icons/waves-icon.svg", class="waves", alt="")
 						h2 RIGHT HERE. RIGHT NOW.
 			include ./partials/down-btn.jade
 
@@ -232,22 +232,21 @@ html(lang='en')
 					ul.inline-holder
 						mixin newservitem(name, img)
 							li.newservitem.inline-el
-								a(href="#")
-									div
-										img(src= img, alt= img)
-									div
-										.undersc
-									span!= name
+								div
+									img(src= img, alt= img)
+								div
+									.undersc
+								span!= name
 
-						+newservitem('Crew Management', 'img/icons/anchor-img.png' )
-						+newservitem('Repair Team </br> Management', 'img/icons/anchor-img.png' )
-						+newservitem('Shore personnel </br> placement', 'img/icons/anchor-img.png' )
-						+newservitem('Business and Maritime </br> Consultancy', 'img/icons/anchor-img.png' )
-						+newservitem('Husbanding / Port Agency </br> Services', 'img/icons/anchor-img.png' )
-						+newservitem('Maritime Training', 'img/icons/anchor-img.png' )
-						+newservitem('In-House Travel </br>  Agency', 'img/icons/anchor-img.png' )
-						+newservitem('Maritime </br> Publications', 'img/icons/anchor-img.png' )
-						+newservitem('IT Services', 'img/icons/anchor-img.png' )
+						+newservitem('Crew Management', 'img/icons/anchor-img.svg' )
+						+newservitem('Repair Team </br> Management', 'img/icons/anchor-img.svg' )
+						+newservitem('Shore personnel </br> placement', 'img/icons/anchor-img.svg' )
+						+newservitem('Business and Maritime </br> Consultancy', 'img/icons/anchor-img.svg' )
+						+newservitem('Husbanding / Port Agency </br> Services', 'img/icons/anchor-img.svg' )
+						+newservitem('Maritime Training', 'img/icons/anchor-img.svg' )
+						+newservitem('In-House Travel </br>  Agency', 'img/icons/anchor-img.svg' )
+						+newservitem('Maritime </br> Publications', 'img/icons/anchor-img.svg' )
+						+newservitem('IT Services', 'img/icons/anchor-img.svg' )
 
 
 
