@@ -1,20 +1,81 @@
 
-var arrayOfImageUrls = [];
+// var arrayOfImageUrls = [];
 
-$('img').each(function() {
-  arrayOfImageUrls.push($(this).attr('src'));
-})
-console.log(arrayOfImageUrls)
-var percentCounter = 0;
+// $('img').each(function() {
+//   arrayOfImageUrls.push($(this).attr('src'));
+// })
+// var percentCounter = 0;
 
-$.each(arrayOfImageUrls, function(index, value) {
-  $('<img></img>').attr('src', value)    //load image
-      .load(function() {
-          percentCounter = (index / arrayOfImageUrls.length) * 100;
-          $('#preloader .load-indocator').css('width', percentCounter + '%' );
+// $.each(arrayOfImageUrls, function(index, value) {
+//   $('<img></img>').attr('src', value)    //load image
+//       .load(function() {
+//           percentCounter = (index / arrayOfImageUrls.length) * 100;
+//           $('#preloader .load-indocator').css('width', Math.round(percentCounter) + '%' );
+//     });
+// });
+
+var loading = {
+  avgTime: 3000,
+  trg: 2,
+  state: 0,
+  preloader: $('body > #preloader'),
+  loaded: function () {
+
+    if(++loading.state == loading.trg) {
+
+      loading.status(1);
+      setTimeout(loading.done, 500);
+
+    } else {
+
+      loading.status(loading.state / loading.trg / 1.1);
+
+    }
+  },
+  status: function (mult) {
+
+    loading.preloader.find('> .load-indocator').css({
+      'width': mult * 100 + '%'
     });
+
+  },
+  done: function () {
+
+    if (loading.finished) return;
+
+    // hide preloader
+    loading.preloader.addClass('done').animate({}).delay(400).animate({
+      'opacity': 0
+    }, 400, function () {
+
+      $(window)
+        .trigger('scroll')
+        .trigger('resize');
+
+      loading.status(0);
+      $(this).detach();
+      loading.finished = true;
+
+
+    });
+
+  }
+};
+
+// TODO test it
+$('img').each(function () {
+
+  if (!this.naturalWidth || true) {
+    loading.trg ++;
+    $(this).one('load', loading.loaded).one('error', loading.loaded);
+  }
+
 });
 
+$(window).on('load', function() {
+  loading.status(1);
+  setTimeout(loading.done, 500);
+})
 
 // init bx-sliders
 $('.animate-slider').bxSlider({
@@ -280,7 +341,6 @@ $(window).on('load', function() {
   var href = window.location.hash.replace("#","");
   if (href = 'shipowners1') {
     $('#shipowners1').addClass('open')
-    console.log(1)
   }
 })
 
@@ -392,24 +452,31 @@ $('#animateNumber3')
 // init gogle maps
 
 var map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 46.4828766, lng: 30.6859532},
-    zoom: 8
-  });
+try {
+  if(document.getElementById('map')) {
+    $('<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbiWDuTu93dbTnJpUDshix6zDZpMYVglc&amp;callback=initMap" async="" defer=""></script>').appendTo('head')
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 46.4828766, lng: 30.6859532},
+        zoom: 8
+      });
+    }
+    $('.city').each(function() {
+          var $self = $(this),
+          lat = $self.attr('lat'),
+          lng = $self.attr('lng'),
+          LatLng = {lat: parseInt(lat), lng: parseInt(lng)};
+      $(this).on('click', function(e) {
+        e.preventDefault();
+        $('.city').removeClass('active')
+        $(this).addClass('active')
+        map.setCenter(LatLng)
+      })
+    })
+  }
+} catch(e) {
+  console.log(e)
 }
-$('.city').each(function() {
-      var $self = $(this),
-      lat = $self.attr('lat'),
-      lng = $self.attr('lng'),
-      LatLng = {lat: parseInt(lat), lng: parseInt(lng)};
-  $(this).on('click', function(e) {
-    e.preventDefault();
-    $('.city').removeClass('active')
-    $(this).addClass('active')
-    map.setCenter(LatLng)
-  })
-})
 
 
 
@@ -451,11 +518,11 @@ $('.data-form li').each(function() {
 
 
 // preloader
-jQuery(document).ready(function($) {  
-    $(window).load(function(){
-        $('#preloader').fadeOut('slow',function(){$(this).remove();});
-    });
+// jQuery(document).ready(function($) {  
+//     $(window).load(function(){
+//         $('#preloader').fadeOut('slow',function(){$(this).remove();});
+//     });
 
-});
+// });
 
 

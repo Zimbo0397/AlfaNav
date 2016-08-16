@@ -275,6 +275,7 @@ ul.pagination
 		padding-top: 90px
 	@media (max-width: $mobile-large)
 		padding-top: 180px
+		padding-bottom: 80px
 	.table-holder
 		height: calc(100vh - 200px)
 		@media (max-width: $medium)
@@ -313,6 +314,10 @@ ul.pagination
 		@media (max-width: $mobile-large)
 			min-height: 100vh
 			height: auto
+		.animate-bg
+			@media (max-width: $mobile-large)
+				display: block
+
 	&.close
 		@media (min-width: $mobile-large)
 			height: 250px !important
@@ -344,19 +349,16 @@ ul.pagination
 		height: 100vh
 		@media (max-width: $mobile-large)
 			height: auto
-			min-height: 100vh
 	&.vacancies
 		background-image: url("../img/images/vacancies.jpg")
 		height: 100vh
 		@media (max-width: $mobile-large)
 			height: auto
-			min-height: 100vh
 	&.seafarers-section
 		background-image: url("../img/images/sefarers.jpg")
 		height: 100vh
 		@media (max-width: $mobile-large)
 			height: auto
-			min-height: 100vh
 			h1
 				font-size: 35px
 	&.team-section
@@ -364,31 +366,26 @@ ul.pagination
 		height: 100vh
 		@media (max-width: $mobile-large)
 			height: auto
-			min-height: 100vh
 	&.story-section
 		background-image: url("../img/images/our-story-bg.jpg")
 		height: 100vh
 		@media (max-width: $mobile-large)
 			height: auto
-			min-height: 100vh
 	&.news-sec
 		background-image: url("../img/images/news-bg.jpg")
 		height: 100vh
 		@media (max-width: $mobile-large)
 			height: auto
-			min-height: 100vh
 	&.database-sec
 		background-image: url("../img/images/database-bg.png")
 		height: 100vh
 		@media (max-width: $mobile-large)
 			height: auto
-			min-height: 100vh
 	&.contacts-sec
 		background-image: url("../img/images/contacts-bg.jpg")
 		height: 100vh
 		@media (max-width: $mobile-large)
 			height: auto
-			min-height: 100vh
 	&.career-sec
 		// padding-top: 150px
 		background-image: url("../img/images/top-line-bg-4.jpg")
@@ -396,13 +393,11 @@ ul.pagination
 		// padding-bottom: 40px
 		@media (max-width: $mobile-large)
 			height: auto
-			min-height: 100vh
 	&.talent-sec
 		background-image: url("../img/images/stock-photo-115909437.jpg")
 		height: 100vh
 		@media (max-width: $mobile-large)
 			height: auto
-			min-height: 100vh
 
 
 	.btn-holder
@@ -4329,6 +4324,7 @@ ul.pagination
 			object-fit: cover
 	@media (max-width: $mobile-large)
 		min-height: 100%
+		display: none
 	.bx-wrapper
 		border: none
 		box-shadow: none
@@ -4346,7 +4342,7 @@ ul.pagination
 			background-position-x: 50%
 			background-position-y: 50%
 			@media (max-width: $mobile-large)
-				height: 140vh
+				height: 1200px
 @keyframes bgchange
 	1%
 		transform: scale(1.001)
@@ -4565,6 +4561,8 @@ ul.pagination
 	-webkit-transition: all .5s
 	-o-transition: all .5s
 	transition: all .5s
+	@media (max-width: $mobile-large)
+		display: none
 	img
 		width: 40px
 		height: 40px
@@ -4623,7 +4621,7 @@ ul.pagination
 	background: #fff
 	.load-indocator
 		height: 10px
-		width: 0%
 		background: #81bd41
 		transition: width 1s
+		width: 0px
 
