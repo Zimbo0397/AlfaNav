@@ -29,7 +29,7 @@ html(lang='en')
 							br
 							and Maritime Tricks
 							
-						img(src="img/icons/waves-icon.png", alt="")
+						img(src="img/icons/waves-icon.svg", class="waves", alt="")
 			include ./partials/down-btn.jade
 
 		section.news
@@ -37,9 +37,9 @@ html(lang='en')
 				.border-el
 					.white-bg
 			.main-container
-				ul.news-list
+				ul.news-list.wow.fadeInUp
 					mixin newnewslist(dataSlide, number, month, year, src, head, text)
-						a.newsLink.wow.fadeInUp(href="#", dataslide= dataSlide)
+						a.newsLink(href="#", dataslide= dataSlide)
 							li.news-item.inline-holder
 								.date-holder
 									.number= number
