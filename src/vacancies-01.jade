@@ -35,6 +35,20 @@ html(lang='en')
 			include ./partials/down-btn.jade
 		
 
+		section.vacanc-desc.wow.fadeInUp
+			.main-container
+				.inline-holder
+					.inline-el
+						h3 
+							span.green Dear job seeker,
+							|you for your interest in the vacancies we offer!
+					.inline-el
+						p 
+							| If you didn’t find the vacancy that would fully meet your demand, please feel out our form and we will mail you as soon as we find the best opportunity for you!
+					
+
+
+
 		section.database
 			.gray-bg
 			.main-container.rel-top
@@ -203,7 +217,7 @@ html(lang='en')
 												span= wages
 											td.duration
 												span= duration
-												a.button.apply-btn(href="#")
+												a.fill-form.button.apply-btn(href="#")
 													.t-holder
 														span Apply
 									+newtr(
@@ -493,6 +507,7 @@ html(lang='en')
 
 		include ./partials/footer.jade
 		include ./partials/call-back-modal.jade
+		include ./partials/online-form-02.jade
 
 
 

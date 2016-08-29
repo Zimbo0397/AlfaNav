@@ -29,47 +29,150 @@ html(lang='en')
 						h2 The number will tell the story best!
 			include ./partials/down-btn.jade
 		
-		section.ourbusiness.wow.fadeInUp
+		
+		section.whyalfanav.wow.fadeInUp
+			.gray-strip.inline-holder
+				.main-container.clearfix
+					.t-title-holder.clearfix
+						.hotvac.inline-el
+							span Hot vacances
+						.allurl.inline-el
+							a(href="#")
+								span Show all vacancies
 			.main-container
-				h3 Personalities are the cornerstone of our maritime business and 
-					span.green we appreciate them at most.
-				.counters.inline-holder
-					.counter-holder.inline-el
-						.counter.inline-holder
-							.number.inline-el
-								span#animateNumber3 0
-								p Years of experience
-							.description.inline-el
-								| We have almost 20 years of experience in placing seafarers in contracts with the top tier employers from the longest ship owners list.
-					.counter-holder.inline-el
-						.counter.inline-holder
-							.number.inline-el
-								span#animateNumber4 0
-								span K
-								p Seafarers
-							.description.inline-el
-								| A special point of proud for us is the AlphaNavigation database of contracts signed since 1997, that reaches the number of 17 000. 
-				.btn-holder
-					a#readTestimonials1.button(href="#shipowners1")
-						.t-holder
-							span Read our testimonials
-					a.button(href="#")
-						.t-holder
-							span Our Principals List
-				.text-holder
-					p 
-						|Our work is geared to providing our clients with professional services of the highest quality. To ensure we achieve our objectives successfully we have masterminded a one of a kind process of maritime employment.
-					p
-						|After successfully getting on board with us you obtain a personal attorney represented by AlphaNavigation on top of the best maritime job opportunities.
-					b
-						|To get a job at sea, please complete our application form:
+				.inline-holder
+					.description-part.inline-el
+						h3 Why    
+							span.green     AlphaNavigation?
+						p 
+							|Aligning the best people with appropriate positions we put our seafarers fulfillment within the entire contract duration as our top priority goal.
+						ul
+							li Free of charge employment services
+							li Stable job for reputable employers
+							li Time efficient application process
+							li 24/7 support for you and your family
+					.gray-strip.mobile.inline-holder
+						.clearfix
+							.t-title-holder.clearfix
+								.hotvac.inline-el
+									span Hot vacances
+								.allurl.inline-el
+									a(href="#")
+										span Show all vacancies
+					.slider-holder.inline-el
+						ul.vacitemslider
+							li
+								ul
+									mixin newvac()
+										li.vacitem
+											a.fill-form(href="#")
+												table
+													tbody
+														tr
+															td Vessel Type: 
+															td.v-type Dry Cargo Vessels
+														tr
+															td DWT 
+															td 100,000
+														tr
+															td Salary Level: 
+															td $50 000
+														tr
+															td Contract Duration:
+															td 5 Months contract
 
-				.btn-holder
-					a#find-job-form.button(href="#")
-						.t-holder
-							span Fill out the form
+												span.button
+													.t-holder
+														span Apply
+									+newvac
+									+newvac
+									+newvac
+									+newvac
+									+newvac
+							li
+								ul
+									mixin newvac()
+										li.vacitem
+											a.fill-form(href="#")
+												table
+													tbody
+														tr
+															td Vssel Type: 
+															td.v-type BULK
+														tr
+															td DWT 
+															td 10,00
+														tr
+															td Salary Level: 
+															td $60 000
+														tr
+															td Contract Duration:
+															td 6 yers contract
 
+												span.button
+													.t-holder
+														span Apply
+									+newvac
+									+newvac
+									+newvac
+									+newvac
+									+newvac
+							li
+								ul
+									mixin newvac()
+										li.vacitem
+											a.fill-form(href="#")
+												table
+													tbody
+														tr
+															td Vessel Type: 
+															td.v-type LPG
+														tr
+															td DWT 
+															td 100,000
+														tr
+															td Salary Level: 
+															td $50 000
+														tr
+															td Contract Duration:
+															td 5 Months contract
 
+												span.button
+													.t-holder
+														span Apply
+									+newvac
+									+newvac
+									+newvac
+									+newvac
+									+newvac
+							li
+								ul
+									mixin newvac()
+										li.vacitem
+											a.fill-form(href="#")
+												table
+													tbody
+														tr
+															td Vssel Type: 
+															td.v-type CHEMICAL OIL PRODUCTS
+														tr
+															td DWT 
+															td 10,00
+														tr
+															td Salary Level: 
+															td $60 000
+														tr
+															td Contract Duration:
+															td 6 yers contract
+
+												span.button
+													.t-holder
+														span Apply
+									+newvac
+									+newvac
+									+newvac
+									+newvac
+									+newvac
 
 
 		section#shipowners1.shipowners
@@ -140,149 +243,46 @@ html(lang='en')
 							span Show all
 
 
-		section.whyalfanav.wow.fadeInUp
-			.gray-strip.inline-holder
-				.main-container.clearfix
-					.t-title-holder.clearfix
-						.hotvac.inline-el
-							span Hot vacances
-						.allurl.inline-el
-							a(href="#")
-								span Show all vacancies
+		
+		section.ourbusiness.wow.fadeInUp
 			.main-container
-				.inline-holder
-					.description-part.inline-el
-						h3 Why    
-							span.green     AlphaNavigation?
-						p 
-							|Aligning the best people with appropriate positions we put our seafarers fulfillment within the entire contract duration as our top priority goal.
-						ul
-							li Free of charge employment services
-							li Stable job for reputable employers
-							li Time efficient application process
-							li 24/7 support for you and your family
-					.gray-strip.mobile.inline-holder
-						.clearfix
-							.t-title-holder.clearfix
-								.hotvac.inline-el
-									span Hot vacances
-								.allurl.inline-el
-									a(href="#")
-										span Show all vacancies
-					.slider-holder.inline-el
-						ul.vacitemslider
-							li
-								ul
-									mixin newvac()
-										li.vacitem
-											a(href="#")
-												table
-													tbody
-														tr
-															td Vessel Type: 
-															td Dry Cargo Vessels
-														tr
-															td DWT 
-															td 100,000
-														tr
-															td Salary Level: 
-															td $50 000
-														tr
-															td Contract Duration:
-															td 5 Months contract
+				h3 Personalities are the cornerstone of our maritime business and 
+					span.green we appreciate them at most.
+				.counters.inline-holder
+					.counter-holder.inline-el
+						.counter.inline-holder
+							.number.inline-el
+								span#animateNumber3 0
+								p Years of experience
+							.description.inline-el
+								| We have almost 20 years of experience in placing seafarers in contracts with the top tier employers from the longest ship owners list.
+					.counter-holder.inline-el
+						.counter.inline-holder
+							.number.inline-el
+								span#animateNumber4 0
+								span K
+								p Seafarers
+							.description.inline-el
+								| A special point of proud for us is the AlphaNavigation database of contracts signed since 1997, that reaches the number of 17 000. 
+				//- .btn-holder
+				//- 	a#readTestimonials1.button(href="#shipowners1")
+				//- 		.t-holder
+				//- 			span Read our testimonials
+				//- 	a.button(href="#")
+				//- 		.t-holder
+				//- 			span Our Principals List
+				.text-holder
+					p 
+						|Our work is geared to providing our clients with professional services of the highest quality. To ensure we achieve our objectives successfully we have masterminded a one of a kind process of maritime employment.
+					p
+						|After successfully getting on board with us you obtain a personal attorney represented by AlphaNavigation on top of the best maritime job opportunities.
+					b
+						|To get a job at sea, please complete our application form:
 
-												span.button(href="#")
-													.t-holder
-														span Apply
-									+newvac
-									+newvac
-									+newvac
-									+newvac
-									+newvac
-							li
-								ul
-									mixin newvac()
-										li.vacitem
-											a(href="#")
-												table
-													tbody
-														tr
-															td Vssel Type: 
-															td Dry Cargo Vessels
-														tr
-															td DWT 
-															td 10,00
-														tr
-															td Salary Level: 
-															td $60 000
-														tr
-															td Contract Duration:
-															td 6 yers contract
-
-												span.button(href="#")
-													.t-holder
-														span Apply
-									+newvac
-									+newvac
-									+newvac
-									+newvac
-									+newvac
-							li
-								ul
-									mixin newvac()
-										li.vacitem
-											a(href="#")
-												table
-													tbody
-														tr
-															td Vessel Type: 
-															td Dry Cargo Vessels
-														tr
-															td DWT 
-															td 100,000
-														tr
-															td Salary Level: 
-															td $50 000
-														tr
-															td Contract Duration:
-															td 5 Months contract
-
-												span.button(href="#")
-													.t-holder
-														span Apply
-									+newvac
-									+newvac
-									+newvac
-									+newvac
-									+newvac
-							li
-								ul
-									mixin newvac()
-										li.vacitem
-											a(href="#")
-												table
-													tbody
-														tr
-															td Vssel Type: 
-															td Dry Cargo Vessels
-														tr
-															td DWT 
-															td 10,00
-														tr
-															td Salary Level: 
-															td $60 000
-														tr
-															td Contract Duration:
-															td 6 yers contract
-
-												span.button(href="#")
-													.t-holder
-														span Apply
-									+newvac
-									+newvac
-									+newvac
-									+newvac
-									+newvac
+				.btn-holder
+					a#find-job-form.button(href="#")
+						.t-holder
+							span Fill out the form
 
 
 
@@ -306,6 +306,7 @@ html(lang='en')
 
 
 		include ./partials/footer.jade
+
 		include ./partials/call-back-modal.jade
 		include ./partials/online-form-02.jade
 

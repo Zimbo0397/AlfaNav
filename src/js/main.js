@@ -254,13 +254,24 @@ $('#filtersClose').on('click', function(e) {
 
 $('#addrev').on('click', function(e) {
   e.preventDefault();
-  $('.rewiew-holder').parent().addClass('open')
+  $('.seafarers-rev').parent().addClass('open')
   $('body').addClass('blackshadow')
 })
 $('#rewiewClose').on('click', function() {
   $('.rewiew-holder').parent().removeClass('open')
   $('body').removeClass('blackshadow')
 })
+
+$('#addrev1').on('click', function(e) {
+  e.preventDefault();
+  $('.owners-rew').parent().addClass('open')
+  $('body').addClass('blackshadow')
+})
+$('#rewiewClose1').on('click', function() {
+  $('.rewiew-holder').parent().removeClass('open')
+  $('body').removeClass('blackshadow')
+})
+
 $('#find-job-form').on('click', function(e) {
   e.preventDefault();
   $('.find-job-form').addClass('open')
@@ -274,7 +285,8 @@ $('#jobFormClose').on('click', function() {
 
 $('.teamLink').each(function() {
     var dataSlide = $(this).attr('dataslide');
-  $(this).on('click', function() {
+  $(this).on('click', function(e) {
+    e.preventDefault();
     $('.person-info-modal').addClass('open');
     $('body').addClass('blackshadow');
     personSlider.goToSlide(dataSlide);
@@ -317,11 +329,52 @@ $('#newsModalClose').on('click', function(e) {
     $('#carousel-holder1').removeClass('active');
     $('#carousel-holder2').addClass('active');
   })
+
+  $('#tab-sv5').on('click', function(e) {
+    e.preventDefault();
+    $('.tab-sv').removeClass('active');
+    $(this).addClass('active');
+    $('#owners').removeClass('active');
+    $('#seafarers').addClass('active');
+  })
+  $('#tab-sv6').on('click', function(e) {
+    e.preventDefault();
+    $('.tab-sv').removeClass('active');
+    $(this).addClass('active');
+    $('#seafarers').removeClass('active');
+    $('#owners').addClass('active');
+  })
+
 $('.down-btn').on('click', function(e) {
     e.preventDefault();
     $("html, body").animate({scrollTop: 25});
 })
+$('.fill-form').each(function() {
+  $(this).on('click', function(e) {
+    e.preventDefault();
+    var text = $(this).find('.v-type').text();
+    $('#v-type').val(text);
+    $('.find-job-form').addClass('open');
+    $('body').addClass('blackshadow');
+  });
+});
 
+$('.apply-btn').each(function() {
+  $(this).on('click', function(e) {
+    e.preventDefault();
+    var text = $(this).closest('tr').find('.vtype span').text();
+    $('#v-type').val(text);
+    $('.find-job-form').addClass('open');
+    $('body').addClass('blackshadow');
+  });
+});
+
+$('.rewiew-holder').each(function() {
+  var $self = $(this)
+    $self.find('.button').on('click', function() {
+      $self.addClass('end')
+  })
+})
 // END click functions on pages
 
 //smooth scroll function
@@ -334,6 +387,11 @@ $(document).ready(function(){
     });
 });
 
+
+$('.newservitem').on('mouseenter', function() {
+  $('.newservitem').removeClass('animate');
+  $(this).addClass('animate');
+});
 // END smooth scroll function
 
 
@@ -494,7 +552,7 @@ if( /Android/i.test(navigator.userAgent) ) {
   $(this).css("padding-top", "5px")
   })
   $('.menu-list li a').each(function() {
-    $(this).css("padding-top", "10px")
+    $(this).css("padding-top", "5px")
   })
   $('.tabs-holder .tab-sv').each(function() {
     $(this).css("padding-top", "14px")
@@ -508,7 +566,9 @@ $('.form-part li').each(function() {
     $this.addClass('active');
   })
 })
-
+$('.form-holder textarea').on('click', function() {
+  $('.form-part li').removeClass('active');
+})
 $('.data-form li').each(function() {
   var $this =  $(this);
   $this.find('input').on('click', function() {

@@ -1,0 +1,28 @@
+.main-modal
+	.rewiew-holder.seafarers-rev
+		.access-text
+			p
+				|Thank you for sharing your thoughts!
+				br
+				|Your opinion is very important to us!
+
+		form(action="")
+			h6 Add review
+			input(type="text" placeholder='Your NAME')
+			label(for="#comment") Comment
+			textarea#comment(name="")
+			.captcha-holder
+				.captcha.inline-holder
+					label.inline-el(for="#captcha") captcha
+						.image-holder
+							img(src="img/images/Captcha.png", alt="")
+					input#captcha.inline-el(type="text")
+					a.ref-capt-btn(href="#")
+						img(src="img/icons/ref-capt-btn.png", alt="")
+			.btn-holder
+				button.button 
+					.t-holder
+						span Send
+	a#rewiewClose.close-btn(href="#")
+		img(src="img/icons/modal-close.svg", alt="")
+	

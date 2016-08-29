@@ -66,8 +66,8 @@ h4
 		font-size: 35px
 		line-height: 40px
 	@media (max-width: $tablet)
-		font-size: 30px
-		line-height: 35px
+		font-size: 28px
+		line-height: 32px
 	.green
 		color: #81bb41
 	&.small
@@ -77,8 +77,8 @@ h4
 			font-size: 40px
 			line-height: 45px
 		@media (max-width: $tablet)
-			font-size: 28px
-			line-height: 32px
+			font-size: 24px
+			line-height: 28px
 	&.dude
 		font-size: 70px
 		line-height: 75px
@@ -92,17 +92,18 @@ h4
 			font-size: 35px
 			line-height: 40px
 h4
-	font-size: 1.55vw
+	font-size: 40px
+	line-height: 45px
 	letter-spacing: -1.5px
+	@media (max-width: $large)
+		font-size: 30px
+		line-height: 35px
 	@media (max-width: $medium)
-		font-size: 2vw
-		line-height: 2vw
+		font-size: 25px
+		line-height: 28px
 	@media (max-width: $tablet)
-		font-size: 3vw
-		line-height: 3vw
-	@media (max-width: $mobile-medium-small)
-		font-size: 6vw
-		line-height: 6vw
+		font-size: 22px
+		line-height: 24px
 
 ul 
 	padding-left: 0
@@ -223,6 +224,7 @@ ul.pagination
 	transition: background, color .2s
 	display: inline-block
 	position: relative
+	background: transparent
 	&:hover
 		color: #fff
 		background: #81bb41
@@ -383,7 +385,7 @@ ul.pagination
 		@media (max-width: $mobile-large)
 			height: auto
 	&.database-sec
-		background-image: url("../img/images/database-bg.png")
+		background-image: url("../img/images/database-bg.jpg")
 		height: 100vh
 		@media (max-width: $mobile-large)
 			height: auto
@@ -464,7 +466,7 @@ ul.pagination
 	@media (max-width: $tablet)
 		font-size: 12px
 	@media (max-width: $mobile-medium)
-		font-size: 11px
+		font-size: 9px
 	.callback-holder
 		padding-right: 57px
 		position: relative
@@ -600,7 +602,7 @@ ul.pagination
 	background: url(../img/images/back02.jpg) no-repeat
 	background-size: cover
 	position: relative
-	padding-top: 100px
+	padding-top: 20px
 	padding-bottom: 40px
 	height: 100vh
 	.table-holder
@@ -611,7 +613,7 @@ ul.pagination
 	&.talent
 		background: url(../img/images/talent-bg.jpg) no-repeat
 		background-size: cover
-		padding-bottom: 150px
+		// padding-bottom: 150px
 	@media (max-width: $medium)
 		height: auto
 		padding-top: 90px
@@ -630,48 +632,48 @@ ul.pagination
 				padding-left: 10px
 				padding-right: 10px
 
-	.tabs-holder
-		text-align: center
-		margin-top: 71px
-		margin-bottom: 70px
-		@media (max-width: $large)
-			margin-top: 30px
-			margin-bottom: 30px
-		.tab-sv
-			width: 200px
-			height: 40px
-			border: 2px solid #81bb41
-			font-size: 14px
-			font-weight: 700
-			text-transform: uppercase
-			padding-top: 10px
-			color: #81bb41
-			@media (max-width: $mobile-large)
-				width: 140px
+.tabs-holder
+	text-align: center
+	margin-top: 71px
+	margin-bottom: 70px
+	@media (max-width: $large)
+		margin-top: 30px
+		margin-bottom: 30px
+	.tab-sv
+		width: 200px
+		height: 40px
+		border: 2px solid #81bb41
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+		padding-top: 10px
+		color: #81bb41
+		@media (max-width: $mobile-large)
+			width: 140px
+		&:after
+			content: ''
+			height: 20px
+			width: 20px
+			bottom: -15px
+			left: 50%
+			background: #81bb41
+			position: absolute
+			transform: rotate(45deg) translateX(-50%)
+			opacity: 0
+		&.active
+			background-color: #81bb41
+			position: relative
+			color: white
 			&:after
 				content: ''
-				height: 20px
-				width: 20px
-				bottom: -15px
-				left: 50%
-				background: #81bb41
-				position: absolute
-				transform: rotate(45deg) translateX(-50%)
-				opacity: 0
-			&.active
-				background-color: #81bb41
-				position: relative
-				color: white
-				&:after
-					content: ''
-					opacity: 1
-			span
-				position: relative
-				z-index: 5
-			&:hover
-				background-color: #81bb41
-				transition: .2s
-				color: white
+				opacity: 1
+		span
+			position: relative
+			z-index: 5
+		&:hover
+			background-color: #81bb41
+			transition: .2s
+			color: white
 				
 .shipowners
 	overflow: hidden
@@ -768,6 +770,7 @@ ul.pagination
 .our-services
 	background: url('../img/images/serv-bg.svg') 100% 0% no-repeat
 	padding-top: 112px
+	background-size: cover
 	@media (max-width: $tablet)
 		background: url('../img/images/serv-bg.svg') 100% 132% no-repeat
 	@media (max-width: $mobile-medium-small)
@@ -800,9 +803,34 @@ ul.pagination
 					margin-top: 9px
 				a
 					cursor: normal
-				img
+				.image-holder
 					width: 63px
 					height: 57px
+					margin: 0 auto
+				img
+					width: 100%
+					height: 100%
+					position: absolute
+					left: 0
+					top: 0
+				&.animate
+					.img2
+						animation: spinone 5s infinite linear
+						transition: animation 9s
+					.img3
+						animation: spintwo 2s infinite linear
+						transition: animation 9s
+
+@keyframes spinone
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)
+@keyframes spintwo
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)
 
 .footer
 	background: url('../img/images/back05.jpg')
@@ -1317,17 +1345,9 @@ ul.pagination
 		background: url(../img/images/serv-bg.svg) no-repeat 100% 168%
 	h4
 		color: #48576a
-		font-size: 1.25vw
-		line-height: 1.25vw
 		font-weight: 400
 		text-transform: uppercase
 		letter-spacing: normal
-		@media (max-width: $medium)
-			font-size: 2vw
-			line-height: 2vw
-		@media (max-width: $mobile-large)
-			font-size: 4vw
-			line-height: 4vw
 	.cards-holder
 		$gap: 8.1%
 		text-align: center
@@ -1396,7 +1416,7 @@ ul.pagination
 					background: url('../img/icons/green-dots.png')
 					left: 50%
 					bottom: 10px
-					transform: translateX(-50%)
+					transform: translateX(-50%) translateZ(10px)
 				&:before
 					content: ''
 					position: absolute
@@ -1443,6 +1463,7 @@ ul.pagination
 					opacity: 1
 					transition: z-index, opacity .2s
 					top: 0px
+					transform: translateZ(0)
 					.text-holder
 						overflow: inherit
 						height: auto
@@ -1453,6 +1474,7 @@ ul.pagination
 						&:after
 							display: none
 	.btn-holder
+		transform: translateZ(-10px)
 		.button
 			width: 200px
 			height: 50px
@@ -1655,6 +1677,9 @@ ul.pagination
 		@media (max-width: $tablet)
 			width: 360px
 			height: 340px
+	&.no-wheel
+		&:after
+			display: none
 
 	.text-holder
 		max-width: 905px
@@ -1886,7 +1911,7 @@ ul.pagination
 					background: #81bb41
 					transition: background, color .2s
 		.bx-controls-direction
-			padding-top: 20px
+			padding-top: 0px
 
 .slider-holder
 	.bx-wrapper
@@ -1897,8 +1922,8 @@ ul.pagination
 		margin-bottom: 31px
 		.bx-pager
 			height: 80px
-			padding-top: 26px
-			background: #fafafa
+			padding-top: 0px
+			// background: #fafafa
 			&.bx-default-pager 
 				a
 					height: 9px
@@ -1943,6 +1968,9 @@ ul.pagination
 			border: 1px solid #eceef0
 			height: 130px
 			margin-top: 8px
+			outline: 2px solid transparent
+			&:focus
+				outline: 2px solid #81bb41
 	.form-holder
 		max-width: 1243px
 		margin: 0 auto
@@ -1962,12 +1990,12 @@ ul.pagination
 			ul 
 				li 
 					border-bottom: 1px solid #dadde1
-					margin-bottom: 36px
+					margin-bottom: 26px
 					padding-bottom: 5px
 					&.active
-						border-bottom: 2px solid #81bb41
+						border-bottom: 1px solid #81bb41
 					&:focus
-						border-bottom: 2px solid #81bb41
+						border-bottom: 1px solid #81bb41
 					&.mobile
 						display: none
 						@media (max-width: $tablet)
@@ -2010,6 +2038,7 @@ ul.pagination
 							font-weight: 400
 							width: 100%
 							text-align: right
+							height: 35px
 							@media (max-width: $mobile-medium-small)
 								background: #fff
 								z-index: 1
@@ -2064,7 +2093,7 @@ ul.pagination
 							right: 0
 							top: 6px
 						input
-							top: 12px
+							top: 1px
 							position: relative
 					.selectable
 						background: url("../img/icons/select-apper.png") no-repeat 97% 33%
@@ -2111,7 +2140,8 @@ ul.pagination
 
 				&:hover
 					background: #81bb41
-
+.tabs-sec
+	padding-top: 30px
 .offices-map
 	background: #f6f6f6
 	padding-top: 71px
@@ -2476,6 +2506,7 @@ ul.pagination
 			border-collapse: collapse
 			border-bottom: 1px solid #e2e2e2
 			&:after
+				pointer-events: none
 				@media (max-width: $medium)
 					content: ''
 					position: absolute
@@ -2788,6 +2819,9 @@ ul.pagination
 	.comments-holder
 		max-width: 1248px
 		margin: 0 auto
+		display: none
+		&.active
+			display: block
 		li
 			padding-left: 221px
 			padding-right: 228px
@@ -3196,6 +3230,7 @@ ul.pagination
 			a
 				height: 37px
 				width: 20px
+				z-index: 2
 		.bx-pager
 			display: none
 
@@ -3279,6 +3314,25 @@ ul.pagination
 		@media (max-width: $mobile-large)
 			padding-left: 20px
 			padding-right: 20px
+		&.end
+			.access-text
+				overflow: inherit
+				height: auto
+				opacity: 1
+				transition: opacity .2s
+			form
+				height: 0
+				overflow: hidden
+				opacity: 0
+		.access-text
+			color: #48576a
+			font-family: GothamPro
+			font-size: 17px
+			font-weight: 400
+			text-align: center
+			overflow: hidden
+			height: 0
+			opacity: 0
 		h6
 			color: #48576a
 			font-family: GothamPro
@@ -3303,7 +3357,7 @@ ul.pagination
 			margin-bottom: 20px
 			background: transparent
 			&:focus
-				border-bottom: 2px solid #81bb41
+				border-bottom: 1px solid #81bb41
 		label
 			color: #A9A9A9
 			font-family: GothamPro
@@ -3322,6 +3376,8 @@ ul.pagination
 			margin-top: 30px
 			margin-bottom: 40px
 			background: transparent
+			&:focus
+				outline: 1px solid #81bb41
 		.captcha
 			position: relative
 			label
@@ -3358,7 +3414,8 @@ ul.pagination
 			.button	
 				height: 50px
 				width: 200px
-				padding-top: 18px
+				outline: none
+				cursor: pointer
 		.ref-capt-btn
 			position: absolute
 			right: 0
@@ -3440,7 +3497,7 @@ ul.pagination
 				height: 40px
 				font-weight: 400
 			&:focus
-				border-bottom: 2px solid #81bb41
+				border-bottom: 1px solid #81bb41
 		label
 			color: #A9A9A9
 			font-family: GothamPro
@@ -3456,7 +3513,6 @@ ul.pagination
 			.button	
 				height: 50px
 				width: 200px
-				padding-top: 15px
 				position: relative
 				img
 					width: 34px
@@ -3540,17 +3596,25 @@ ul.pagination
 	height: 100vh
 	width: 415px
 	padding-left: 60px
-	padding-right: 60px
+	padding-right: 0px
 	transition: right .2s
 	background: url(../img/images/aside-bg.jpg)
 	z-index: 20
-	padding-top: 56px
+	padding-top: 76px
 	padding-bottom: 77px
 	@media (max-width: $mobile-large)
 		padding-top: 26px
 	.scroll-holder
 		max-height: 100%
 		overflow-y: auto
+		padding-right: 60px
+		&::-webkit-scrollbar-track
+		&::-webkit-scrollbar
+			width: 7px
+		&::-webkit-scrollbar-thumb
+			background: #e4e3e3
+		@media (max-width: $mobile-medium-small)
+			padding-right: 80px
 	.vert-el
 		@media (max-width: $mobile-medium-small)
 			display: block
@@ -3562,7 +3626,6 @@ ul.pagination
 		width: 100%
 	@media (max-width: $mobile-medium-small)
 		padding-left: 44px
-		padding-right: 36px
 	&.open
 		right: 0
 		transition: right .2s
@@ -3572,7 +3635,10 @@ ul.pagination
 		margin-top: 25px
 		padding-left: 8px
 	ul.menu-list
-		margin-top: 0
+		margin-top: 0px
+		margin-bottom: 0
+		@media (max-width: $mobile-large)
+			margin-top: 0
 		li
 			color: #48576a
 			font-family: GothamPro
@@ -3581,7 +3647,7 @@ ul.pagination
 			text-transform: uppercase
 			border: 2px solid transparent
 			@media (max-width: $mobile-medium-small)
-				font-size: 14px
+				font-size: 12px
 			&:hover
 				border: 2px solid #81bb41
 			a
@@ -3595,6 +3661,8 @@ ul.pagination
 				font-weight: 400
 				font-size: 14px
 				padding-left: 20px
+				@media (max-width: $mobile-medium-small)
+					font-size: 12px
 	.callback-holder
 		padding-right: 57px
 		position: relative
@@ -3629,6 +3697,7 @@ ul.pagination
 		left: 50%
 		width: 280px
 		bottom: 30px
+		margin-top: 20px
 		@media (max-width: $mobile-medium-small)
 			position: static
 			transform: none
@@ -3683,6 +3752,7 @@ ul.pagination
 			position: absolute
 			right: 28px
 			top: 20px
+			z-index: 2
 			.material-icons
 				font-size: 43px
 				color: #81bb41
@@ -4655,3 +4725,18 @@ ul.pagination
 			height: 100%
 			z-index: 1
 
+.vacanc-desc
+	padding-top: 50px
+	padding-bottom: 50px
+	.inline-el
+		width: 50%
+		@media (max-width: $mobile-large)
+			width: 100%
+		p
+			color: #48576a
+			font-size: 16px
+			line-height: 24px
+			margin-top: 0
+			padding-left: 20px
+			@media (max-width: $mobile-large)
+				padding-left: 0
