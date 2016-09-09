@@ -1,18 +1,4 @@
 
-// var arrayOfImageUrls = [];
-
-// $('img').each(function() {
-//   arrayOfImageUrls.push($(this).attr('src'));
-// })
-// var percentCounter = 0;
-
-// $.each(arrayOfImageUrls, function(index, value) {
-//   $('<img></img>').attr('src', value)    //load image
-//       .load(function() {
-//           percentCounter = (index / arrayOfImageUrls.length) * 100;
-//           $('#preloader .load-indocator').css('width', Math.round(percentCounter) + '%' );
-//     });
-// });
 
 var loading = {
   avgTime: 3000,
@@ -143,12 +129,14 @@ $(window).on('load', function() {
 
 
 //wow animation init
-new WOW().init();
+$(window).on('load', function() {
+  new WOW().init();
+})
 //END wow animation init
 
 
 
-$('.top-line.index:before')
+// $('.top-line.index:before')
 
 
 
@@ -539,7 +527,7 @@ try {
 
 
 
-// init slider carousel
+// Object-Fit script
 $('.carousel').alphaSlider();
 $('.carousel2').alphaSlider();
 
@@ -558,6 +546,9 @@ if( /Android/i.test(navigator.userAgent) ) {
     $(this).css("padding-top", "14px")
   })
 }
+if( /MSIE/i.test(navigator.userAgent)) {
+  alert(1);
+};
 
 $('.form-part li').each(function() {
   var $this =  $(this);
@@ -577,13 +568,65 @@ $('.data-form li').each(function() {
   })
 })
 
+// function msieversion() 
+// {
+//     var ua = window.navigator.userAgent;
+//     var msie = ua.indexOf("MSIE ");
 
-// preloader
-// jQuery(document).ready(function($) {  
-//     $(window).load(function(){
-//         $('#preloader').fadeOut('slow',function(){$(this).remove();});
-//     });
+//     if (msie > 0) // If Internet Explorer, return version number
+//     {
+//         alert(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
+//     }
+//     else  // If another browser, return 0
+//     {
+//         alert('otherbrowser');
+//     }
 
-// });
+//     return false;
+// }
+// msieversion();
 
+function fitImageToHolder () {
+  $('.video-holder').each(function () {
+    var $holder = $(this);
+    var $image = $holder.find('video');
+    var image = $image.get(0);
+    var holderWidth = $holder.width(),
+      holderHeight = $holder.height(),
+      imageWidth = $image.width(),
+      imageHeight = $image.height();
+      // imageWidth = image.naturalWidth,
+      // imageHeight = image.naturalHeight;
+    function fitImg (img) {
+      if (holderWidth - imageWidth < holderHeight - imageHeight) {
+        $(img).css({
+          'width': 'auto',
+          'height': '100%'
+        });
+      } else {
+        $(img).css({
+          'width': '100%',
+          'height': 'auto'
+        });
+      }
+    }
+    if (imageWidth) {
+      fitImg (image);
+    } else {
+      $image.on('load', function () {
+        imageWidth = this.naturalWidth;
+        imageHeight = this.naturalHeight;
+        fitImg (this);
+      });
+    }
+  });
+}
+fitImageToHolder ();
+function fitOnResize () {
+  clearTimeout(fitImageToHolder.timeoutId);
+  fitImageToHolder.timeoutId = setTimeout(fitImageToHolder, 500);
+}
 
+$(window).on('resize', function () {
+  fitOnResize ();
+});
