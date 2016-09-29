@@ -38,7 +38,7 @@ body
 			bottom: 0
 			background: #000
 			opacity: 0.4
-			z-index: 5
+			z-index: 55
 
 .waves
 	width: 81px
@@ -237,6 +237,7 @@ ul.pagination
 		span
 			display: table-cell
 			vertical-align: middle
+			line-height: 14px
 .section-icon
 	position: absolute
 	top: 64px
@@ -351,6 +352,17 @@ ul.pagination
 			pointer-events: none
 			opacity: 0
 			transition: opacity.2s
+	&.static
+		@media (min-width: $mobile-large)
+			height: 100vh !important
+			&.policy
+				height: auto !important
+			// .description-in-top
+			// 	// opacity: 1
+			// .down-btn
+			// 	display: block
+			.animate-bg
+				top: 0px
 
 
 	&.job
@@ -439,15 +451,23 @@ ul.pagination
 	position: absolute
 	top: 30px
 	left: 83px
+	img
+		width: 150px
 	@media (max-width: $medium)
 		width: 100px
 		left: 53px
+		img
+			width: 100px
 	@media (max-width: $tablet)
 		width: 70px
+		img
+			width: 70px
 	@media (max-width: $mobile-medium)
 		width: 50px
 		left: 23px
 		top: 20px
+		img
+			width: 50px
 
 .main-nav-holder 
 	text-align: right
@@ -3231,7 +3251,7 @@ ul.pagination
 			a
 				height: 37px
 				width: 20px
-				z-index: 2
+				z-index: 52
 		.bx-pager
 			display: none
 
@@ -3286,7 +3306,7 @@ ul.pagination
 	opacity: 0
 	pointer-events: none
 	transition: opacity .2s
-	z-index: 30
+	z-index: 56
 	
 	&:before
 		content: ''
@@ -3527,6 +3547,9 @@ ul.pagination
 					.hover
 						opacity: 1
 						transition: opacity .2s
+.news-modal
+	.scroll-holder
+		overflow-x: hidden
 				
 
 .nav-toggle-button
@@ -3600,7 +3623,7 @@ ul.pagination
 	padding-right: 0px
 	transition: right .2s
 	background: url(../img/images/aside-bg.jpg)
-	z-index: 20
+	z-index: 56
 	padding-top: 76px
 	padding-bottom: 77px
 	@media (max-width: $mobile-large)
